@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export for Netlify
-  output: 'export',
+  // Removed static export since we're using database integration
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static hosting
+    unoptimized: true, // Required for Netlify hosting
     domains: ['localhost', 'images.unsplash.com', 'via.placeholder.com', 'ozmevsim.netlify.app']
   },
   env: {
@@ -13,9 +12,7 @@ const nextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
-  // Static export configuration
-  distDir: 'out'
+  swcMinify: true
 };
 
 module.exports = nextConfig; 

@@ -1,41 +1,92 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
-import { products, categories, brands, getProductsByCategory, getProductsByBrand, searchProducts } from '@/data/products';
-import { Search, Filter, ShoppingCart, Star, Tag, ArrowLeft } from 'lucide-react';
-import Image from 'next/image';
+import { Search, Filter, ShoppingCart, Star, Tag, ArrowLeft, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+interface Product {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  short_description: string;
+  brand: string;
+  price: string;
+  currency: string;
+  main_image: string;
+  specifications: any;
+  features: string[];
+  is_featured: boolean;
+  category_name: string;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  slug: string;
+}
+
 export default function ProductsPage() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  
   const [selectedCategory, setSelectedCategory] = useState('Tümü');
   const [selectedBrand, setSelectedBrand] = useState('Tümü');
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
-  const [filteredProductList, setFilteredProductList] = useState(products);
 
-  // Get deleted product IDs from localStorage
-  const getDeletedProductIds = (): string[] => {
-    if (typeof window === 'undefined') return [];
-    try {
-      const deleted = localStorage.getItem('ozmevsim_deleted_products');
-      return deleted ? JSON.parse(deleted) : [];
-    } catch {
-      return [];
-    }
-  };
-
-  // Filter products excluding deleted ones on mount
+  // Fetch products from API
   useEffect(() => {
-    const deletedIds = getDeletedProductIds();
-    const allProducts = products.filter(product => !deletedIds.includes(product.id));
-    setFilteredProductList(allProducts);
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        const response = await fetch('/api/products');
+        if (!response.ok) {
+          throw new Error('Ürünler yüklenirken hata oluştu');
+        }
+        
+        const data = await response.json();
+        if (data.success) {
+          setProducts(data.data || []);
+        } else {
+          throw new Error(data.message || 'Ürünler yüklenemedi');
+        }
+      } catch (err) {
+        console.error('Products fetch error:', err);
+        setError(err instanceof Error ? err.message : 'Bir hata oluştu');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
   }, []);
+
+  // Extract unique categories and brands from products
+  const { uniqueCategories, uniqueBrands } = useMemo(() => {
+    const categorySet = new Set<string>();
+    const brandSet = new Set<string>();
+    
+    products.forEach(product => {
+      if (product.category_name) categorySet.add(product.category_name);
+      if (product.brand) brandSet.add(product.brand);
+    });
+    
+    return {
+      uniqueCategories: ['Tümü', ...Array.from(categorySet).sort()],
+      uniqueBrands: ['Tümü', ...Array.from(brandSet).sort()]
+    };
+  }, [products]);
 
   // WhatsApp redirect function
   const handleWhatsAppRedirect = (productName: string) => {
-    const phoneNumber = '+905324467367'; // WhatsApp number
+    const phoneNumber = '+905324467367';
     const message = `Merhaba! ${productName} ürünü için teklif almak istiyorum. Detaylı bilgi verir misiniz?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -43,7 +94,7 @@ export default function ProductsPage() {
   };
 
   const filteredProducts = useMemo(() => {
-    let filtered = filteredProductList;
+    let filtered = products;
 
     // Search filter
     if (searchQuery) {
@@ -51,13 +102,13 @@ export default function ProductsPage() {
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.category.toLowerCase().includes(searchQuery.toLowerCase())
+        (product.category_name && product.category_name.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
 
     // Category filter
     if (selectedCategory !== 'Tümü') {
-      filtered = filtered.filter(product => product.category === selectedCategory);
+      filtered = filtered.filter(product => product.category_name === selectedCategory);
     }
 
     // Brand filter
@@ -66,7 +117,52 @@ export default function ProductsPage() {
     }
 
     return filtered;
-  }, [selectedCategory, selectedBrand, searchQuery, filteredProductList]);
+  }, [selectedCategory, selectedBrand, searchQuery, products]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-900">
+        <Header />
+        <div className="page-content">
+          <div className="pt-40 pb-20 bg-gray-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-center py-20">
+                <div className="text-center">
+                  <Loader2 className="h-8 w-8 animate-spin text-orange-400 mx-auto mb-4" />
+                  <p className="text-white">Ürünler yükleniyor...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-900">
+        <Header />
+        <div className="page-content">
+          <div className="pt-40 pb-20 bg-gray-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center py-20">
+                <p className="text-red-400 mb-4">{error}</p>
+                <button 
+                  onClick={() => window.location.reload()} 
+                  className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors"
+                >
+                  Tekrar Dene
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -132,7 +228,7 @@ export default function ProductsPage() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white text-gray-900 transition-colors"
                 >
-                  {categories.map(category => (
+                  {uniqueCategories.map(category => (
                     <option key={category} value={category} className="text-gray-900">{category}</option>
                   ))}
                 </select>
@@ -146,7 +242,7 @@ export default function ProductsPage() {
                   onChange={(e) => setSelectedBrand(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white text-gray-900 transition-colors"
                 >
-                  {brands.map(brand => (
+                  {uniqueBrands.map(brand => (
                     <option key={brand} value={brand} className="text-gray-900">{brand}</option>
                   ))}
                 </select>
@@ -191,12 +287,12 @@ export default function ProductsPage() {
                   {/* Product Image */}
                   <div className="relative h-48 bg-gray-100">
                     <img
-                      src={product.image}
+                      src={product.main_image || '/images/products/default-product.jpg'}
                       alt={product.name}
                       className="object-contain p-4 w-full h-full"
                       loading="lazy"
                     />
-                    {product.featured && (
+                    {product.is_featured && (
                       <div className="absolute top-2 left-2 bg-primary-600 text-white px-2 py-1 rounded text-xs font-medium">
                         Öne Çıkan
                       </div>
@@ -205,66 +301,49 @@ export default function ProductsPage() {
 
                   {/* Product Info */}
                   <div className="p-4">
-                    {/* Brand */}
-                    <div className="flex items-center gap-2 mb-2">
-                      <Tag className="h-4 w-4 text-gray-400" />
-                      <span className="text-sm text-gray-600 font-medium">{product.brand}</span>
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-semibold text-gray-900 text-sm leading-tight">{product.name}</h3>
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded ml-2 shrink-0">
+                        {product.brand}
+                      </span>
+                    </div>
+                    
+                    <p className="text-gray-600 text-xs mb-3 line-clamp-2">{product.short_description}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="text-primary-600 font-bold text-lg">
+                        ₺{Number(product.price).toLocaleString('tr-TR')}
+                      </div>
+                      <span className="text-xs text-gray-500">{product.category_name}</span>
                     </div>
 
-                    {/* Product Name */}
-                    <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {product.name}
-                    </h3>
-
-                    {/* Category */}
-                    <p className="text-sm text-gray-600 mb-2">{product.category}</p>
-
-                    {/* Description */}
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                      {product.description}
-                    </p>
-
                     {/* Features */}
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-1">
+                    {product.features && product.features.length > 0 && (
+                      <div className="mt-3 flex flex-wrap gap-1">
                         {product.features.slice(0, 2).map((feature, index) => (
-                          <span
-                            key={index}
-                            className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-                          >
+                          <span key={index} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
                             {feature}
                           </span>
                         ))}
                         {product.features.length > 2 && (
-                          <span className="text-xs text-gray-500">
-                            +{product.features.length - 2} özellik
-                          </span>
+                          <span className="text-xs text-gray-500">+{product.features.length - 2}</span>
                         )}
                       </div>
-                    </div>
+                    )}
 
-                    {/* Stock Status */}
-                    <div className="mb-4">
-                      {product.inStock ? (
-                        <span className="text-sm text-green-600 font-medium">✓ Stokta</span>
-                      ) : (
-                        <span className="text-sm text-red-600 font-medium">✗ Stokta Yok</span>
-                      )}
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex gap-2">
+                    {/* Action Buttons */}
+                    <div className="mt-4 flex gap-2">
                       <Link
                         href={`/urunler/${product.id}`}
-                        className="flex-1 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-center text-sm font-medium"
+                        className="flex-1 bg-gray-100 text-gray-700 py-2 px-3 rounded text-sm font-medium hover:bg-gray-200 transition-colors text-center"
                       >
-                        Detayları Gör
+                        Detaylar
                       </Link>
                       <button
                         onClick={() => handleWhatsAppRedirect(product.name)}
-                        className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-center text-sm font-medium"
+                        className="flex-1 bg-green-600 text-white py-2 px-3 rounded text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-1"
                       >
-                        Teklif Al
+                        <span>Teklif Al</span>
                       </button>
                     </div>
                   </div>

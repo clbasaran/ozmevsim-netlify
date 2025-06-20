@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { initializeAdminSync } from '@/lib/data-sync';
 import {
   HomeIcon,
   DocumentDuplicateIcon,
@@ -25,6 +24,7 @@ import {
   MoonIcon,
 } from '@heroicons/react/24/outline';
 
+
 interface MenuItem {
   title: string;
   icon: React.ReactNode;
@@ -34,9 +34,6 @@ interface MenuItem {
 }
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  console.log('🏗️ AdminLayout component rendering - SERVER:', typeof window === 'undefined');
-  console.log('🏗️ AdminLayout component rendering - CLIENT:', typeof window !== 'undefined');
-  
   const pathname = usePathname();
   const router = useRouter();
   const [expandedMenus, setExpandedMenus] = useState<string[]>(['Sayfa Yönetimi', 'İçerik Yönetimi']);
@@ -116,15 +113,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const isParentActive = (subItems: any[]) => 
     subItems.some(item => pathname === item.href);
 
-  // Initialize admin sync system
   useEffect(() => {
-    console.log('🎭 Admin Layout useEffect running - CLIENT SIDE');
-    console.log('🔄 Calling initializeAdminSync...');
-    console.log('🌍 Window check:', typeof window !== 'undefined');
-    initializeAdminSync();
+    console.log('🏗️ AdminLayout component rendering - SERVER:', typeof window === 'undefined');
+    console.log('🏗️ AdminLayout component rendering - CLIENT:', typeof window !== 'undefined');
   }, []);
-
-
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>

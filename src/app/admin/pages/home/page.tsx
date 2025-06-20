@@ -18,7 +18,6 @@ import {
   UserGroupIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-import { getAllHeroSlides, updateHeroSlide, addHeroSlide, deleteHeroSlide, type HeroSlide as DataHeroSlide } from '@/lib/data';
 
 // Admin interface that matches the data.ts structure
 interface AdminHeroSlide {
@@ -217,12 +216,29 @@ export default function AdminHomePage() {
   const [editingTestimonial, setEditingTestimonial] = useState<HomeTestimonial | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Load actual hero slides from data.ts
+  // Load default hero slides
   useEffect(() => {
     const loadSlides = () => {
       try {
-        const heroSlides = getAllHeroSlides();
-        setSlides(heroSlides);
+        // Use default hero slides since we're removing static data dependency
+        const defaultSlides: AdminHeroSlide[] = [
+          {
+            id: 1,
+            title: 'Güvenilir Isı Sistemleri',
+            subtitle: 'Uzman Kadro, Kaliteli Hizmet',
+            description: 'Modern teknoloji ile evinizi sıcak tutuyoruz',
+            backgroundImage: '/images/hero-bg-1.jpg',
+            stats: [
+              { value: '500+', label: 'Mutlu Müşteri' },
+              { value: '15+', label: 'Yıl Deneyim' },
+              { value: '1200+', label: 'Proje' }
+            ],
+            primaryCTA: { text: 'İletişim', href: '/iletisim' },
+            secondaryCTA: { text: 'Hizmetler', href: '/hizmetler' },
+            isActive: true
+          }
+        ];
+        setSlides(defaultSlides);
       } catch (error) {
         console.error('Error loading hero slides:', error);
       } finally {
@@ -231,14 +247,6 @@ export default function AdminHomePage() {
     };
 
     loadSlides();
-
-    // Listen for updates
-    const handleHeroSlidesUpdated = () => {
-      loadSlides();
-    };
-
-    window.addEventListener('heroSlidesUpdated', handleHeroSlidesUpdated);
-    return () => window.removeEventListener('heroSlidesUpdated', handleHeroSlidesUpdated);
   }, []);
 
   // Load other data from localStorage
@@ -339,22 +347,19 @@ export default function AdminHomePage() {
   const handleSaveSlide = (slideData: AdminHeroSlide) => {
     try {
       if (editingSlide) {
-        updateHeroSlide(editingSlide.id, slideData);
+        // Update existing slide
+        setSlides(prev => prev.map(slide => 
+          slide.id === editingSlide.id ? { ...slide, ...slideData } : slide
+        ));
       } else {
-        addHeroSlide({
-          title: slideData.title,
-          subtitle: slideData.subtitle,
-          description: slideData.description,
-          backgroundImage: slideData.backgroundImage,
-          stats: slideData.stats,
-          primaryCTA: slideData.primaryCTA,
-          secondaryCTA: slideData.secondaryCTA,
-          isActive: slideData.isActive
-        });
+        // Add new slide
+        const newSlide = {
+          ...slideData,
+          id: Math.max(0, ...slides.map(s => s.id)) + 1
+        };
+        setSlides(prev => [...prev, newSlide]);
       }
       
-      // Reload slides
-      setSlides(getAllHeroSlides());
       setShowSlideForm(false);
       setEditingSlide(null);
     } catch (error) {
@@ -366,8 +371,7 @@ export default function AdminHomePage() {
   const handleDeleteSlide = (id: number) => {
     if (confirm('Bu slide\'ı silmek istediğinizden emin misiniz?')) {
       try {
-        deleteHeroSlide(id);
-        setSlides(getAllHeroSlides());
+        setSlides(prev => prev.filter(slide => slide.id !== id));
       } catch (error) {
         console.error('Error deleting slide:', error);
         alert('Slide silinirken hata oluştu.');
@@ -376,11 +380,9 @@ export default function AdminHomePage() {
   };
 
   const handleToggleActive = (id: number) => {
-    const slide = slides.find(s => s.id === id);
-    if (slide) {
-      updateHeroSlide(id, { isActive: !slide.isActive });
-      setSlides(getAllHeroSlides());
-    }
+    setSlides(prev => prev.map(slide => 
+      slide.id === id ? { ...slide, isActive: !slide.isActive } : slide
+    ));
   };
 
   const tabs = [
@@ -636,8 +638,6 @@ export default function AdminHomePage() {
               </div>
             </div>
           )}
-
-
 
           {/* Testimonials Tab */}
           {activeTab === 'testimonials' && (

@@ -1,426 +1,484 @@
 // Cloudflare D1 Database Wrapper
 // Öz Mevsim Website için database işlemleri
 
-interface D1Database {
-  prepare(sql: string): D1PreparedStatement;
-  dump(): Promise<ArrayBuffer>;
-  batch(statements: D1PreparedStatement[]): Promise<D1Result[]>;
-  exec(sql: string): Promise<D1ExecResult>;
+import { Pool, PoolConfig } from 'pg';
+
+// Database connection configuration
+const dbConfig: PoolConfig = {
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '5432'),
+  database: process.env.DB_NAME || 'ozmevsim',
+  user: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || '',
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  max: 20,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
+};
+
+// Create connection pool
+let pool: Pool | null = null;
+
+export function getDbPool(): Pool {
+  if (!pool) {
+    pool = new Pool(dbConfig);
+    
+    pool.on('error', (err) => {
+      console.error('Unexpected error on idle client', err);
+      process.exit(-1);
+    });
+  }
+  
+  return pool;
 }
 
-interface D1PreparedStatement {
-  bind(...values: any[]): D1PreparedStatement;
-  first<T = any>(colName?: string): Promise<T | null>;
-  run(): Promise<D1Result>;
-  all<T = any>(): Promise<D1Result<T>>;
-}
-
-interface D1Result<T = any> {
-  results?: T[];
-  success: boolean;
-  error?: string;
-  meta: {
-    duration: number;
-    size_after: number;
-    rows_read: number;
-    rows_written: number;
-    last_row_id?: number;
-  };
-}
-
-interface D1ExecResult {
-  count: number;
-  duration: number;
-}
-
-// Extend globalThis interface for D1
-declare global {
-  var DB: D1Database | undefined;
-}
-
-// Database işlemleri için wrapper class
+// Database service class
 export class DatabaseService {
-  private db: D1Database;
-
-  constructor(database: D1Database) {
-    this.db = database;
+  private pool: Pool;
+  
+  constructor() {
+    this.pool = getDbPool();
   }
-
-  // Products (Ürünler) işlemleri
-  async getProducts(status = 'active') {
+  
+  // Generic query method
+  async query(text: string, params?: any[]) {
+    const client = await this.pool.connect();
     try {
-      const stmt = this.db.prepare('SELECT * FROM products WHERE status = ? ORDER BY created_at DESC');
-      const result = await stmt.bind(status).all();
-      return result.results || [];
-    } catch (error: any) {
-      console.error('Error fetching products:', error);
-      return [];
+      const result = await client.query(text, params);
+      return result;
+    } finally {
+      client.release();
     }
   }
-
-  async getProduct(id: number) {
-    try {
-      const stmt = this.db.prepare('SELECT * FROM products WHERE id = ?');
-      return await stmt.bind(id).first();
-    } catch (error: any) {
-      console.error('Error fetching product:', error);
-      return null;
+  
+  // Products methods
+  async getProducts(filters: {
+    category?: string;
+    brand?: string;
+    featured?: boolean;
+    search?: string;
+    limit?: number;
+    offset?: number;
+  } = {}) {
+    let query = `
+      SELECT p.*, c.name as category_name 
+      FROM products p 
+      LEFT JOIN categories c ON p.category_id = c.id 
+      WHERE p.is_active = true
+    `;
+    const params: any[] = [];
+    let paramCount = 1;
+    
+    if (filters.category) {
+      query += ` AND c.slug = $${paramCount}`;
+      params.push(filters.category);
+      paramCount++;
     }
-  }
-
-  async createProduct(product: any) {
-    try {
-      const stmt = this.db.prepare(`
-        INSERT INTO products (title, description, price, image_url, category, brand, model, features, specifications, status)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      `);
-      const result = await stmt.bind(
-        product.title,
-        product.description,
-        product.price,
-        product.image_url,
-        product.category,
-        product.brand,
-        product.model,
-        JSON.stringify(product.features || []),
-        JSON.stringify(product.specifications || {}),
-        product.status || 'active'
-      ).run();
-      return { success: true, id: result.meta.last_row_id };
-    } catch (error: any) {
-      console.error('Error creating product:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
+    
+    if (filters.brand) {
+      query += ` AND p.brand ILIKE $${paramCount}`;
+      params.push(`%${filters.brand}%`);
+      paramCount++;
     }
-  }
-
-  async updateProduct(id: number, product: any) {
-    try {
-      const stmt = this.db.prepare(`
-        UPDATE products 
-        SET title = ?, description = ?, price = ?, image_url = ?, category = ?, 
-            brand = ?, model = ?, features = ?, specifications = ?, status = ?, updated_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-      `);
-      const result = await stmt.bind(
-        product.title,
-        product.description,
-        product.price,
-        product.image_url,
-        product.category,
-        product.brand,
-        product.model,
-        JSON.stringify(product.features || []),
-        JSON.stringify(product.specifications || {}),
-        product.status || 'active',
-        id
-      ).run();
-      return { success: result.success };
-    } catch (error: any) {
-      console.error('Error updating product:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
+    
+    if (filters.featured !== undefined) {
+      query += ` AND p.is_featured = $${paramCount}`;
+      params.push(filters.featured);
+      paramCount++;
     }
-  }
-
-  async deleteProduct(id: number) {
-    try {
-      const stmt = this.db.prepare('UPDATE products SET status = ? WHERE id = ?');
-      const result = await stmt.bind('deleted', id).run();
-      return { success: result.success };
-    } catch (error: any) {
-      console.error('Error deleting product:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
+    
+    if (filters.search) {
+      query += ` AND (p.name ILIKE $${paramCount} OR p.description ILIKE $${paramCount})`;
+      params.push(`%${filters.search}%`);
+      paramCount++;
     }
-  }
-
-  // Blog Posts işlemleri
-  async getBlogPosts(status = 'published') {
-    try {
-      const stmt = this.db.prepare('SELECT * FROM blog_posts WHERE status = ? ORDER BY created_at DESC');
-      const result = await stmt.bind(status).all();
-      return result.results || [];
-    } catch (error: any) {
-      console.error('Error fetching blog posts:', error);
-      return [];
-    }
-  }
-
-  async createBlogPost(post: any) {
-    try {
-      const stmt = this.db.prepare(`
-        INSERT INTO blog_posts (title, content, excerpt, featured_image, author, status, tags)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-      `);
-      const result = await stmt.bind(
-        post.title,
-        post.content,
-        post.excerpt,
-        post.featured_image,
-        post.author,
-        post.status || 'published',
-        JSON.stringify(post.tags || [])
-      ).run();
-      return { success: true, id: result.meta.last_row_id };
-    } catch (error: any) {
-      console.error('Error creating blog post:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  async updateBlogPost(id: number, post: any) {
-    try {
-      const stmt = this.db.prepare(`
-        UPDATE blog_posts 
-        SET title = ?, content = ?, excerpt = ?, featured_image = ?, author = ?, status = ?, tags = ?, updated_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-      `);
-      const result = await stmt.bind(
-        post.title,
-        post.content,
-        post.excerpt,
-        post.featured_image,
-        post.author,
-        post.status || 'published',
-        JSON.stringify(post.tags || []),
-        id
-      ).run();
-      return { success: result.success };
-    } catch (error: any) {
-      console.error('Error updating blog post:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  async deleteBlogPost(id: number) {
-    try {
-      const stmt = this.db.prepare('UPDATE blog_posts SET status = ? WHERE id = ?');
-      const result = await stmt.bind('deleted', id).run();
-      return { success: result.success };
-    } catch (error: any) {
-      console.error('Error deleting blog post:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  // FAQ işlemleri
-  async getFAQs(status = 'active') {
-    try {
-      const stmt = this.db.prepare('SELECT * FROM faqs WHERE status = ? ORDER BY order_index ASC, created_at DESC');
-      const result = await stmt.bind(status).all();
-      return result.results || [];
-    } catch (error: any) {
-      console.error('Error fetching FAQs:', error);
-      return [];
-    }
-  }
-
-  async createFAQ(faq: any) {
-    try {
-      const stmt = this.db.prepare(`
-        INSERT INTO faqs (question, answer, category, order_index, status)
-        VALUES (?, ?, ?, ?, ?)
-      `);
-      const result = await stmt.bind(
-        faq.question,
-        faq.answer,
-        faq.category,
-        faq.order_index || 0,
-        faq.status || 'active'
-      ).run();
-      return { success: true, id: result.meta.last_row_id };
-    } catch (error: any) {
-      console.error('Error creating FAQ:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  // Testimonials işlemleri
-  async getTestimonials(status = 'active') {
-    try {
-      const stmt = this.db.prepare('SELECT * FROM testimonials WHERE status = ? ORDER BY created_at DESC');
-      const result = await stmt.bind(status).all();
-      return result.results || [];
-    } catch (error: any) {
-      console.error('Error fetching testimonials:', error);
-      return [];
-    }
-  }
-
-  async createTestimonial(testimonial: any) {
-    try {
-      const stmt = this.db.prepare(`
-        INSERT INTO testimonials (name, company, position, content, rating, avatar_url, status)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-      `);
-      const result = await stmt.bind(
-        testimonial.name,
-        testimonial.company,
-        testimonial.position,
-        testimonial.content,
-        testimonial.rating || 5,
-        testimonial.avatar_url,
-        testimonial.status || 'active'
-      ).run();
-      return { success: true, id: result.meta.last_row_id };
-    } catch (error: any) {
-      console.error('Error creating testimonial:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  // Contact Messages işlemleri
-  async createContactMessage(message: any) {
-    try {
-      const stmt = this.db.prepare(`
-        INSERT INTO contact_messages (name, email, phone, subject, message, status)
-        VALUES (?, ?, ?, ?, ?, ?)
-      `);
-      const result = await stmt.bind(
-        message.name,
-        message.email,
-        message.phone,
-        message.subject,
-        message.message,
-        'unread'
-      ).run();
-      return { success: true, id: result.meta.last_row_id };
-    } catch (error: any) {
-      console.error('Error creating contact message:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
-  }
-
-  async getContactMessages(status?: string) {
-    try {
-      let stmt;
-      if (status) {
-        stmt = this.db.prepare('SELECT * FROM contact_messages WHERE status = ? ORDER BY created_at DESC');
-        const result = await stmt.bind(status).all();
-        return result.results || [];
-      } else {
-        stmt = this.db.prepare('SELECT * FROM contact_messages ORDER BY created_at DESC');
-        const result = await stmt.all();
-        return result.results || [];
+    
+    query += ` ORDER BY p.sort_order ASC, p.created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+      paramCount++;
+      
+      if (filters.offset) {
+        query += ` OFFSET $${paramCount}`;
+        params.push(filters.offset);
       }
-    } catch (error: any) {
-      console.error('Error fetching contact messages:', error);
-      return [];
     }
+    
+    const result = await this.query(query, params);
+    return result.rows;
   }
-
-  // Site Settings işlemleri
+  
+  async getProductById(id: string) {
+    const result = await this.query(
+      `SELECT p.*, c.name as category_name 
+       FROM products p 
+       LEFT JOIN categories c ON p.category_id = c.id 
+       WHERE p.id = $1 AND p.is_active = true`,
+      [id]
+    );
+    return result.rows[0];
+  }
+  
+  async getProductBySlug(slug: string) {
+    const result = await this.query(
+      `SELECT p.*, c.name as category_name 
+       FROM products p 
+       LEFT JOIN categories c ON p.category_id = c.id 
+       WHERE p.slug = $1 AND p.is_active = true`,
+      [slug]
+    );
+    return result.rows[0];
+  }
+  
+  // Services methods
+  async getServices(filters: {
+    featured?: boolean;
+    search?: string;
+    limit?: number;
+  } = {}) {
+    let query = `SELECT * FROM services WHERE is_active = true`;
+    const params: any[] = [];
+    let paramCount = 1;
+    
+    if (filters.featured !== undefined) {
+      query += ` AND is_featured = $${paramCount}`;
+      params.push(filters.featured);
+      paramCount++;
+    }
+    
+    if (filters.search) {
+      query += ` AND (title ILIKE $${paramCount} OR description ILIKE $${paramCount})`;
+      params.push(`%${filters.search}%`);
+      paramCount++;
+    }
+    
+    query += ` ORDER BY sort_order ASC, created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+    }
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  async getServiceBySlug(slug: string) {
+    const result = await this.query(
+      `SELECT * FROM services WHERE slug = $1 AND is_active = true`,
+      [slug]
+    );
+    return result.rows[0];
+  }
+  
+  // Blog methods
+  async getBlogPosts(filters: {
+    category?: string;
+    featured?: boolean;
+    published?: boolean;
+    limit?: number;
+    offset?: number;
+  } = {}) {
+    let query = `
+      SELECT bp.*, u.name as author_name 
+      FROM blog_posts bp 
+      LEFT JOIN users u ON bp.author_id = u.id
+    `;
+    const params: any[] = [];
+    let paramCount = 1;
+    const conditions: string[] = [];
+    
+    if (filters.published !== false) {
+      conditions.push('bp.is_published = true');
+    }
+    
+    if (filters.category) {
+      conditions.push(`bp.category = $${paramCount}`);
+      params.push(filters.category);
+      paramCount++;
+    }
+    
+    if (filters.featured !== undefined) {
+      conditions.push(`bp.is_featured = $${paramCount}`);
+      params.push(filters.featured);
+      paramCount++;
+    }
+    
+    if (conditions.length > 0) {
+      query += ` WHERE ${conditions.join(' AND ')}`;
+    }
+    
+    query += ` ORDER BY bp.published_at DESC, bp.created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+      paramCount++;
+      
+      if (filters.offset) {
+        query += ` OFFSET $${paramCount}`;
+        params.push(filters.offset);
+      }
+    }
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  async getBlogPostBySlug(slug: string) {
+    const result = await this.query(
+      `SELECT bp.*, u.name as author_name 
+       FROM blog_posts bp 
+       LEFT JOIN users u ON bp.author_id = u.id 
+       WHERE bp.slug = $1 AND bp.is_published = true`,
+      [slug]
+    );
+    return result.rows[0];
+  }
+  
+  // Projects methods
+  async getProjects(filters: {
+    category?: string;
+    featured?: boolean;
+    limit?: number;
+    offset?: number;
+  } = {}) {
+    let query = `SELECT * FROM projects WHERE is_active = true`;
+    const params: any[] = [];
+    let paramCount = 1;
+    
+    if (filters.category) {
+      query += ` AND category = $${paramCount}`;
+      params.push(filters.category);
+      paramCount++;
+    }
+    
+    if (filters.featured !== undefined) {
+      query += ` AND is_featured = $${paramCount}`;
+      params.push(filters.featured);
+      paramCount++;
+    }
+    
+    query += ` ORDER BY sort_order ASC, completion_date DESC, created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+      paramCount++;
+      
+      if (filters.offset) {
+        query += ` OFFSET $${paramCount}`;
+        params.push(filters.offset);
+      }
+    }
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  async getProjectBySlug(slug: string) {
+    const result = await this.query(
+      `SELECT * FROM projects WHERE slug = $1 AND is_active = true`,
+      [slug]
+    );
+    return result.rows[0];
+  }
+  
+  // Contact messages methods
+  async createContactMessage(data: {
+    name: string;
+    email: string;
+    phone?: string;
+    subject?: string;
+    message: string;
+    service_interest?: string;
+    ip_address?: string;
+    user_agent?: string;
+  }) {
+    const result = await this.query(
+      `INSERT INTO contact_messages 
+       (name, email, phone, subject, message, service_interest, ip_address, user_agent) 
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8) 
+       RETURNING id`,
+      [
+        data.name,
+        data.email,
+        data.phone || null,
+        data.subject || null,
+        data.message,
+        data.service_interest || null,
+        data.ip_address || null,
+        data.user_agent || null
+      ]
+    );
+    return { success: true, id: result.rows[0].id };
+  }
+  
+  async getContactMessages(filters: {
+    status?: string;
+    limit?: number;
+    offset?: number;
+  } = {}) {
+    let query = `
+      SELECT cm.*, u.name as assigned_to_name 
+      FROM contact_messages cm 
+      LEFT JOIN users u ON cm.assigned_to = u.id
+    `;
+    const params: any[] = [];
+    let paramCount = 1;
+    
+    if (filters.status) {
+      query += ` WHERE cm.status = $${paramCount}`;
+      params.push(filters.status);
+      paramCount++;
+    }
+    
+    query += ` ORDER BY cm.created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+      paramCount++;
+      
+      if (filters.offset) {
+        query += ` OFFSET $${paramCount}`;
+        params.push(filters.offset);
+      }
+    }
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  // Testimonials methods
+  async getTestimonials(filters: {
+    approved?: boolean;
+    featured?: boolean;
+    limit?: number;
+  } = {}) {
+    let query = `SELECT * FROM testimonials WHERE is_active = true`;
+    const params: any[] = [];
+    let paramCount = 1;
+    
+    if (filters.approved !== false) {
+      query += ` AND is_approved = true`;
+    }
+    
+    if (filters.featured !== undefined) {
+      query += ` AND is_featured = $${paramCount}`;
+      params.push(filters.featured);
+      paramCount++;
+    }
+    
+    query += ` ORDER BY sort_order ASC, created_at DESC`;
+    
+    if (filters.limit) {
+      query += ` LIMIT $${paramCount}`;
+      params.push(filters.limit);
+    }
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  // FAQ methods
+  async getFAQs(category?: string) {
+    let query = `SELECT * FROM faqs WHERE is_active = true`;
+    const params: any[] = [];
+    
+    if (category) {
+      query += ` AND category = $1`;
+      params.push(category);
+    }
+    
+    query += ` ORDER BY sort_order ASC, created_at ASC`;
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  // Categories methods
+  async getCategories(parentId?: string) {
+    let query = `SELECT * FROM categories WHERE is_active = true`;
+    const params: any[] = [];
+    
+    if (parentId === null) {
+      query += ` AND parent_id IS NULL`;
+    } else if (parentId) {
+      query += ` AND parent_id = $1`;
+      params.push(parentId);
+    }
+    
+    query += ` ORDER BY sort_order ASC, name ASC`;
+    
+    const result = await this.query(query, params);
+    return result.rows;
+  }
+  
+  // Settings methods
   async getSetting(key: string) {
-    try {
-      const stmt = this.db.prepare('SELECT value, type FROM site_settings WHERE key = ?');
-      const result = await stmt.bind(key).first();
-      if (!result) return null;
-      
-      // Type'a göre parse et
-      if (result.type === 'json') {
-        return JSON.parse(result.value);
-      } else if (result.type === 'boolean') {
-        return result.value === 'true';
-      } else if (result.type === 'number') {
-        return parseFloat(result.value);
-      }
-      return result.value;
-    } catch (error: any) {
-      console.error('Error fetching setting:', error);
-      return null;
-    }
+    const result = await this.query(
+      `SELECT value FROM settings WHERE key = $1`,
+      [key]
+    );
+    return result.rows[0]?.value;
   }
-
-  async setSetting(key: string, value: any, type = 'text') {
-    try {
-      let stringValue = value;
-      if (type === 'json') {
-        stringValue = JSON.stringify(value);
-      } else if (type === 'boolean') {
-        stringValue = value ? 'true' : 'false';
-      } else if (type === 'number') {
-        stringValue = value.toString();
-      }
-
-      const stmt = this.db.prepare(`
-        INSERT OR REPLACE INTO site_settings (key, value, type, updated_at)
-        VALUES (?, ?, ?, CURRENT_TIMESTAMP)
-      `);
-      const result = await stmt.bind(key, stringValue, type).run();
-      return { success: result.success };
-    } catch (error: any) {
-      console.error('Error setting value:', error);
-      return { success: false, error: error?.message || 'Unknown error' };
-    }
+  
+  async getPublicSettings() {
+    const result = await this.query(
+      `SELECT key, value FROM settings WHERE is_public = true`
+    );
+    return result.rows.reduce((acc: any, row: any) => {
+      acc[row.key] = row.value;
+      return acc;
+    }, {});
   }
-
-  async getAllSettings() {
-    try {
-      const stmt = this.db.prepare('SELECT key, value, type FROM site_settings');
-      const result = await stmt.all();
-      
-      const settings: Record<string, any> = {};
-      (result.results || []).forEach((row: any) => {
-        if (row.type === 'json') {
-          settings[row.key] = JSON.parse(row.value);
-        } else if (row.type === 'boolean') {
-          settings[row.key] = row.value === 'true';
-        } else if (row.type === 'number') {
-          settings[row.key] = parseFloat(row.value);
-        } else {
-          settings[row.key] = row.value;
-        }
-      });
-      
-      return settings;
-    } catch (error: any) {
-      console.error('Error fetching all settings:', error);
-      return {};
+  
+  // Page content methods
+  async getPageContent(pageName: string, sectionName?: string) {
+    let query = `SELECT * FROM page_contents WHERE page_name = $1 AND is_active = true`;
+    const params: any[] = [pageName];
+    
+    if (sectionName) {
+      query += ` AND section_name = $2`;
+      params.push(sectionName);
     }
-  }
-
-  // Dashboard Statistics
-  async getDashboardStats() {
-    try {
-      const queries = [
-        this.db.prepare('SELECT COUNT(*) as count FROM products WHERE status = ?').bind('active'),
-        this.db.prepare('SELECT COUNT(*) as count FROM blog_posts WHERE status = ?').bind('published'),
-        this.db.prepare('SELECT COUNT(*) as count FROM faqs WHERE status = ?').bind('active'),
-        this.db.prepare('SELECT COUNT(*) as count FROM testimonials WHERE status = ?').bind('active'),
-        this.db.prepare('SELECT COUNT(*) as count FROM contact_messages WHERE status = ?').bind('unread'),
-      ];
-
-      const results = await Promise.all(queries.map(q => q.first()));
-      
-      return {
-        products: results[0]?.count || 0,
-        blog_posts: results[1]?.count || 0,
-        faqs: results[2]?.count || 0,
-        testimonials: results[3]?.count || 0,
-        unread_messages: results[4]?.count || 0,
-      };
-    } catch (error: any) {
-      console.error('Error fetching dashboard stats:', error);
-      return {
-        products: 0,
-        blog_posts: 0,
-        faqs: 0,
-        testimonials: 0,
-        unread_messages: 0,
-      };
+    
+    query += ` ORDER BY section_name ASC`;
+    
+    const result = await this.query(query, params);
+    
+    if (sectionName) {
+      return result.rows[0]?.content;
     }
+    
+    return result.rows.reduce((acc: any, row: any) => {
+      acc[row.section_name] = row.content;
+      return acc;
+    }, {});
   }
 }
 
-// Helper function to get database instance
-export function getDatabase(): D1Database | null {
-  if (typeof globalThis !== 'undefined' && globalThis.DB) {
-    return globalThis.DB;
+// Singleton instance
+let dbService: DatabaseService | null = null;
+
+export function getDatabaseService(): DatabaseService {
+  if (!dbService) {
+    dbService = new DatabaseService();
   }
-  return null;
+  return dbService;
 }
 
-// Helper function to create database service
-export function createDatabaseService(): DatabaseService | null {
-  const db = getDatabase();
-  if (!db) return null;
-  return new DatabaseService(db);
+// Helper function to check database connection
+export async function checkDatabaseConnection(): Promise<boolean> {
+  try {
+    const pool = getDbPool();
+    const result = await pool.query('SELECT NOW()');
+    return !!result;
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    return false;
+  }
 } 

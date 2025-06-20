@@ -10,7 +10,12 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "export": "next export",
-    "netlify-build": "next build"
+    "test": "npm run build",
+    "netlify-build": "next build",
+    "db:setup": "node setup-database.js setup",
+    "db:reset": "node setup-database.js reset",
+    "db:test": "node setup-database.js test",
+    "db:help": "node setup-database.js"
   },
   "dependencies": {
     "@headlessui/react": "1.7.17",
@@ -26,6 +31,7 @@
     "@types/crypto-js": "4.2.1",
     "@types/js-cookie": "3.0.6",
     "@types/node": "20.10.5",
+    "@types/pg": "^8.15.4",
     "@types/qrcode": "1.5.5",
     "@types/react": "18.2.45",
     "@types/react-dom": "18.2.18",
@@ -44,6 +50,7 @@
     "jspdf": "2.5.1",
     "lucide-react": "0.300.0",
     "next": "14.0.4",
+    "pg": "^8.16.2",
     "qrcode": "1.5.3",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",

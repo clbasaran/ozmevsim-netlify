@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,17 +12,64 @@ import {
   ShoppingCartIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
-import { getProductById, getProductsByCategory } from '@/data/products';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  image_url: string;
+  category: string;
+  brand: string;
+  features: string[];
+  status: string;
+}
 
 interface ProductDetailClientProps {
   productId: string;
 }
 
 export default function ProductDetailClient({ productId }: ProductDetailClientProps) {
-  const product = getProductById(productId);
+  const [product, setProduct] = useState<Product | null>(null);
+  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedTab, setSelectedTab] = useState('features');
+
+  // Load product data from API
+  useEffect(() => {
+    const loadProduct = async () => {
+      setIsLoading(true);
+      try {
+        // Fetch single product
+        const response = await fetch(`/api/products?id=${productId}`);
+        if (response.ok) {
+          const allProducts = await response.json();
+          const foundProduct = allProducts.find((p: Product) => p.id === productId);
+          
+          if (foundProduct) {
+            setProduct(foundProduct);
+            
+            // Fetch related products from same category
+            const relatedResponse = await fetch(`/api/products?category=${foundProduct.category}`);
+            if (relatedResponse.ok) {
+              const relatedData = await relatedResponse.json();
+              const filtered = relatedData.filter((p: Product) => p.id !== productId).slice(0, 3);
+              setRelatedProducts(filtered);
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error loading product:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    if (productId) {
+      loadProduct();
+    }
+  }, [productId]);
 
   // WhatsApp redirect function
   const handleWhatsAppRedirect = (productName: string) => {
@@ -32,6 +79,21 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <div className="pt-32 flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Ürün yükleniyor...</p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -43,7 +105,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
             <p className="text-gray-600 mb-8">Aradığınız ürün mevcut değil veya kaldırılmış olabilir.</p>
             <Link
               href="/urunler"
-              className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               <ArrowLeftIcon className="h-5 w-5" />
               Ürünlere Dön
@@ -54,10 +116,6 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
       </div>
     );
   }
-
-  const relatedProducts = getProductsByCategory(product.category)
-    .filter(p => p.id !== product.id)
-    .slice(0, 3);
 
   const tabs = [
     { id: 'features', name: 'Özellikler', icon: CheckCircleIcon },
@@ -107,16 +165,18 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
             >
               <div className="aspect-square bg-white rounded-2xl shadow-sm overflow-hidden">
                 <img
-                  src={product.image}
+                  src={product.image_url}
                   alt={product.name}
                   className="object-contain p-8 w-full h-full"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/placeholder-product.jpg';
+                  }}
                 />
               </div>
-              {product.featured && (
-                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  Öne Çıkan
-                </div>
-              )}
+              <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Öne Çıkan
+              </div>
             </motion.div>
 
             {/* Product Info */}
@@ -167,7 +227,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
 
               {/* Quick Features */}
               <div className="grid grid-cols-2 gap-3 mb-8">
-                {product.features.slice(0, 4).map((feature, index) => (
+                {product.features?.slice(0, 4).map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm text-gray-700">
                     <CheckCircleIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
                     {feature}
@@ -198,16 +258,17 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
                 <div className="flex gap-3">
                   <a
                     href="tel:+903123570600"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
                   >
-                    Hemen Ara
+                    (312) 357 06 00
                   </a>
-                  <Link
-                    href="/iletisim"
-                    className="bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium border border-blue-200"
+                  <span className="text-gray-300">•</span>
+                  <a
+                    href="mailto:info@ozmevsim.com"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
                   >
-                    Mesaj Gönder
-                  </Link>
+                    info@ozmevsim.com
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -218,34 +279,39 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-16"
+            className="bg-white rounded-2xl shadow-sm overflow-hidden mb-16"
           >
-            {/* Tab Navigation */}
-            <div className="flex gap-1 mb-8 bg-gray-100 p-1 rounded-lg">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setSelectedTab(tab.id)}
-                  className={`flex-1 flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                    selectedTab === tab.id
-                      ? 'bg-white shadow-sm text-blue-600'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
-                >
-                  <tab.icon className="h-4 w-4" />
-                  {tab.name}
-                </button>
-              ))}
+            {/* Tab Headers */}
+            <div className="border-b border-gray-200">
+              <nav className="flex">
+                {tabs.map((tab) => {
+                  const Icon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setSelectedTab(tab.id)}
+                      className={`flex items-center gap-2 px-6 py-4 font-medium text-sm transition-colors ${
+                        selectedTab === tab.id
+                          ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      <Icon className="h-4 w-4" />
+                      {tab.name}
+                    </button>
+                  );
+                })}
+              </nav>
             </div>
 
             {/* Tab Content */}
-            <div className="bg-white rounded-lg shadow-sm p-8">
+            <div className="p-8">
               {selectedTab === 'features' && (
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Ürün Özellikleri</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {product.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3">
+                    {product.features?.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
                         <CheckCircleIcon className="h-5 w-5 text-green-500 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </div>
@@ -258,12 +324,14 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Teknik Özellikler</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between items-center py-3 border-b border-gray-100">
-                        <span className="font-medium text-gray-600">{key}</span>
-                        <span className="text-gray-900">{value}</span>
-                      </div>
-                    ))}
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-medium text-gray-900 mb-2">Genel Bilgiler</h4>
+                      <ul className="space-y-2 text-sm text-gray-600">
+                        <li><span className="font-medium">Marka:</span> {product.brand}</li>
+                        <li><span className="font-medium">Kategori:</span> {product.category}</li>
+                        <li><span className="font-medium">Durum:</span> {product.status}</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               )}
@@ -272,32 +340,16 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Garanti & Servis</h3>
                   <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Garanti Kapsamı</h4>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-center gap-2">
-                          <CheckCircleIcon className="h-4 w-4 text-green-500" />
-                          2 yıl üretici garantisi
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircleIcon className="h-4 w-4 text-green-500" />
-                          Ücretsiz kurulum hizmeti
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircleIcon className="h-4 w-4 text-green-500" />
-                          24/7 teknik destek
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <CheckCircleIcon className="h-4 w-4 text-green-500" />
-                          Orijinal yedek parça garantisi
-                        </li>
-                      </ul>
+                    <div className="bg-blue-50 p-6 rounded-lg">
+                      <h4 className="font-medium text-gray-900 mb-2">2 Yıl Garanti</h4>
+                      <p className="text-gray-600 text-sm">
+                        Tüm ürünlerimiz 2 yıl garantili olup, garanti süresince ücretsiz servis hizmeti sunulmaktadır.
+                      </p>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Servis Ağı</h4>
-                      <p className="text-gray-700">
-                        Ankara genelinde geniş servis ağımız ile hızlı ve güvenilir servis hizmeti sunuyoruz.
-                        Acil durumlar için 7/24 çağrı merkezimiz hizmetinizdedir.
+                    <div className="bg-green-50 p-6 rounded-lg">
+                      <h4 className="font-medium text-gray-900 mb-2">7/24 Servis Desteği</h4>
+                      <p className="text-gray-600 text-sm">
+                        Ankara genelinde 7/24 acil servis hizmeti sunmaktayız. Arıza durumunda hemen bizimle iletişime geçin.
                       </p>
                     </div>
                   </div>
@@ -314,31 +366,35 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Benzer Ürünler</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {relatedProducts.map((relatedProduct) => (
                   <Link
                     key={relatedProduct.id}
                     href={`/urunler/${relatedProduct.id}`}
-                    className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
+                    className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="relative h-48 bg-gray-100">
+                    <div className="aspect-square bg-gray-50 rounded-t-xl overflow-hidden">
                       <img
-                        src={relatedProduct.image}
+                        src={relatedProduct.image_url}
                         alt={relatedProduct.name}
-                        className="object-contain p-4 group-hover:scale-105 transition-transform duration-300 w-full h-full"
-                        loading="lazy"
+                        className="object-contain p-6 group-hover:scale-105 transition-transform duration-300 w-full h-full"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/images/placeholder-product.jpg';
+                        }}
                       />
                     </div>
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-sm text-gray-600 font-medium">{relatedProduct.brand}</span>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm text-blue-600 font-medium">{relatedProduct.brand}</span>
+                        <span className="text-xs text-gray-500">{relatedProduct.category}</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                         {relatedProduct.name}
                       </h3>
-                      <div className="text-sm text-green-600 font-medium">
-                        ✓ Stokta
-                      </div>
+                      <p className="text-gray-600 text-sm mt-2 line-clamp-2">
+                        {relatedProduct.description}
+                      </p>
                     </div>
                   </Link>
                 ))}

@@ -1,3 +1,11 @@
+const { Pool } = require('pg');
+
+// Database connection
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+});
+
 exports.handler = async (event, context) => {
   // CORS headers
   const headers = {
@@ -20,7 +28,7 @@ exports.handler = async (event, context) => {
 
     if (method === 'POST') {
       const body = JSON.parse(event.body);
-      const { name, email, phone, subject, message } = body;
+      const { name, email, phone, subject, message, service_interest } = body;
 
       // Validation
       if (!name || !email || !message) {
@@ -31,45 +39,74 @@ exports.handler = async (event, context) => {
         };
       }
 
-      // In production, save to database
-      // For now, just return success
-      const id = Date.now().toString();
+      // Get client IP (handle multiple IPs in x-forwarded-for)
+      let ip_address = event.headers['x-forwarded-for'] || event.headers['x-real-ip'] || null;
+      if (ip_address && ip_address.includes(',')) {
+        ip_address = ip_address.split(',')[0].trim(); // Take first IP
+      }
+      const user_agent = event.headers['user-agent'] || null;
 
-      return {
-        statusCode: 200,
-        headers,
-        body: JSON.stringify({
-          success: true,
-          message: 'Message sent successfully',
-          id: id
-        }),
-      };
+      // Save to database
+      const client = await pool.connect();
+      try {
+        const result = await client.query(
+          `INSERT INTO contact_messages 
+           (name, email, phone, subject, message, service_interest, ip_address, user_agent) 
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8) 
+           RETURNING id`,
+          [name, email, phone || null, subject || null, message, service_interest || null, ip_address, user_agent]
+        );
+
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({
+            success: true,
+            message: 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.',
+            id: result.rows[0].id
+          }),
+        };
+      } finally {
+        client.release();
+      }
     }
 
     if (method === 'GET') {
-      // Mock data for contact messages
-      const messages = [
-        {
-          id: '1',
-          name: 'Ahmet Yılmaz',
-          email: 'ahmet@example.com',
-          phone: '0532 123 45 67',
-          subject: 'Kombi Montajı',
-          message: 'Yeni aldığım kombiyi monte ettirmek istiyorum.',
-          urgency: 'medium',
-          status: 'new',
-          createdAt: '2024-01-15T10:00:00Z',
-        },
-      ];
+      // Get contact messages for admin
+      const { status, limit = 50, offset = 0 } = event.queryStringParameters || {};
+      
+      const client = await pool.connect();
+      try {
+        let query = `
+          SELECT cm.*, u.name as assigned_to_name 
+          FROM contact_messages cm 
+          LEFT JOIN users u ON cm.assigned_to = u.id
+        `;
+        const params = [];
+        let paramCount = 1;
+        
+        if (status) {
+          query += ` WHERE cm.status = $${paramCount}`;
+          params.push(status);
+          paramCount++;
+        }
+        
+        query += ` ORDER BY cm.created_at DESC LIMIT $${paramCount} OFFSET $${paramCount + 1}`;
+        params.push(parseInt(limit), parseInt(offset));
 
-      return {
-        statusCode: 200,
-        headers,
-        body: JSON.stringify({
-          success: true,
-          data: messages
-        }),
-      };
+        const result = await client.query(query, params);
+
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({
+            success: true,
+            data: result.rows
+          }),
+        };
+      } finally {
+        client.release();
+      }
     }
 
     return {
@@ -83,7 +120,10 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Internal server error' }),
+      body: JSON.stringify({ 
+        error: 'Internal server error',
+        message: process.env.NODE_ENV === 'development' ? error.message : 'Bir hata oluştu'
+      }),
     };
   }
 }; 

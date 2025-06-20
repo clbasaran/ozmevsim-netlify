@@ -1,5 +1,4 @@
 // Publish localStorage data to production
-import { STORAGE_KEYS } from './data';
 
 interface PublishResponse {
   success: boolean;
@@ -15,12 +14,12 @@ export async function publishAllData(): Promise<PublishResponse> {
   const errors: string[] = [];
   const successes: string[] = [];
 
-  // Get all localStorage data
+  // Get essential localStorage data keys
   const dataKeys = [
-    STORAGE_KEYS.HERO_SLIDES,
-    STORAGE_KEYS.SERVICES,
-    STORAGE_KEYS.PRODUCTS,
-    STORAGE_KEYS.REFERENCES
+    'homeServices',
+    'homeStats',  
+    'homeTestimonials',
+    'homeSettings'
   ];
 
   for (const key of dataKeys) {
@@ -28,7 +27,7 @@ export async function publishAllData(): Promise<PublishResponse> {
       const data = localStorage.getItem(key);
       if (!data) continue;
 
-      // For static sites, we need to use Cloudflare Functions
+      // For static sites, we can handle this with simple JSON storage
       const response = await fetch('/api/publish-data', {
         method: 'POST',
         headers: {
@@ -87,19 +86,18 @@ export function enableAutoSync() {
 
   // Listen for storage changes
   window.addEventListener('storage', (e) => {
-    if (e.key && e.newValue && e.key.startsWith('ozmevsim_')) {
+    if (e.key && e.newValue && ['homeServices', 'homeStats', 'homeTestimonials', 'homeSettings'].includes(e.key)) {
       syncSingleData(e.key, JSON.parse(e.newValue));
     }
   });
 
   // Listen for custom events
-  ['heroSlidesUpdated', 'servicesUpdated', 'productsUpdated', 'referencesUpdated'].forEach(event => {
+  ['servicesUpdated', 'statsUpdated', 'testimonialsUpdated', 'settingsUpdated'].forEach(event => {
     window.addEventListener(event, () => {
-      const key = event.replace('Updated', '').replace(/([A-Z])/g, '_$1').toLowerCase();
-      const fullKey = `ozmevsim_${key}`;
-      const data = localStorage.getItem(fullKey);
+      const key = event.replace('Updated', '');
+      const data = localStorage.getItem(key);
       if (data) {
-        syncSingleData(fullKey, JSON.parse(data));
+        syncSingleData(key, JSON.parse(data));
       }
     });
   });
