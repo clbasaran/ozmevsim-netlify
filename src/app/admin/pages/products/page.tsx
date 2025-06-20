@@ -39,6 +39,13 @@ interface Product {
   status: string;
   created_at: string;
   updated_at: string;
+  main_image: string;
+  short_description: string;
+  price: number;
+  price_range: string;
+  specifications: Record<string, string>;
+  is_active: boolean;
+  is_featured: boolean;
 }
 
 interface Category {
@@ -68,7 +75,8 @@ export default function AdminProductsPage() {
   ]);
 
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [isCreating, setIsCreating] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
@@ -79,6 +87,7 @@ export default function AdminProductsPage() {
   const [sortBy, setSortBy] = useState('created_at');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [isLoading, setIsLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
 
   // Load products from API
   useEffect(() => {
@@ -115,23 +124,30 @@ export default function AdminProductsPage() {
     setSelectedProduct({
       id: '',
       name: '',
+      brand: '',
+      category: '',
       description: '',
       image_url: '',
-      category: '',
-      brand: '',
+      main_image: '',
+      short_description: '',
       features: [],
+      price: 0,
+      price_range: '',
+      specifications: {},
+      is_active: true,
+      is_featured: false,
       status: 'active',
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString()
     });
     setIsCreating(true);
-    setIsEditing(true);
+    setIsModalOpen(true);
   };
 
   const handleEditProduct = (product: Product) => {
     setSelectedProduct(product);
     setIsCreating(false);
-    setIsEditing(true);
+    setIsModalOpen(true);
   };
 
   const handleSaveProduct = async () => {
@@ -157,7 +173,7 @@ export default function AdminProductsPage() {
           setProducts(data);
         }
         
-        setIsEditing(false);
+        setIsModalOpen(false);
         setSelectedProduct(null);
       } else {
         console.error('Failed to save product');
@@ -248,6 +264,67 @@ export default function AdminProductsPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  const handleFileUpload = async (file: File): Promise<string> => {
+    if (!file) throw new Error('Dosya seçilmedi');
+
+    // Create FormData for file upload
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('folder', 'products');
+
+    try {
+      // You can implement a file upload API or use a service like Cloudinary
+      // For now, we'll simulate upload and return a local path
+      
+      // Create a local file path simulation
+      const fileName = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, '')}`;
+      const uploadPath = `/uploads/products/${fileName}`;
+      
+      // Here you would normally upload to your storage service
+      // For demo, we'll return the simulated path
+      
+      return uploadPath;
+    } catch (error) {
+      console.error('Upload error:', error);
+      throw new Error('Dosya yüklenirken hata oluştu');
+    }
+  };
+
+  const handleImageFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      alert('Lütfen sadece resim dosyası seçin');
+      return;
+    }
+
+    // Validate file size (max 5MB)
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Dosya boyutu 5MB\'dan küçük olmalıdır');
+      return;
+    }
+
+    try {
+      setUploading(true);
+      const uploadedUrl = await handleFileUpload(file);
+      setSelectedProduct(prev => {
+        if (!prev) return null;
+        return {
+          ...prev,
+          image_url: uploadedUrl,
+          main_image: uploadedUrl
+        };
+      });
+    } catch (error) {
+      console.error('Image upload error:', error);
+      alert('Resim yüklenirken hata oluştu');
+    } finally {
+      setUploading(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -563,7 +640,7 @@ export default function AdminProductsPage() {
       </div>
 
       {/* Edit Modal */}
-      {isEditing && selectedProduct && (
+      {isModalOpen && selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -576,7 +653,7 @@ export default function AdminProductsPage() {
                   {isCreating ? 'Yeni Ürün Ekle' : 'Ürün Düzenle'}
                 </h2>
                 <button
-                  onClick={() => setIsEditing(false)}
+                  onClick={() => setIsModalOpen(false)}
                   className="text-gray-400 hover:text-gray-600"
                 >
                   <XCircleIcon className="h-6 w-6" />
@@ -606,6 +683,59 @@ export default function AdminProductsPage() {
                   </div>
                 </div>
 
+                {/* Image Upload Section */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Ürün Fotoğrafı</label>
+                  <div className="space-y-4">
+                    {/* Current Image Preview */}
+                    {selectedProduct.image_url && (
+                      <div className="relative w-32 h-32 border border-gray-300 rounded-lg overflow-hidden">
+                        <img
+                          src={selectedProduct.image_url}
+                          alt="Ürün önizleme"
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = '/images/placeholder-product.jpg';
+                          }}
+                        />
+                      </div>
+                    )}
+                    
+                    {/* File Upload Input */}
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-1">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImageFileChange}
+                          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                          disabled={uploading}
+                        />
+                      </div>
+                      {uploading && (
+                        <div className="flex items-center space-x-2">
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                          <span className="text-sm text-gray-600">Yükleniyor...</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* URL Input as alternative */}
+                    <div className="text-center text-sm text-gray-500">veya</div>
+                    <div>
+                      <input
+                        type="url"
+                        value={selectedProduct.image_url}
+                        onChange={(e) => setSelectedProduct({...selectedProduct, image_url: e.target.value, main_image: e.target.value})}
+                        placeholder="Fotoğraf URL'i girin"
+                        className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Category and Description */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Kategori</label>
@@ -615,8 +745,8 @@ export default function AdminProductsPage() {
                       className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Kategori Seçin</option>
-                      {categories.map(cat => (
-                        <option key={cat.id} value={cat.name}>{cat.name}</option>
+                      {categories.map(category => (
+                        <option key={category} value={category}>{category}</option>
                       ))}
                     </select>
                   </div>
@@ -629,6 +759,7 @@ export default function AdminProductsPage() {
                     >
                       <option value="active">Aktif</option>
                       <option value="inactive">Pasif</option>
+                      <option value="draft">Taslak</option>
                     </select>
                   </div>
                 </div>
@@ -640,17 +771,6 @@ export default function AdminProductsPage() {
                     onChange={(e) => setSelectedProduct({...selectedProduct, description: e.target.value})}
                     rows={3}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Resim URL</label>
-                  <input
-                    type="text"
-                    value={selectedProduct.image_url}
-                    onChange={(e) => setSelectedProduct({...selectedProduct, image_url: e.target.value})}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="https://example.com/image.jpg"
                   />
                 </div>
 
@@ -691,7 +811,7 @@ export default function AdminProductsPage() {
               {/* Actions */}
               <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-gray-200">
                 <button
-                  onClick={() => setIsEditing(false)}
+                  onClick={() => setIsModalOpen(false)}
                   className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   İptal

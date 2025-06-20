@@ -41,23 +41,26 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
     const loadProduct = async () => {
       setIsLoading(true);
       try {
-        // Fetch single product
-        const response = await fetch(`/api/products/?id=${productId}`);
+        // Fetch single product using the ID endpoint
+        const response = await fetch(`/api/products/${productId}`);
         if (response.ok) {
-          const allProducts = await response.json();
-          const foundProduct = allProducts.find((p: Product) => p.id === productId);
+          const productData = await response.json();
+          setProduct(productData);
           
-          if (foundProduct) {
-            setProduct(foundProduct);
-            
-            // Fetch related products from same category
-            const relatedResponse = await fetch(`/api/products/?category=${foundProduct.category}`);
+          // Fetch related products from same category
+          if (productData.category) {
+            const relatedResponse = await fetch(`/api/products/`);
             if (relatedResponse.ok) {
-              const relatedData = await relatedResponse.json();
-              const filtered = relatedData.filter((p: Product) => p.id !== productId).slice(0, 3);
+              const allProducts = await relatedResponse.json();
+              const productsArray = Array.isArray(allProducts) ? allProducts : (allProducts.data || []);
+              const filtered = productsArray
+                .filter((p: Product) => p.category === productData.category && p.id !== productId)
+                .slice(0, 3);
               setRelatedProducts(filtered);
             }
           }
+        } else {
+          console.error('Product not found');
         }
       } catch (error) {
         console.error('Error loading product:', error);
