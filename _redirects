@@ -1,0 +1,7 @@
+# API redirects to Netlify Functions
+/api/contact /.netlify/functions/contact 200
+/api/products /.netlify/functions/products 200
+/api/blog /.netlify/functions/blog 200
+
+# SPA fallback for client-side routing
+/* /index.html 200 

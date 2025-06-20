@@ -1,0 +1,2007 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KMK8C72');
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+	<!-- Removed 02.05.2023
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KMK8C72');</script>
+-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KV88C5HG5H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function
+		gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-KV88C5HG5H');
+	</script>
+
+	<base href="https://eca.com.tr/">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="content-language" content="tr">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="content-language" content="tr">
+	<meta name="description" content="E.C.A. SEREL. Klimadan kombiye, armatürden seramik gereçlerine kadar yüksek performanslı, düşük sarfiyatlı çevre dostu ürünleriyle Yıllarca Beraber." />
+	<meta name="keywords" content="" />
+
+	<!-- Removed 14 June 2022
+	<title></title> -->
+
+	<!-- Added 14 June 2022  -->
+	<title>E.C.A. SEREL: Yıllarca Beraber</title>
+
+	<meta name="og:title" content="Page Not Found! - E.C.A. SEREL: Yıllarca Beraber">
+	<meta name="og:description" content="">
+	<!-- <meta name="og:image" content="upload/files/files_2019-10-31_14-55-35.png"> -->
+	<!-- ysn added -->
+	<!-- <meta property="og:image" name="og:image" itemprop="image" content="https://eca.com.tr/upload/files/files_2019-10-31_14-55-35.png" /> -->
+	<meta property="og:image" name="og:image" itemprop="image" content="https://eca.com.tr/assets/images/eca-serel-logo.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<!-- ysn added -->
+
+	<meta name="og:url" content="https://eca.com.tr/Storage/Products/Main/fd5a2a47-0e8f-4df3-8d61-8de3f1e2a0c7.png">
+	<meta property="og:locale" content="tr">
+	<meta name="og:site_name" content="E.C.A. SEREL: Yıllarca Beraber">
+	<meta name="og:type" content="website">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://eca.com.tr/Storage/Products/Main/fd5a2a47-0e8f-4df3-8d61-8de3f1e2a0c7.png">
+	<meta name="twitter:title" content="Page Not Found! - E.C.A. SEREL: Yıllarca Beraber">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="upload/files/files_2019-10-31_14-55-35.png">
+	<meta name="twitter:site_name" content="E.C.A. SEREL: Yıllarca Beraber">
+	<meta name="twitter:creator" content="@egegen">
+	<meta name="twitter:site" content="@egegen">
+
+	<meta itemprop="name" content="Page Not Found! - E.C.A. SEREL: Yıllarca Beraber">
+	<meta itemprop="description" content="">
+	<meta itemprop="url" content="https://eca.com.tr/Storage/Products/Main/fd5a2a47-0e8f-4df3-8d61-8de3f1e2a0c7.png">
+	<meta itemprop="image" content="upload/files/files_2019-10-31_14-55-35.png">
+	<script src="assets/js/internet-explorer.js"></script>
+	<!-- favicons -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+	<link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/plugins/swiper/css/swiper.min.css" />
+
+			<link rel="stylesheet" href="assets/css/main.css" />
+	
+			<script>
+		var BASE_URL = "https://eca.com.tr/",
+			LANG = "tr";
+	</script>
+
+
+
+    <link rel="stylesheet" href="https://eca.com.tr/assets/cookieconsent/cookieconsent.css"><style>
+        .cc--light-funky {
+            color-scheme: light;
+
+            --cc-bg: #f9faff;
+            --cc-primary-color: #009CDC;
+            --cc-secondary-color: #112954;
+
+            --cc-btn-primary-bg: #009CDC;
+            --cc-btn-primary-color: var(--cc-bg);
+            --cc-btn-primary-hover-bg: #213657;
+            --cc-btn-primary-hover-color: #fff;
+
+            --cc-btn-secondary-bg: #dfe7f9;
+            --cc-btn-secondary-color: var(--cc-secondary-color);
+            --cc-btn-secondary-hover-bg: #c6d1ea;
+            --cc-btn-secondary-hover-color: #000;
+
+            --cc-cookie-category-block-bg: #ebeff9;
+            --cc-cookie-category-block-border: #ebeff9;
+            --cc-cookie-category-block-hover-bg: #dbe5f9;
+            --cc-cookie-category-block-hover-border: #dbe5f9;
+            --cc-cookie-category-expanded-block-hover-bg: #ebeff9;
+            --cc-cookie-category-expanded-block-bg: #ebeff9;
+
+            --cc-overlay-bg: rgba(219, 232, 255, 0.85)!important;
+
+            --cc-toggle-readonly-bg: #cbd8f1;
+            --cc-toggle-on-knob-bg: var(--cc-bg);
+            --cc-toggle-off-bg: #8fa8d6;
+            --cc-toggle-readonly-knob-bg: var(--cc-bg);
+
+            --cc-separator-border-color: #f1f3f5;
+
+            --cc-footer-border-color: #f1f3f5;
+            --cc-footer-bg: var(--cc-bg);
+
+            --cc-btn-border-radius: 1rem .6rem 1.3rem .5rem / .5rem 1rem;
+            --cc-modal-border-radius: var(--cc-btn-border-radius);
+            --cc-pm-toggle-border-radius: var(--cc-btn-border-radius);
+        }
+
+        .cc--light-funky #cc-main .toggle__icon:after {
+            border-radius: var(--cc-btn-border-radius);
+        }
+
+        .cc--light-funky #cc-main .cm__btn--close {
+            border-radius: var(--cc-btn-border-radius);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style><script defer src="https://eca.com.tr/assets/cookieconsent/cookieconsent.umd.js"></script>
+    <script defer>
+    CookieConsent.run({
+    guiOptions: {
+        consentModal: {
+            layout: "box wide",
+            position: "middle center",
+            equalWeightButtons: true,
+            flipButtons: true
+        },
+        preferencesModal: {
+            layout: "box",
+            position: "right",
+            equalWeightButtons: false,
+            flipButtons: true
+        }
+    },
+    categories: {
+        necessary: {
+            readOnly: true
+        },
+        functionality: {},
+        analytics: {},
+        marketing: {}
+    },
+    language: {
+        default: "en",
+        autoDetect: "browser",
+        translations: {
+            en: {
+                consentModal: {
+                    title: "Çerez Kullanımı",
+                    description: "<p>&nbsp;&nbsp;&nbsp;&nbsp;İnternet Sitesi’nin sağlanması ve bilgi toplumu hizmetlerinin sunulması için zorunlu çerezler kullanmaktayız. Ayrıca, İnternet Sitesi’ni daha işlevsel kullanabilmeniz ve deneyiminizin iyileştirilmesi kapsamında performans ve analitik çerezleri, size yönelik kişiselleştirilmiş ürün ve hizmet tanıtımı kapsamında ise reklam ve pazarlama çerezleri kullanılmak istenmektedir. Zorunlu olmayan çerezler onay vermediğiniz durumlarda kullanılmayacaktır.</p>\n<br>\n<br>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;İnternet Sitesi’nde kullanılan çerezlerin türü ve kullanım amaçları ile bu çerezler bakımından sahip olduğunuz tercih haklarınıza ilişkin detaylı bilgiler için <a href='https://eca.com.tr/upload/kvkk/ECA-cerez-aydinlatma-metni-pdf-15-08-24.pdf'>Çerez Aydınlatma Metni</a> ’ni inceleyebilirsiniz.</p>\n",
+                    closeIconLabel: "X",
+                    acceptAllBtn: "Tümünü Kabul Et",
+                    acceptNecessaryBtn: "Tümünü Reddet",
+                    showPreferencesBtn: "Çerezleri Yönet",
+                    footer: "<a href=\"https://eca.com.tr/upload/kvkk/gizlilik-politikasi.pdf\">Gizlilik Politikası</a>\n<a href=\"https://eca.com.tr/upload/kvkk/kullanim-sartlari.pdf\">Şartlar ve koşullar</a>"
+                },
+                preferencesModal: {
+                    title: "Rıza Tercihleri Merkezi",
+                    closeIconLabel: "Kapat",
+                    acceptAllBtn: "Tümünü Kabul Et",
+                    acceptNecessaryBtn: "Tümünü Reddet",
+                    savePreferencesBtn: "Tercihleri kaydet",
+                    serviceCounterLabel: "Hizmetler",
+                    sections: [
+                        {
+                            title: "Çerez Kullanımı",
+                            description: "<p>&nbsp;&nbsp;&nbsp;&nbsp;İnternet Sitesi’nin sağlanması ve bilgi toplumu hizmetlerinin sunulması için zorunlu çerezler kullanmaktayız. Ayrıca, İnternet Sitesi’ni daha işlevsel kullanabilmeniz ve deneyiminizin iyileştirilmesi kapsamında performans ve analitik çerezleri, size yönelik kişiselleştirilmiş ürün ve hizmet tanıtımı kapsamında ise reklam ve pazarlama çerezleri kullanılmak istenmektedir. Zorunlu olmayan çerezler onay vermediğiniz durumlarda kullanılmayacaktır.</p>\n<br>\n<br>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;İnternet Sitesi’nde kullanılan çerezlerin türü ve kullanım amaçları ile bu çerezler bakımından sahip olduğunuz tercih haklarınıza ilişkin detaylı bilgiler için <a href='/cerez-aydinlatma-metni'>Çerez Aydınlatma Metni</a> ’ni inceleyebilirsiniz.</p>\n"
+                        },
+                        {
+                            title: "Kesinlikle Gerekli Çerezler <span class=\"pm__badge\">Always Enabled</span>",
+                            description: "Bu çerezler, internet sitemizin düzgün çalışması ve temel işlevlerini yerine getirebilmesini sağlar. Tarayıcı ayarlarınızı değiştirerek bu çerezleri devre dışı bırakabilirsiniz, ancak bu, internet sitesinin düzgün çalışmasını engelleyebilir.",
+                            linkedCategory: "necessary"
+                        },
+                        {
+                            title: "İşlevsellik Çerezleri",
+                            description: "İşlevsellik çerezleri kullanım tercihlerinizi hatırlayan çerezlerdir. İşlevsellik çerezlerini kabul ederek, sitenin daha kolay çalışması için gerekli özellikleri kullanabilirsiniz. Bu çerezlerden bir kısmının sağlayıcıları yurt dışında bulunmaktadır. Bu çerezlerin kullanımını etkinleştirmeniz halinde çerezler aracılığıyla işlenen kişisel verileriniz yurt dışına aktarılacaktır.",
+                            linkedCategory: "functionality"
+                        },
+                        {
+                            title: "Analitik (Performans) Çerezleri",
+                            description: "Bu çerezler internet sitemizi optimize etmemize yardımcı olur. Bu çerezleri kullanmamıza izin verdiğinizde, kullanıcılarımızın en çok hangi sayfaları gezmekten keyif aldıkları ve hangi ürünlerin en popüler olduğu hakkında bilgi sahibi olabiliriz. Bu çerezlerden bir kısmının sağlayıcıları yurt dışında bulunmaktadır. Bu çerezlerin kullanımını etkinleştirmeniz halinde çerezler aracılığıyla işlenen kişisel verileriniz yurt dışına aktarılacaktır.",
+                            linkedCategory: "analytics"
+                        },
+                        {
+                            title: "Pazarlama/Hedefleme Çerezleri",
+                            description: "Bu çerezler, ilgisiz reklamları görmenizi engellemeye yardımcı olmak için kullanılır. Ayrıca, diğer internet sitelerini ziyaret ettiğinizde, göz attığınız, aradığınız veya satın aldığınız ürünlere dayalı olarak isabetli reklamları yapmak için kullanılırlar. Bu çerezlerden bir kısmının sağlayıcıları yurt dışında bulunmaktadır. Bu çerezlerin kullanımını etkinleştirmeniz halinde çerezler aracılığıyla işlenen kişisel verileriniz yurt dışına aktarılacaktır",
+                            linkedCategory: "marketing"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    disablePageInteraction: true
+});
+</script>
+
+
+
+
+
+</head>
+
+
+
+<body >
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMK8C72" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-52175268-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+	<div style="display:none">
+			</div>
+
+
+
+
+	<!-- Header -->
+
+<header id="header">
+    <div class="h-top">
+        <div class="grid grid-ver container">
+            <a class="hide-lg-up navbar-brand" href="https://eca.com.tr/" title="E.C.A. SEREL: Yıllarca Beraber">
+                <img src="https://eca.com.tr/upload/files/files_2019-10-31_14-55-35.png" alt="E.C.A. SEREL: Yıllarca Beraber" />
+            </a>
+            <button class="navbar-toggler menu-toggler hide-lg-up collapsed" type="button" data-toggle="collapse" data-target="#topMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse h-nav" id="topMenu">
+                <nav class="grid h-navmenu">
+		<a href="reklam-filmleri" target="_self" title="Medya">
+		Medya	</a>
+		<a href="kurucularimiz" target="_self" title="Hakkımızda">
+		Hakkımızda	</a>
+		<a href="sikca-sorulan-sorular" target="_self" title="Tüketici Köşesi">
+		Tüketici Köşesi	</a>
+		<a href="https://servis.emarservis.com.tr/website/website" target="_blank" title="Servis Talebi">
+		Servis Talebi	</a>
+		<a href="iletisim-bilgileri" target="_self" title="İletişim">
+		İletişim	</a>
+		<a href="kampanyalar" target="_self" title="Kampanyalar">
+		Kampanyalar	</a>
+</nav>                <div class="h-top-right">
+                    <ul class="h-top-nav">
+
+                                                    <li class="hide-lg-down">
+                                <a href="tel:444 0 322">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.995 24.983"><path d="M1030.377,25.988a2.564,2.564,0,0,0,2.625-2.5V16.828a2.561,2.561,0,0,0-2.572-2.5,7.744,7.744,0,0,1,7.821-6.662h3.5a7.744,7.744,0,0,1,7.821,6.662,2.561,2.561,0,0,0-2.572,2.5V23.49a2.554,2.554,0,0,0,2.467,2.5A2.619,2.619,0,0,1,1047,27.653h-3.657a2.661,2.661,0,0,0-3.349-1.523,2.469,2.469,0,0,0-1.6,3.188,2.661,2.661,0,0,0,3.349,1.523,2.564,2.564,0,0,0,1.6-1.523H1047a4.3,4.3,0,0,0,4.322-3.656A4.166,4.166,0,0,0,1054,21.824V18.493a4.16,4.16,0,0,0-2.625-3.822A9.432,9.432,0,0,0,1041.75,6h-3.5a9.432,9.432,0,0,0-9.623,8.669A4.161,4.161,0,0,0,1026,18.493v3.331A4.273,4.273,0,0,0,1030.377,25.988Zm10.5,3.331a.834.834,0,1,1,.875-.832A.854.854,0,0,1,1040.875,29.319Zm11.373-10.825v3.331a2.564,2.564,0,0,1-2.624,2.5.855.855,0,0,1-.875-.833V16.828a.854.854,0,0,1,.875-.833A2.564,2.564,0,0,1,1052.248,18.493Zm-24.5,0a2.564,2.564,0,0,1,2.625-2.5.854.854,0,0,1,.875.833V23.49a.855.855,0,0,1-.875.833,2.564,2.564,0,0,1-2.625-2.5Z" transform="translate(-1026.002 -6.002)"/></svg>
+                                    </span>
+                                    <span class="text">444 0 322</span>
+                                </a>
+                            </li>
+                            <li class="hide-lg-down">
+                                <a href="tel:0 850 800 0 322">
+                                    <span class="icon">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.26 236.2"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M155.66,145.3a12.4,12.4,0,0,0-17.2-3.6l-3.4,2.2a12.38,12.38,0,0,0-4.3,4.8c-5.9-5.5-12.7-14.4-20.7-28.2-8.2-14.2-12.5-24.8-14.3-32.7a12.44,12.44,0,0,0,7-1.2l3.6-1.8a12.43,12.43,0,0,0,5.4-16.7l-10.3-20.2a12.55,12.55,0,0,0-16.7-5.5l-3.6,1.8a11.94,11.94,0,0,0-4.7,4.2h0c-9,13.8-11.6,38.8,14.1,83.4,24.3,42.2,46.1,53.6,62.4,54a11.3,11.3,0,0,0,2.6,0h.4a12.83,12.83,0,0,0,4.9-1.9l3.4-2.2a12.42,12.42,0,0,0,3.6-17.2Z"/><path class="cls-1" d="M75.36,218.3l-9.8-5.3,2-3.6L82,217.2l-10.4,19-14.2-7.8,2-3.6,9.6,5.3,2.2-4.1-8.8-4.8,1.9-3.5,8.8,4.8Z"/><path class="cls-1" d="M63.06,206.3a2.26,2.26,0,0,1-2.3,2.9,3.84,3.84,0,0,1-3.6-2.8,2.26,2.26,0,0,1,2.3-2.9A3.87,3.87,0,0,1,63.06,206.3Z"/><path class="cls-1" d="M52,200.7a10.44,10.44,0,0,1-3.3,8.3,10.15,10.15,0,0,1-8.6,2.5,14.82,14.82,0,0,1-9-5.1c-3.2-3.6-4.7-8.1-3.9-11.9l4.6,1.9c-.6,2.3.3,4.9,2.3,7.2a9.4,9.4,0,0,0,5.7,3.3,6.74,6.74,0,0,0,7.6-6.9,9.86,9.86,0,0,0-2.7-6c-2-2.2-4.7-3.4-6.9-3l-1.4-4.8c3.8-.4,8.2,1.4,11.4,5A15.43,15.43,0,0,1,52,200.7Z"/><path class="cls-1" d="M37.86,179.5a2.35,2.35,0,0,1-3.2,2,3.83,3.83,0,0,1-2.4-3.9,2.35,2.35,0,0,1,3.2-2A3.91,3.91,0,0,1,37.86,179.5Z"/><path class="cls-1" d="M26.06,154.2,23,157.1l3.9,9.8h4.2l2.1,5.2-23.6-.7-2.4-6L24,148.8Zm-3.6,12.7-2.7-6.8-6.9,6.6Z"/><path class="cls-1" d="M23.16,144.1a2.39,2.39,0,0,1-3.7.7,3.77,3.77,0,0,1-.8-4.5,2.39,2.39,0,0,1,3.7-.7A3.66,3.66,0,0,1,23.16,144.1Z"/><path class="cls-1" d="M16.16,102.1l2.6-4.2a13.47,13.47,0,0,1,3.9,9.7l1.1.1c.4-1.4,1.4-2.5,2.7-2.4,2.2.2,2.8,3.1,1.9,8.6l-2.8-.3c.5-2.7.4-4.1-.2-4.1-.4,0-.8.7-1,2.3l-2.1-.2a14.21,14.21,0,0,1-4.6,8.2,9.66,9.66,0,0,1-7.9,2.4,9.77,9.77,0,0,1-7.5-4.8,14.4,14.4,0,0,1-2.1-10.2c.5-4.8,3-8.8,6.4-10.7l1.6,4.7c-2.1,1.1-3.5,3.5-3.9,6.5a8.89,8.89,0,0,0,1.3,6.4,6.32,6.32,0,0,0,4.8,2.9,6.71,6.71,0,0,0,5.3-1.7,9.35,9.35,0,0,0,2.7-6C18.76,106.3,17.86,103.5,16.16,102.1Z"/><path class="cls-1" d="M15.46,75.6l1.8-4.6,14.5,5.6-1.7,4.6-1.7-.7a8,8,0,0,1-.1,6.6,9.29,9.29,0,0,1-4.5,5.2,7.58,7.58,0,0,1-6.4.4A7.44,7.44,0,0,1,13,88.1a9.66,9.66,0,0,1,.1-6.9,7.88,7.88,0,0,1,4.3-4.9Zm9.4,9.3a5.88,5.88,0,0,0,.2-3.9,3.56,3.56,0,0,0-2.4-2.5,3.66,3.66,0,0,0-3.5.3,5.3,5.3,0,0,0-2.5,3.1,5.88,5.88,0,0,0-.2,3.9,4.17,4.17,0,0,0,5.9,2.3A6.68,6.68,0,0,0,24.86,84.9Z"/><path class="cls-1" d="M17.86,57.3l2.5-3.6c.9.6,1.7.4,2.4-.7s.7-1.9-.2-2.5l2.5-3.6c2.3,1.6,2.4,4.4.1,7.8C22.86,57.9,20.16,58.9,17.86,57.3Zm11.7-6.2,2.7-3.9,12.2,8.4a6.3,6.3,0,0,1,2.9,5.5A11.51,11.51,0,0,1,45,67.9c-2.3,3.4-5.2,5.3-8.2,5.2l.7-4.5c1.7,0,3.3-.9,4.6-2.9,1.7-2.5,1.7-4.9-.3-6.2l-1.4-.9a7.53,7.53,0,0,1-1.5,6.3,9.8,9.8,0,0,1-5.7,4.2,7.27,7.27,0,0,1-9.3-6.4,10,10,0,0,1,1.9-6.8,7.62,7.62,0,0,1,5.4-3.7Zm2.9,3.8a6,6,0,0,0-3.1,2.4,5.71,5.71,0,0,0-1.2,3.8,3.74,3.74,0,0,0,1.6,2.9c2,1.4,4.8.6,6.5-2s1.5-5.4-.5-6.8A4.17,4.17,0,0,0,32.46,54.9Z"/><path class="cls-1" d="M43.46,39.4c-.7-2.1.2-4.4,2-6.2l3.1,3.2a6.08,6.08,0,0,0-2.3,3.3,3.41,3.41,0,0,0,1,3.5l5.2,5.3L49,51.9l-10.9-11,3.5-3.4Z"/><path class="cls-1" d="M60.06,41.9l-9.4-12.3,3.9-3L64,38.9Z"/><path class="cls-1" d="M95,.3l7.3,20.4-4.9,1.7L92.66,9.1l-3.6,12-.6.2-10.4-7,4.7,13.2-4.9,1.8L70.56,8.9l5.1-1.8,10.6,7.1L90,2Z"/><path class="cls-1" d="M111.46,13.7c.8,1.9,2.7,2.7,5.6,2.5a5.89,5.89,0,0,0,4.1-1.9l4.1,1.5c-1.7,2.3-4.3,3.7-7.9,4a11.23,11.23,0,0,1-7.7-1.7,7.39,7.39,0,0,1-3.3-5.6,7.29,7.29,0,0,1,2.3-6,10.69,10.69,0,0,1,7-2.9,10.13,10.13,0,0,1,7,1.8,7.57,7.57,0,0,1,3.2,5.6,10.28,10.28,0,0,1-.1,1.7Zm9.3-3.9c-.7-2.1-2.7-2.9-4.9-2.7-2.6.2-4.3,1.5-4.7,3.5Z"/><path class="cls-1" d="M137.06,6.8c1.1-1.9,3.5-2.6,6-2.4l-.5,4.4a7.08,7.08,0,0,0-4.1.3,3.46,3.46,0,0,0-2.1,3l-.7,7.4-4.9-.5,1.6-15.4,4.9.5Z"/><path class="cls-1" d="M162.36,25.5l-5.5-1.5-4.7-8.6-1.9,6.8-4.7-1.3L151.46,0l4.7,1.3-3.5,12.5,8.1-4.8,5.6,1.6L157,15.9Z"/><path class="cls-1" d="M170.86,22.9c-.3,2,.8,3.7,3.4,5a5.67,5.67,0,0,0,4.5.5l2.7,3.4c-2.7,1.1-5.6.9-8.9-.8a11.1,11.1,0,0,1-5.6-5.5,7.41,7.41,0,0,1,.1-6.5,7.25,7.25,0,0,1,5.1-3.9,10.24,10.24,0,0,1,7.5,1.2,9.7,9.7,0,0,1,5,5.2,7.53,7.53,0,0,1-.2,6.4,5.51,5.51,0,0,1-.9,1.4Zm9.9,1.6c.5-2.1-.8-3.9-2.8-4.9-2.3-1.2-4.4-1-5.8.5Z"/><path class="cls-1" d="M190.86,37.8l6.6,5.2-2.3,2.9-11.7-9.2,1.6-2.1L197,32.4l-6-4.7,2.3-2.9,11.1,8.8-1.7,2.1Z"/><path class="cls-1" d="M198.56,49.6l11.3-10.7,3.4,3.5L202,53.1Zm13.9-14a2.88,2.88,0,0,1,3.9.5,2.94,2.94,0,0,1,.3,3.9,2.88,2.88,0,0,1-3.9-.5C211.66,38.2,211.56,36.5,212.46,35.6Z"/><path class="cls-1" d="M138.16,209.7c.3,0,.5-.1.8-.1s.8-.1,1.2-.2l1.4-.3c.2,0,.4-.1.6-.1.6-.1,1.3-.3,1.9-.4h.1a88.25,88.25,0,0,0,35.9-17.3c.1-.1.2-.1.2-.2.4-.3.8-.7,1.2-1,.2-.2.4-.3.6-.5s.6-.5.9-.8.6-.5.9-.8.4-.3.5-.5c.4-.4.8-.7,1.2-1.1l.2-.2a87.34,87.34,0,0,0,21.8-33.3v-.1l.6-1.8c.1-.2.1-.4.2-.6.1-.4.3-.9.4-1.3a5.64,5.64,0,0,1,.4-1.2,2.35,2.35,0,0,0,.2-.8c.2-.6.3-1.2.5-1.8,0-.1,0-.1.1-.2a86.91,86.91,0,0,0,2.6-15.4v-.1c0-.4.1-.8.1-1.2s.1-.8.1-1.2v-.1a80.86,80.86,0,0,0-.6-15.6v-.2c-.1-.6-.2-1.2-.3-1.9,0-.3-.1-.5-.1-.8s-.1-.8-.2-1.3-.2-.9-.3-1.4c0-.2-.1-.4-.1-.7-.1-.6-.3-1.3-.4-1.9v-.1a88.25,88.25,0,0,0-17.3-35.9c-.1-.1-.1-.2-.2-.2-.3-.4-.7-.8-1-1.2-.2-.2-.3-.4-.5-.6a6.47,6.47,0,0,0-.8-.9c-.3-.3-.5-.6-.8-.9s-.3-.4-.5-.5c-.4-.4-.7-.8-1.1-1.2l-.2-.2a87.34,87.34,0,0,0-33.3-21.8H155l-1.8-.6c-.2-.1-.4-.1-.6-.2-.4-.1-.9-.3-1.3-.4a5.64,5.64,0,0,1-1.2-.4,2.35,2.35,0,0,0-.8-.2c-.6-.2-1.2-.3-1.8-.5-.1,0-.1,0-.2-.1a86,86,0,0,0-16.1-2.7H131a17.7,17.7,0,0,0-2.3-.1h-.4a16.2,16.2,0,0,1-2.2-.1h-2.8a19.27,19.27,0,0,0-2.4.1h0a87.71,87.71,0,0,0-16.3,2.3l6.5,12.9a77.88,77.88,0,0,1,9.7-1.2c.8,0,1.6-.1,2.4-.1H128c.6,0,1.3.1,1.9.1s1.1.1,1.7.1,1.3.1,2,.2c.5.1,1,.1,1.5.2a20,20,0,0,1,2.4.4c.4.1.9.1,1.3.2a15.54,15.54,0,0,1,2.3.5l1.4.3a16,16,0,0,0,2.1.5,9.83,9.83,0,0,1,1.6.5c.6.2,1.2.4,1.7.6s1.3.4,1.9.6.9.3,1.4.5c.7.3,1.4.6,2.2.9.3.1.7.3,1,.4.8.4,1.6.7,2.4,1.1a4.88,4.88,0,0,0,.7.3c.9.4,1.8.9,2.6,1.3a.76.76,0,0,0,.4.2c.9.5,1.8,1,2.7,1.6.1.1.2.1.3.2l2.7,1.8c.1.1.2.1.2.2.9.6,1.8,1.2,2.7,1.9.1.1.2.1.3.2l2.5,1.9c.1.1.3.2.4.4l2.2,1.9.6.6c.6.6,1.3,1.2,1.9,1.8l.9.9c.5.5,1,1,1.5,1.6a6.89,6.89,0,0,1,1.1,1.3,12.67,12.67,0,0,1,1.1,1.3l1.4,1.7c.3.3.5.7.8,1l1.5,2.1c.2.2.3.5.5.7.6.8,1.1,1.6,1.6,2.4.1.2.2.3.3.5.6.9,1.1,1.8,1.6,2.7.1.1.1.2.2.3.5.9,1,1.9,1.5,2.9,0,.1.1.2.1.3.5,1,.9,2,1.4,2.9,0,.1.1.2.1.3.4,1,.8,1.9,1.2,2.9.1.2.1.3.2.5.3.9.7,1.8,1,2.8a1.85,1.85,0,0,1,.2.7c.3.8.5,1.7.8,2.5.1.3.2.7.3,1,.2.7.4,1.5.6,2.2.1.5.2.9.3,1.4s.3,1.3.4,1.9l.3,1.8a8.75,8.75,0,0,1,.2,1.6l.3,2.1a6.6,6.6,0,0,1,.1,1.4c.1.8.1,1.6.2,2.4a5.7,5.7,0,0,0,.1,1.3c0,.8.1,1.6.1,2.4v1.4a16.2,16.2,0,0,1-.1,2.2c0,.6-.1,1.2-.1,1.8s-.1,1.2-.1,1.8-.1,1.5-.2,2.2c-.1.5-.1,1-.2,1.4a20,20,0,0,1-.4,2.4c-.1.4-.1.9-.2,1.3a15.54,15.54,0,0,1-.5,2.3c-.1.5-.2.9-.3,1.4a16,16,0,0,0-.5,2.1,9.83,9.83,0,0,1-.5,1.6c-.2.6-.4,1.2-.6,1.7s-.4,1.2-.6,1.9c-.2.5-.3.9-.5,1.4-.3.7-.6,1.4-.9,2.2-.1.3-.3.7-.4,1-.4.8-.7,1.6-1.1,2.4a4.88,4.88,0,0,0-.3.7c-.4.9-.9,1.8-1.3,2.6a.76.76,0,0,0-.2.4c-.5.9-1,1.8-1.6,2.7-.1.1-.1.2-.2.3l-1.8,2.7c-.1.1-.1.2-.2.2-.6.9-1.2,1.8-1.9,2.7-.1.1-.1.2-.2.3-.6.8-1.3,1.7-1.9,2.5-.1.1-.2.3-.4.4l-1.9,2.2-.6.6c-.6.6-1.2,1.3-1.8,1.9l-.9.9c-.5.5-1,1-1.6,1.5a12.67,12.67,0,0,1-1.3,1.1,12.67,12.67,0,0,1-1.3,1.1l-1.7,1.4c-.3.3-.7.5-1,.8l-2.1,1.5c-.2.2-.5.3-.7.5-.8.6-1.6,1.1-2.4,1.6-.2.1-.3.2-.5.3-.9.6-1.8,1.1-2.7,1.6-.1.1-.2.1-.3.2-.9.5-1.9,1-2.9,1.5a.35.35,0,0,0-.2.1c-1,.5-2,.9-3,1.4-.1,0-.2.1-.3.1-1,.4-1.9.8-2.9,1.2-.1.1-.3.1-.4.2a23.07,23.07,0,0,1-2.8,1,1.85,1.85,0,0,1-.7.2c-.8.3-1.7.5-2.5.8l-1,.3-2.2.6-1.4.3c-.6.1-1.3.3-1.9.4l-1.8.3a8.75,8.75,0,0,1-1.6.2l-2.1.3a6.6,6.6,0,0,1-1.4.1c-.8.1-1.6.1-2.4.2a5.7,5.7,0,0,0-1.3.1c-.8,0-1.6.1-2.4.1h-1.4a16.2,16.2,0,0,1-2.2-.1c-.6,0-1.2-.1-1.8-.1s-1.2-.1-1.8-.1-1.5-.1-2.2-.2c-.5-.1-.9-.1-1.4-.2a20,20,0,0,1-2.4-.4c-.4-.1-.9-.1-1.3-.2a15.54,15.54,0,0,1-2.3-.5l-1.4-.3a16,16,0,0,0-2.1-.5,9.83,9.83,0,0,1-1.6-.5c-.6-.2-1.2-.4-1.7-.6s-1.2-.4-1.9-.6c-.5-.2-.9-.3-1.4-.5a14.27,14.27,0,0,0-2.2-.8c-.3-.1-.7-.3-1-.4-.8-.4-1.6-.7-2.4-1.1a4.88,4.88,0,0,0-.7-.3c-.9-.4-1.8-.9-2.6-1.3a.76.76,0,0,0-.4-.2c-.9-.5-1.8-1-2.7-1.6-.1-.1-.2-.1-.3-.2l-2.7-1.8c-.1-.1-.2-.1-.2-.2-.9-.6-1.8-1.2-2.7-1.9-.1-.1-.2-.1-.3-.2l-2.5-1.9c-.1-.1-.3-.2-.4-.4l-2.2-1.9-.6-.6c-.6-.6-1.3-1.2-1.9-1.8l-.9-.9c-.5-.5-1-1-1.5-1.6a12.67,12.67,0,0,1-1.1-1.3,12.67,12.67,0,0,1-1.1-1.3L67,168.1c-.3-.3-.5-.7-.8-1l-1.5-2.1c-.2-.2-.3-.5-.5-.7-.6-.8-1.1-1.6-1.6-2.4-.1-.2-.2-.3-.3-.5-.6-.9-1.1-1.8-1.6-2.7-.1-.1-.1-.2-.2-.3-.5-.9-1-1.9-1.5-2.9a.35.35,0,0,0-.1-.2c-.5-1-.9-2-1.4-2.9,0-.1-.1-.2-.1-.3-.4-1-.8-1.9-1.2-2.9-.1-.2-.1-.3-.2-.5-.3-.9-.7-1.8-1-2.8a1.85,1.85,0,0,1-.2-.7c-.3-.8-.5-1.7-.8-2.5-.1-.3-.2-.7-.3-1-.2-.7-.4-1.5-.6-2.3-.1-.5-.2-.9-.3-1.4s-.3-1.3-.4-1.9l-.3-1.8a8.75,8.75,0,0,1-.2-1.6l-.3-2.1a6.6,6.6,0,0,1-.1-1.4c-.1-.8-.1-1.6-.2-2.4a5.7,5.7,0,0,0-.1-1.3c0-.8-.1-1.6-.1-2.4v-2.8c0-1.1.1-2.1.2-3.2a2,2,0,0,1,.1-.7c.1-1.1.2-2.2.4-3.3,0-.2.1-.5.1-.7.1-.5.1-1,.2-1.4s.1-.6.1-.9.1-.8.2-1.3.1-.7.2-1.1.1-.7.2-1c.1-.5.2-.9.3-1.4.1-.2.1-.4.2-.6a8.45,8.45,0,0,1,.5-1.7.37.37,0,0,1,.1-.3,73.15,73.15,0,0,1,5.5-13.9h0a74,74,0,0,1,4.9-8.2A90,90,0,0,1,62,61.4a89.3,89.3,0,0,0-16.3,23.4h0c-.5,1-.9,2-1.4,3-.1.1-.1.3-.2.4-.4.9-.7,1.8-1.1,2.7l-.3.9a20.94,20.94,0,0,0-.8,2.3c-.2.5-.3,1-.5,1.5l-.6,1.8-.6,2.1-.3,1.2c-.2.9-.4,1.7-.6,2.6-.1.3-.1.5-.2.8l-.6,3c0,.2-.1.3-.1.5-.2,1-.3,2.1-.5,3.1a.6.6,0,0,1-.1.4v.1c0,.4-.1.8-.1,1.2a17.85,17.85,0,0,0-.2,2.3,2.2,2.2,0,0,1-.1.8c-.1,1.1-.2,2.1-.2,3.2v.4a88.74,88.74,0,0,0,.6,14.6v.2c.1.6.2,1.2.3,1.9,0,.3.1.5.1.8s.1.8.2,1.2.2.9.3,1.4c0,.2.1.4.1.6.1.6.3,1.3.4,1.9v.1a88.25,88.25,0,0,0,17.3,35.9c.1.1.1.2.2.2.3.4.7.8,1,1.2.2.2.3.4.5.5.3.3.5.6.8.9s.5.6.8.9.3.4.5.5c.4.4.7.8,1.1,1.2l.2.2a87.34,87.34,0,0,0,33.3,21.8H95l1.8.6c.2.1.4.1.6.2.4.1.9.3,1.3.4a5.64,5.64,0,0,1,1.2.4,2.35,2.35,0,0,0,.8.2c.6.2,1.2.3,1.8.5.1,0,.1,0,.2.1a86.91,86.91,0,0,0,15.4,2.6h.1c.4,0,.8.1,1.2.1s.8.1,1.2.1h.1a80.86,80.86,0,0,0,15.6-.6h.2A3.26,3.26,0,0,0,138.16,209.7Z"/></svg>
+                                    </span>
+                                    <span class="text">0 850 800 0 322</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="servisler">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19.599" height="24.362" viewBox="0 0 19.599 24.362"> <g transform="translate(-43.28 0)"> <g transform="translate(43.28 0)"><path d="M50.015,24.085a.947.947,0,0,0,1.339,0L53.437,22a.947.947,0,0,0,0-1.339l-.03-.03,1.459-1.459A.588.588,0,0,1,55.278,19H56.44a1.869,1.869,0,0,0,1.33-.551l1.709-1.709.26.26a1.655,1.655,0,0,0,2.338,0l.318-.318a1.655,1.655,0,0,0,0-2.338l-.26-.26a1.734,1.734,0,0,0,0-2.447l-4.69-4.69a1.734,1.734,0,0,0-2.447,0L52.383,4.334A3.537,3.537,0,0,0,47.521.3l-.55.239L48.91,2.477,47.87,3.517,45.931,1.578l-.239.55A3.537,3.537,0,0,0,49.727,6.99l.565.565a.793.793,0,0,0-.2.141L48.945,8.843a1.869,1.869,0,0,0-.551,1.33v2.14a.581.581,0,0,1-.171.413L46.848,14.1a.973.973,0,0,0-1.208.106L43.557,16.29a.946.946,0,0,0,0,1.339Zm11.8-7.977-.318.318a.838.838,0,0,1-1.183,0l-.26-.26,1.5-1.5.26.26A.838.838,0,0,1,61.819,16.107ZM49.965,6.073l-.234.071a2.722,2.722,0,0,1-3.475-3.087L47.87,4.672l2.2-2.2L48.451.862a2.722,2.722,0,0,1,3.087,3.475l-.071.234,2.953,2.953-1.5,1.5ZM48.8,13.3a1.391,1.391,0,0,0,.41-.99v-2.14a1.058,1.058,0,0,1,.312-.753l1.146-1.146a.042.042,0,0,1,.052,0L52.445,10a.476.476,0,0,0,.657,0l2.469-2.469a.916.916,0,0,1,1.3,0l.617.617-.59.59a.408.408,0,1,0,.577.577l.59-.59,1,1-.59.59a.408.408,0,1,0,.577.577l.59-.59,1,1-.59.59a.408.408,0,1,0,.577.577l.59-.59.341.341a.916.916,0,0,1,0,1.295l-4.362,4.362a1.058,1.058,0,0,1-.753.312H55.278a1.392,1.392,0,0,0-.99.41L52.83,20.056l-5.391-5.391Zm-4.665,3.564,2.082-2.082a.131.131,0,0,1,.185,0l6.457,6.457a.131.131,0,0,1,0,.185l-2.082,2.082a.13.13,0,0,1-.184,0l-6.457-6.457A.131.131,0,0,1,44.135,16.866Z" transform="translate(-43.28 0)"></path></g> </g> </svg>
+                                    </span>
+                                    <span class="text">YETKİLİ SERVİSLER</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="bayiler">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21.34" height="16.361" viewBox="0 0 21.34 16.361"> <path d="M4.357,27.114H6.135v8.181A1.067,1.067,0,0,0,7.2,36.361H22.141a1.067,1.067,0,0,0,1.067-1.067V27.114h1.778a.365.365,0,0,0,.318-.523l-2.1-4.185V20.356A.356.356,0,0,0,22.852,20H6.491a.356.356,0,0,0-.356.356v2.051L4.039,26.6a.356.356,0,0,0,.318.514Zm5.806-4.268L9.173,26.4H6.93l1.649-3.557Zm10.6,0L22.413,26.4H20.171l-.991-3.557Zm-2.323,0,.991,3.557H16.806l-.338-3.557Zm-2.689,0,.331,3.557H13.26l.331-3.557ZM12.538,26.4H9.911l.991-3.557h1.974Zm1.778,9.248H12.182V29.959h2.134Zm.711,0V29.959h2.134V35.65Zm7.469-.356a.356.356,0,0,1-.356.356H17.873V29.6a.356.356,0,0,0-.356-.356H11.826a.356.356,0,0,0-.356.356V35.65H7.2a.356.356,0,0,1-.356-.356V27.114H22.5Zm.7-8.892a.277.277,0,0,0-.018-.05l-1.625-3.507h1.083L24.41,26.4Zm-.7-5.691v1.423H6.847V20.711ZM6.712,22.845H7.795L6.169,26.352a.277.277,0,0,0-.018.05H4.933Z" transform="translate(-4.002 -20)"></path> </svg>
+                                    </span>
+                                    <span class="text">YETKİLİ BAYİLER</span>
+                                </a>
+                            </li>
+                                                <li class="dropdown dropdown-user">
+
+                            <!-- -->
+                            <a class="dropdown-toggle lih-30" href="javascript:;" data-toggle="dropdown" id="cartDropdown">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.651 24.01"><g transform="translate(-17 -16.5)"><path d="M28.826,40.51A12.006,12.006,0,1,0,17,28.5,11.93,11.93,0,0,0,28.826,40.51Zm4.289-3.175a13.92,13.92,0,0,0,1.737-4.53H37.53A9.834,9.834,0,0,1,33.115,37.335ZM38.5,28.5a10.018,10.018,0,0,1-.238,2.162,1.036,1.036,0,0,0-.121-.012H35.177c.064-.669.1-1.358.1-2.065a21.557,21.557,0,0,0-.116-2.235h3.106A10.023,10.023,0,0,1,38.5,28.5Zm-.971-4.3H34.815a13.48,13.48,0,0,0-1.862-4.61A9.828,9.828,0,0,1,37.53,24.2ZM29.9,19.466c1.089.691,2.119,2.382,2.711,4.738H29.9Zm0,6.888H33a19.73,19.73,0,0,1,.02,4.3H29.9Zm0,6.45h2.753c-.584,2.446-1.638,4.2-2.753,4.908Zm-9.779,0H22.8a13.919,13.919,0,0,0,1.737,4.53A9.834,9.834,0,0,1,20.122,32.8Zm7.629,4.908C26.635,37.006,25.581,35.251,25,32.8h2.753Zm0-7.058H24.633a19.729,19.729,0,0,1,.02-4.3h3.1Zm0-11.188V24.2H25.04C25.631,21.848,26.662,20.157,27.751,19.466Zm-3.053.128a13.48,13.48,0,0,0-1.862,4.61H20.122A9.828,9.828,0,0,1,24.7,19.594Zm-5.189,6.76h2.983a21.557,21.557,0,0,0-.116,2.235c0,.707.035,1.4.1,2.065H19.867a1.066,1.066,0,0,0-.458.106,9.961,9.961,0,0,1-.021-4.418A1.036,1.036,0,0,0,19.508,26.355Z"/></g></svg>
+                                </span>
+                                <span class="text">
+                                                                TÜRKİYE
+                                                                </span>
+                            </a>
+                            <!-- -->
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                                                    <a class="dropdown-item" href="home/global" class="">E.C.A. GLOBAL</a>
+                                                                        <a class="dropdown-item" target="_blank" href="http://ecaboilers.co.uk">UNITED KINGDOM</a>
+                                    <a class="dropdown-item" target="_blank" href="http://eca-serel.de">GERMANY</a>
+
+                                
+                                <!-- Select English Language
+                                <a class="dropdown-item" href="https://eca.com.tr/language?lang=en">ENGLISH</a> -->
+                            </div>
+                        </li>
+
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" href="javascript:;" data-toggle="dropdown" id="cartDropdown">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.003 25.002"><g transform="translate(-1383.001 -5.999)"><path d="M1395.5,31A12.5,12.5,0,1,0,1383,18.5,12.515,12.515,0,0,0,1395.5,31Zm0-2.015a10.432,10.432,0,0,1-6.39-2.18,4.986,4.986,0,0,1,4.527-2.957h3.69a5,5,0,0,1,4.543,2.972A10.43,10.43,0,0,1,1395.5,28.987Zm-3.273-11.86A3.273,3.273,0,1,1,1395.5,20.4,3.276,3.276,0,0,1,1392.23,17.126Zm3.273-9.112a10.478,10.478,0,0,1,7.9,17.37,7.032,7.032,0,0,0-5.549-3.528,5.288,5.288,0,1,0-4.705,0,7.022,7.022,0,0,0-5.562,3.511A10.478,10.478,0,0,1,1395.5,8.014Z"/></g></svg>
+                                </span>
+                                <span class="badge badge-pill badge-dark badge-up">
+                                    0                                </span>
+                                <span class="text hide-lg-up">Favorilerim</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="product/favorite" class="dropdown-item">
+                                    <img style="width: 16px!important; margin-right: 10px;" src="https://www.svgrepo.com/show/105567/heart.svg" alt="favorite">
+                                                                        Favorilerim <span class="badge badge-pill badge-primary">0</span>
+                                </a>
+                                <a href="product/comparison" class="dropdown-item">
+                                    <img style="width: 16px!important; margin-right: 10px;" src="https://www.svgrepo.com/show/358779/tfvc-compare.svg" alt="compare">
+                                                                        Karşılaştırma Listesi <span class="badge badge-pill badge-dark">0</span>
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- Select Different Language -->
+                                                    <a href="https://eca.com.tr/language?lang=en">
+                                <img style="width: 24px; height: 24px; object-fit: cover; margin-left: 20px" src="https://cdn-icons-png.flaticon.com/512/299/299688.png" alt="">
+                            </a>
+                        
+                        <li class="hide-lg-up">
+                            <a href="tel:4440322">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.995 24.983"><path d="M1030.377,25.988a2.564,2.564,0,0,0,2.625-2.5V16.828a2.561,2.561,0,0,0-2.572-2.5,7.744,7.744,0,0,1,7.821-6.662h3.5a7.744,7.744,0,0,1,7.821,6.662,2.561,2.561,0,0,0-2.572,2.5V23.49a2.554,2.554,0,0,0,2.467,2.5A2.619,2.619,0,0,1,1047,27.653h-3.657a2.661,2.661,0,0,0-3.349-1.523,2.469,2.469,0,0,0-1.6,3.188,2.661,2.661,0,0,0,3.349,1.523,2.564,2.564,0,0,0,1.6-1.523H1047a4.3,4.3,0,0,0,4.322-3.656A4.166,4.166,0,0,0,1054,21.824V18.493a4.16,4.16,0,0,0-2.625-3.822A9.432,9.432,0,0,0,1041.75,6h-3.5a9.432,9.432,0,0,0-9.623,8.669A4.161,4.161,0,0,0,1026,18.493v3.331A4.273,4.273,0,0,0,1030.377,25.988Zm10.5,3.331a.834.834,0,1,1,.875-.832A.854.854,0,0,1,1040.875,29.319Zm11.373-10.825v3.331a2.564,2.564,0,0,1-2.624,2.5.855.855,0,0,1-.875-.833V16.828a.854.854,0,0,1,.875-.833A2.564,2.564,0,0,1,1052.248,18.493Zm-24.5,0a2.564,2.564,0,0,1,2.625-2.5.854.854,0,0,1,.875.833V23.49a.855.855,0,0,1-.875.833,2.564,2.564,0,0,1-2.625-2.5Z" transform="translate(-1026.002 -6.002)"/></svg>
+                                </span>
+                                <span class="text">444 0 322</span>
+                            </a>
+                        </li>
+                        <li class="lang hidden">
+                            <select name="selectLang" id="selectLang" class="selectLang">
+                                                                    <option value="https://eca.com.tr/language?lang=tr" class="selected">TR</option>
+                                                                    <option value="https://eca.com.tr/language?lang=en" class="">EN</option>
+                                                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-expand-md">
+        <div class="grid grid-ver container">
+            <a class="grid grid-align-center grid_item hide-lg-down navbar-brand" href="https://eca.com.tr/" title="E.C.A. SEREL: Yıllarca Beraber">
+                <img width="345" src="https://eca.com.tr/upload/files/files_2019-10-31_14-55-35.png" alt="E.C.A. SEREL: Yıllarca Beraber" />
+            </a>
+            
+<nav class="grid_item collapse navbar-collapse">
+	<ul class="navbar-nav">
+					<li class="nav-item dropdown" >
+			<a class="nav-link" href="yapi">
+									<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 39"><g transform="translate(-763 -67)"><path d="M771.409,76.75a1.654,1.654,0,0,0-1.682,1.625v3.25h-5.045A1.654,1.654,0,0,0,763,83.25a18.126,18.126,0,0,0,16.818,17.794v3.332a1.683,1.683,0,0,0,3.364,0v-3.332A18.125,18.125,0,0,0,800,83.25a1.654,1.654,0,0,0-1.682-1.625h-5.045v-3.25a1.683,1.683,0,0,0-3.364,0v3.25h-6.727v-9.75a1.683,1.683,0,0,1,3.364,0,1.683,1.683,0,0,0,3.364,0,5.048,5.048,0,0,0-10.091,0v9.75h-6.727v-3.25A1.654,1.654,0,0,0,771.409,76.75ZM781.5,97.875a14.959,14.959,0,0,1-15.044-13h30.088A14.959,14.959,0,0,1,781.5,97.875Z"></g></svg>					</span>
+					<span class="text">YAPI</span>
+							</a>
+			<div class="dropdown-menu container dropdown-megamenu">
+				<div class="megamenu-body">
+					<div class="megamenu-links">
+						<div class="grid grid-center text-primary megamenu-head">
+							
+															<span class="icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 39"><g transform="translate(-763 -67)"><path d="M771.409,76.75a1.654,1.654,0,0,0-1.682,1.625v3.25h-5.045A1.654,1.654,0,0,0,763,83.25a18.126,18.126,0,0,0,16.818,17.794v3.332a1.683,1.683,0,0,0,3.364,0v-3.332A18.125,18.125,0,0,0,800,83.25a1.654,1.654,0,0,0-1.682-1.625h-5.045v-3.25a1.683,1.683,0,0,0-3.364,0v3.25h-6.727v-9.75a1.683,1.683,0,0,1,3.364,0,1.683,1.683,0,0,0,3.364,0,5.048,5.048,0,0,0-10.091,0v9.75h-6.727v-3.25A1.654,1.654,0,0,0,771.409,76.75ZM781.5,97.875a14.959,14.959,0,0,1-15.044-13h30.088A14.959,14.959,0,0,1,781.5,97.875Z"></g></svg>								</span>
+								<span class="text">Yapı Ürünleri</span>
+													</div>
+						<div class="megamenu-content" data-scroll="true">
+							<ul class="megamenu">
+																																			<li class="megamenu-item is-sub">
+											<a href="armaturler" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-02-19_11-02-55.jpg">
+                                                Armatürler                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="armaturler" class="megamenu-link megamenu-title-link">
+														Armatürler													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="lavabo-bataryalari" class="megamenu-link " >
+															Lavabo Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ankastre-lavabo-bataryalari" class="megamenu-link " >
+															Ankastre Lavabo Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="mutfak-bataryalari" class="megamenu-link " >
+															Mutfak Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="banyo-bataryalari" class="megamenu-link " >
+															Banyo Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dus-bataryalari" class="megamenu-link " >
+															Duş Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kuvet-bataryalari" class="megamenu-link " >
+															Küvet Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ankastre-banyo-ve-dus-bataryalari" class="megamenu-link " >
+															Ankastre Banyo ve Duş Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ayakli-kuvet-ve-lavabo-bataryalari" class="megamenu-link " >
+															Ayaklı Küvet ve Lavabo Bataryaları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="fotoselli-bataryalar" class="megamenu-link " >
+															Fotoselli Bataryalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="termostatik-bataryalar" class="megamenu-link " >
+															Termostatik Bataryalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="zaman-ayarli-bataryalar" class="megamenu-link " >
+															Zaman Ayarlı Bataryalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dus-sistemleri" class="megamenu-link " >
+															Duş Sistemleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="musluklar-2" class="megamenu-link " >
+															Musluklar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="tamamlayici-urunler" class="megamenu-link " >
+															Tamamlayıcı Ürünler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ankastre-dus-setleri" class="megamenu-link " >
+															Ankastre Duş Setleri															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="teknik-urunler" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2023-11-14_13-28-06.jpg">
+                                                Sıhhi Tesisat Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="teknik-urunler" class="megamenu-link megamenu-title-link">
+														Sıhhi Tesisat Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="sihhi-tesisat-valfleri-2" class="megamenu-link " >
+															Sıhhi Tesisat Valfleri 															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kuresel-valfler-2-3" class="megamenu-link " >
+															Küresel Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dogalgaz-valfleri" class="megamenu-link " >
+															Doğalgaz Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="mini-kuresel-valfler-2" class="megamenu-link " >
+															Mini Küresel Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="siber-valfler-2" class="megamenu-link " >
+															Şiber Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="su-basinc-dusuruculer-2" class="megamenu-link " >
+															Su Basınç Düşürücüler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="stop-valfler-2" class="megamenu-link " >
+															Stop Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="cekvalfler-2" class="megamenu-link " >
+															Çekvalfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="filtreler-4" class="megamenu-link " >
+															Filtreler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="flatorler-2" class="megamenu-link " >
+															Flatörler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="musluklar-3" class="megamenu-link " >
+															Musluklar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="termokupl-cikisli-kuresel-valfler-2" class="megamenu-link " >
+															Termokupl Çıkışlı Küresel Valfler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="seramik-saglik-gerecleri" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-02-19_11-02-25.jpg">
+                                                Seramik Sağlık Gereçleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="seramik-saglik-gerecleri" class="megamenu-link megamenu-title-link">
+														Seramik Sağlık Gereçleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="seriler" class="megamenu-link " >
+															Seriler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="bagimsiz-modeller" class="megamenu-link " >
+															Bağımsız Modeller															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ozel-fonksiyonlu-urunler" class="megamenu-link " >
+															Özel Fonksiyonlu Ürünler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="tamamlayici-urunler-2" class="megamenu-link " >
+															Tamamlayıcı Ürünler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="gomme-rezervuar" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-02-23_14-21-27.jpg">
+                                                Gömme Rezervuar                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="gomme-rezervuar" class="megamenu-link megamenu-title-link">
+														Gömme Rezervuar													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="tugla-duvar-urunleri" class="megamenu-link " >
+															Tuğla Duvar Ürünleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="alcipan-duvar-uygulama-urunleri" class="megamenu-link " >
+															Alçıpan Duvar Uygulama Ürünleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="glassbox-duvar-onu-urunleri" class="megamenu-link " >
+															Glassbox Duvar Önü Ürünleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="panel-2" class="megamenu-link " >
+															Panel															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="kromajli-banyo-aksesuarlari" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-02-19_11-01-38.jpg">
+                                                Kromajlı Banyo Aksesuarları                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="kromajli-banyo-aksesuarlari" class="megamenu-link megamenu-title-link">
+														Kromajlı Banyo Aksesuarları													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="luna-19" class="megamenu-link " >
+															Luna															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="purity-13" class="megamenu-link " >
+															Purity															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="rita-3" class="megamenu-link " >
+															Rita															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="star-15" class="megamenu-link " >
+															Star															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="diagonal-2" class="megamenu-link " >
+															Diagonal															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="bianca-2" class="megamenu-link " >
+															Bianca															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="lale-2" class="megamenu-link " >
+															Lale															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="otel" class="megamenu-link " >
+															Otel															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="paslanmaz-grubu" class="megamenu-link " >
+															Paslanmaz Grubu															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="aynalar-3" class="megamenu-link " >
+															Aynalar															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																								</ul>
+						</div>
+					</div>  
+					<div class="megamenu-hover">
+						<div class="megamenu-submenu" data-scroll="true">
+							
+						</div>
+						<div class="megamenu-image">
+							<img data-src="" class="gg lazy" alt=""/>
+						</div>
+					</div> 
+				</div>
+				
+			</div>
+			
+		</li>
+					<li class="nav-item dropdown" >
+			<a class="nav-link" href="isitma-sogutma">
+									<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.012 39"><g transform="translate(-939.996 -67)"><path d="M964.29,106a1.613,1.613,0,0,0,1.6-1.63v-4.162l2.227,1.716a1.541,1.541,0,0,0,2.227-.3,1.616,1.616,0,0,0-.294-2.274l-4.16-3.261V89.954l5.925,3.39v4.033a1.6,1.6,0,1,0,3.194,0V95.188l3.614,2.1a1.617,1.617,0,0,0,2.185-.6,1.689,1.689,0,0,0-.588-2.231l-3.95-2.274,2.773-1.5a1.618,1.618,0,0,0,.673-2.188,1.588,1.588,0,0,0-1.429-.858,1.621,1.621,0,0,0-.756.172L972.9,90.254l-5.043-2.917,5.757-3.69,3.824,2.446a1.554,1.554,0,0,0,2.185-.515,1.625,1.625,0,0,0-.5-2.231l-2.521-1.63,3.656-2.36a1.634,1.634,0,0,0,.5-2.231,1.6,1.6,0,0,0-1.345-.772,1.494,1.494,0,0,0-.84.257l-3.572,2.317V76.01a1.6,1.6,0,1,0-3.194,0v4.977l-5.925,3.818V77.726a1.046,1.046,0,0,0,.294-.171l3.866-3a1.616,1.616,0,0,0,.294-2.274,1.542,1.542,0,0,0-1.261-.644,1.665,1.665,0,0,0-.967.343l-2.227,1.716V68.631a1.6,1.6,0,1,0-3.194,0v35.739A1.613,1.613,0,0,0,964.29,106Zm-4.749-10.726V76.74a9.269,9.269,0,0,0,0,18.534Zm-1.533-20.6a1.6,1.6,0,0,0,1.555-1.588l-.022-4.5A1.568,1.568,0,0,0,957.987,67a1.6,1.6,0,0,0-1.555,1.588l.022,4.5A1.6,1.6,0,0,0,958.009,74.674Zm-14.814,3.267,5.246,3.221a1.567,1.567,0,0,0,2.143-.6,1.637,1.637,0,0,0-.588-2.188l-5.246-3.222a1.568,1.568,0,0,0-2.143.6A1.589,1.589,0,0,0,943.194,77.941Zm4.968,12.931-4.968,2.943A1.626,1.626,0,0,0,942.606,96a1.558,1.558,0,0,0,2.143.6l4.968-2.943a1.627,1.627,0,0,0,.588-2.188A1.578,1.578,0,0,0,948.162,90.872Zm3.261,4.952-3.616,4.556a1.631,1.631,0,0,0,.213,2.259,1.553,1.553,0,0,0,2.212-.218l3.616-4.556a1.632,1.632,0,0,0-.213-2.259A1.572,1.572,0,0,0,951.423,95.824Zm-4.088-10.685-5.744-.039a1.6,1.6,0,0,0-.047,3.209l5.744.039a1.591,1.591,0,0,0,1.595-1.58A1.613,1.613,0,0,0,947.335,85.139Zm6.481-10.8-3.7-4.482a1.553,1.553,0,0,0-2.213-.21,1.631,1.631,0,0,0-.206,2.259l3.7,4.482a1.553,1.553,0,0,0,2.213.21A1.653,1.653,0,0,0,953.816,74.337ZM957.987,97a1.6,1.6,0,0,0-1.555,1.587v5.354a1.568,1.568,0,0,0,1.555,1.588,1.6,1.6,0,0,0,1.555-1.588V98.629A1.578,1.578,0,0,0,957.987,97Z"></path></g></svg>					</span>
+					<span class="text">ISITMA - SOĞUTMA</span>
+							</a>
+			<div class="dropdown-menu container dropdown-megamenu">
+				<div class="megamenu-body">
+					<div class="megamenu-links">
+						<div class="grid grid-center text-primary megamenu-head">
+							
+															<span class="icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.012 39"><g transform="translate(-939.996 -67)"><path d="M964.29,106a1.613,1.613,0,0,0,1.6-1.63v-4.162l2.227,1.716a1.541,1.541,0,0,0,2.227-.3,1.616,1.616,0,0,0-.294-2.274l-4.16-3.261V89.954l5.925,3.39v4.033a1.6,1.6,0,1,0,3.194,0V95.188l3.614,2.1a1.617,1.617,0,0,0,2.185-.6,1.689,1.689,0,0,0-.588-2.231l-3.95-2.274,2.773-1.5a1.618,1.618,0,0,0,.673-2.188,1.588,1.588,0,0,0-1.429-.858,1.621,1.621,0,0,0-.756.172L972.9,90.254l-5.043-2.917,5.757-3.69,3.824,2.446a1.554,1.554,0,0,0,2.185-.515,1.625,1.625,0,0,0-.5-2.231l-2.521-1.63,3.656-2.36a1.634,1.634,0,0,0,.5-2.231,1.6,1.6,0,0,0-1.345-.772,1.494,1.494,0,0,0-.84.257l-3.572,2.317V76.01a1.6,1.6,0,1,0-3.194,0v4.977l-5.925,3.818V77.726a1.046,1.046,0,0,0,.294-.171l3.866-3a1.616,1.616,0,0,0,.294-2.274,1.542,1.542,0,0,0-1.261-.644,1.665,1.665,0,0,0-.967.343l-2.227,1.716V68.631a1.6,1.6,0,1,0-3.194,0v35.739A1.613,1.613,0,0,0,964.29,106Zm-4.749-10.726V76.74a9.269,9.269,0,0,0,0,18.534Zm-1.533-20.6a1.6,1.6,0,0,0,1.555-1.588l-.022-4.5A1.568,1.568,0,0,0,957.987,67a1.6,1.6,0,0,0-1.555,1.588l.022,4.5A1.6,1.6,0,0,0,958.009,74.674Zm-14.814,3.267,5.246,3.221a1.567,1.567,0,0,0,2.143-.6,1.637,1.637,0,0,0-.588-2.188l-5.246-3.222a1.568,1.568,0,0,0-2.143.6A1.589,1.589,0,0,0,943.194,77.941Zm4.968,12.931-4.968,2.943A1.626,1.626,0,0,0,942.606,96a1.558,1.558,0,0,0,2.143.6l4.968-2.943a1.627,1.627,0,0,0,.588-2.188A1.578,1.578,0,0,0,948.162,90.872Zm3.261,4.952-3.616,4.556a1.631,1.631,0,0,0,.213,2.259,1.553,1.553,0,0,0,2.212-.218l3.616-4.556a1.632,1.632,0,0,0-.213-2.259A1.572,1.572,0,0,0,951.423,95.824Zm-4.088-10.685-5.744-.039a1.6,1.6,0,0,0-.047,3.209l5.744.039a1.591,1.591,0,0,0,1.595-1.58A1.613,1.613,0,0,0,947.335,85.139Zm6.481-10.8-3.7-4.482a1.553,1.553,0,0,0-2.213-.21,1.631,1.631,0,0,0-.206,2.259l3.7,4.482a1.553,1.553,0,0,0,2.213.21A1.653,1.653,0,0,0,953.816,74.337ZM957.987,97a1.6,1.6,0,0,0-1.555,1.587v5.354a1.568,1.568,0,0,0,1.555,1.588,1.6,1.6,0,0,0,1.555-1.588V98.629A1.578,1.578,0,0,0,957.987,97Z"></path></g></svg>								</span>
+								<span class="text">Isıtma - Soğutma</span>
+													</div>
+						<div class="megamenu-content" data-scroll="true">
+							<ul class="megamenu">
+																																			<li class="megamenu-item is-sub">
+											<a href="kombiler" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2020-04-10_16-30-07.jpg">
+                                                Kombiler                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="kombiler" class="megamenu-link megamenu-title-link">
+														Kombiler													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                                onmouseenter="showImage('https://eca.com.tr/upload/product_gallery/product_gallery_2020-02-28_15-13-36.jpg','https://eca.com.tr/upload/product_gallery/product_gallery_2020-04-10_16-30-07.jpg')"
+                                                                                                            >
+														<a href="yogusmali" class="megamenu-link " >
+															Yoğuşmalı															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                                onmouseenter="showImage('https://eca.com.tr/upload/product_gallery/product_gallery_2021-12-03_16-45-48.png','https://eca.com.tr/upload/product_gallery/product_gallery_2020-04-10_16-30-07.jpg')"
+                                                                                                            >
+														<a href="elektrikli" class="megamenu-link " >
+															Elektrikli															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                                onmouseenter="showImage('https://eca.com.tr/upload/product_gallery/product_gallery_2021-03-18_15-37-05.png','https://eca.com.tr/upload/product_gallery/product_gallery_2020-04-10_16-30-07.jpg')"
+                                                                                                            >
+														<a href="oda-kontrol-aksesuarlari" class="megamenu-link " >
+															Oda Kontrol Aksesuarları															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="merkezi-isitma-sistemleri" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-02-18_10-45-18.jpg">
+                                                Merkezi Isıtma Sistemleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="merkezi-isitma-sistemleri" class="megamenu-link megamenu-title-link">
+														Merkezi Isıtma Sistemleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="duvar-tipi-yogusmali-kazanlar" class="megamenu-link " >
+															Duvar Tipi Yoğuşmalı Kazanlar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="seperatorler" class="megamenu-link " >
+															Seperatörler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="isitma-sistem-valfleri-2" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2023-11-16_14-26-39.png">
+                                                Isıtma Sistem Valfleri                                             </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="isitma-sistem-valfleri-2" class="megamenu-link megamenu-title-link">
+														Isıtma Sistem Valfleri 													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="termostatik-radyator-valfleri-2" class="megamenu-link " >
+															Termostatik Radyatör Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="radyator-valfleri-2" class="megamenu-link " >
+															Radyatör Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="radyator-geri-donus-valfleri-2" class="megamenu-link " >
+															Radyatör Geri Dönüş Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="h-valfleri-2" class="megamenu-link " >
+															H-Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="rakorlar-2" class="megamenu-link " >
+															Rakorlar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="otomatik-havalandirici-ve-purjorler-2" class="megamenu-link " >
+															Otomatik Havalandırıcı ve Purjörler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="emniyet-valfleri-5" class="megamenu-link " >
+															Emniyet Valfleri															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="dosemeden-isitma-sistemleri" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-04-13_11-09-17.png">
+                                                Yerden Isıtma Sistem Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="dosemeden-isitma-sistemleri" class="megamenu-link megamenu-title-link">
+														Yerden Isıtma Sistem Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kolektorler" class="megamenu-link " >
+															Kolektörler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="aktuatorler" class="megamenu-link " >
+															Aktüatörler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="oda-kontrol-uniteleri" class="megamenu-link " >
+															Oda Kontrol Üniteleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="aktuatorlu-vanalar" class="megamenu-link " >
+															Aktüatörlü Vanalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="valf-aksesuarlari" class="megamenu-link " >
+															Aksesuarlar															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="radyatorler" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2022-03-16_10-34-15.png">
+                                                Radyatörler                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="radyatorler" class="megamenu-link megamenu-title-link">
+														Radyatörler													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dokum-radyatorler" class="megamenu-link " >
+															Döküm Radyatörler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="panel-radyatorler" class="megamenu-link " >
+															Panel Radyatörler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="boylerler" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2020-12-22_16-55-29.jpg">
+                                                Boylerler                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="boylerler" class="megamenu-link megamenu-title-link">
+														Boylerler													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="e-c-a-boylerler-2" class="megamenu-link " >
+															E.C.A. Boylerler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="su-isiticilari" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2020-12-22_16-57-36.jpg">
+                                                Su Isıtıcıları                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="su-isiticilari" class="megamenu-link megamenu-title-link">
+														Su Isıtıcıları													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="e-c-a-sofben-2" class="megamenu-link " >
+															Hermetik Şofbenler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="havlupan" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2022-03-16_10-37-07.jpg">
+                                                Havlupan                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="havlupan" class="megamenu-link megamenu-title-link">
+														Havlupan													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="beyaz-boyali-havlupan-4" class="megamenu-link " >
+															Beyaz Boyalı Havlupan															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="krom-kapli-havlupan-4" class="megamenu-link " >
+															Krom Kaplı Havlupan															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="bombeli-havlupan-4" class="megamenu-link " >
+															Bombeli Havlupan															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="klimalar" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2022-03-28_18-55-30.png">
+                                                Klimalar                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="klimalar" class="megamenu-link megamenu-title-link">
+														Klimalar													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="duvar-tipi-split-klimalar" class="megamenu-link " >
+															Duvar Tipi Split Klimalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="hafif-ticari-klimalar" class="megamenu-link " >
+															Hafif Ticari Klimalar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="multi-klimalar" class="megamenu-link " >
+															Multi Klimalar															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="isi-pompalari" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2023-07-10_11-31-12.jpg">
+                                                Isı Pompası                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="isi-pompalari" class="megamenu-link megamenu-title-link">
+														Isı Pompası													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="isi-pompasi" class="megamenu-link " >
+															E.C.A. Monoblok Isı Pompaları															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="aluminyum-radyatorler-ve-havlupanlar" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2020-12-22_16-46-10.jpg">
+                                                Alüminyum Radyatörler ve Havlupanlar                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="aluminyum-radyatorler-ve-havlupanlar" class="megamenu-link megamenu-title-link">
+														Alüminyum Radyatörler ve Havlupanlar													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="aluminyum-havlupanlar" class="megamenu-link " >
+															Alüminyum Havlupanlar															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="aluminyum-radyatorler" class="megamenu-link " >
+															Alüminyum Radyatörler															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="pelet-soba-ve-kazanlar" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2020-12-18_17-32-53.jpg">
+                                                Pelet Soba ve Kazanlar                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="pelet-soba-ve-kazanlar" class="megamenu-link megamenu-title-link">
+														Pelet Soba ve Kazanlar													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="elanus-3" class="megamenu-link " >
+															Elanus															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="rhea-4" class="megamenu-link " >
+															Rhea															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="manyetik-filtre" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2025-04-04_12-41-55.png">
+                                                Manyetik Filtre                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="manyetik-filtre" class="megamenu-link megamenu-title-link">
+														Manyetik Filtre													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="e-c-a-manyetik-filtre" class="megamenu-link " >
+															E.C.A. Manyetik Filtre															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="manyetik-filtre-set" class="megamenu-link " >
+															E.C.A. Manyetik Filtre Set															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																								</ul>
+						</div>
+					</div>  
+					<div class="megamenu-hover">
+						<div class="megamenu-submenu" data-scroll="true">
+							
+						</div>
+						<div class="megamenu-image">
+							<img data-src="" class="gg lazy" alt=""/>
+						</div>
+					</div> 
+				</div>
+				
+			</div>
+			
+		</li>
+					<li class="nav-item dropdown" >
+			<a class="nav-link" href="endustriyel-3">
+									<span class="icon">
+						<svg fill="#009cdc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.785 34.785"><g id="Group_27" data-name="Group 27" transform="translate(-325 -6)"> <g id="Group_26" data-name="Group 26" transform="translate(325 6)"> <path id="Path_157" data-name="Path 157" d="M40.126,16.888a1.338,1.338,0,0,0-1.329-.017L28.744,22.457V18.041a1.338,1.338,0,0,0-1.936-1.2L15.365,22.566V7.338A1.338,1.338,0,0,0,14.027,6H7.338A1.338,1.338,0,0,0,6,7.338V39.447a1.338,1.338,0,0,0,1.338,1.338H39.447a1.338,1.338,0,0,0,1.338-1.338V18.041A1.34,1.34,0,0,0,40.126,16.888ZM38.109,38.109H8.676V8.676h4.014V24.73a1.339,1.339,0,0,0,1.937,1.2l11.442-5.721V24.73A1.337,1.337,0,0,0,28.056,25.9l10.054-5.585Z" transform="translate(-6 -6)"> <path id="Path_158" data-name="Path 158" d="M29.338,40A1.338,1.338,0,0,0,28,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,29.338,40Z" transform="translate(-13.283 -17.256)"> <path id="Path_159" data-name="Path 159" d="M45.338,46.689a1.338,1.338,0,0,0,1.338-1.338V41.338a1.338,1.338,0,0,0-2.676,0v4.014A1.338,1.338,0,0,0,45.338,46.689Z" transform="translate(-18.58 -17.256)"> <path id="Path_160" data-name="Path 160" d="M21.338,40A1.338,1.338,0,0,0,20,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,21.338,40Z" transform="translate(-10.635 -17.256)"> <path id="Path_161" data-name="Path 161" d="M36,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338a1.338,1.338,0,0,0-2.676,0Z" transform="translate(-15.932 -17.256)"> </g> </g> </svg>					</span>
+					<span class="text">Endüstriyel</span>
+							</a>
+			<div class="dropdown-menu container dropdown-megamenu">
+				<div class="megamenu-body">
+					<div class="megamenu-links">
+						<div class="grid grid-center text-primary megamenu-head">
+							
+															<span class="icon">
+									<svg fill="#009cdc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.785 34.785"><g id="Group_27" data-name="Group 27" transform="translate(-325 -6)"> <g id="Group_26" data-name="Group 26" transform="translate(325 6)"> <path id="Path_157" data-name="Path 157" d="M40.126,16.888a1.338,1.338,0,0,0-1.329-.017L28.744,22.457V18.041a1.338,1.338,0,0,0-1.936-1.2L15.365,22.566V7.338A1.338,1.338,0,0,0,14.027,6H7.338A1.338,1.338,0,0,0,6,7.338V39.447a1.338,1.338,0,0,0,1.338,1.338H39.447a1.338,1.338,0,0,0,1.338-1.338V18.041A1.34,1.34,0,0,0,40.126,16.888ZM38.109,38.109H8.676V8.676h4.014V24.73a1.339,1.339,0,0,0,1.937,1.2l11.442-5.721V24.73A1.337,1.337,0,0,0,28.056,25.9l10.054-5.585Z" transform="translate(-6 -6)"> <path id="Path_158" data-name="Path 158" d="M29.338,40A1.338,1.338,0,0,0,28,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,29.338,40Z" transform="translate(-13.283 -17.256)"> <path id="Path_159" data-name="Path 159" d="M45.338,46.689a1.338,1.338,0,0,0,1.338-1.338V41.338a1.338,1.338,0,0,0-2.676,0v4.014A1.338,1.338,0,0,0,45.338,46.689Z" transform="translate(-18.58 -17.256)"> <path id="Path_160" data-name="Path 160" d="M21.338,40A1.338,1.338,0,0,0,20,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,21.338,40Z" transform="translate(-10.635 -17.256)"> <path id="Path_161" data-name="Path 161" d="M36,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338a1.338,1.338,0,0,0-2.676,0Z" transform="translate(-15.932 -17.256)"> </g> </g> </svg>								</span>
+								<span class="text">Endüstriyel</span>
+													</div>
+						<div class="megamenu-content" data-scroll="true">
+							<ul class="megamenu">
+																																			<li class="megamenu-item is-sub">
+											<a href="sogutucu-sistem-valfleri-2" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-03-03_13-30-53.jpg">
+                                                Soğutucu Sistem Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="sogutucu-sistem-valfleri-2" class="megamenu-link megamenu-title-link">
+														Soğutucu Sistem Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="sogutucu-kuresel-valfler-2" class="megamenu-link " >
+															Soğutucu Küresel Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="sarjli-sogutucu-kuresel-valfler-2" class="megamenu-link " >
+															Şarjlı Soğutucu Küresel Valfler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="emniyet-valfleri-3" class="megamenu-link " >
+															Emniyet Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="yon-degistiriciler-2" class="megamenu-link " >
+															Yön Değiştiriciler  															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="filtreler-3" class="megamenu-link " >
+															Filtreler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="nem-indikatorleri-gozetleme-cami-2" class="megamenu-link " >
+															Nem İndikatörleri - Gözetleme Camı 															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="servis-ve-gaz-doldurma-valfleri-2" class="megamenu-link " >
+															Servis ve Gaz Doldurma Valfleri															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="firin-ocak-gaz-valfleri-2" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-03-03_13-30-37.jpg">
+                                                Fırın - Ocak Gaz Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="firin-ocak-gaz-valfleri-2" class="megamenu-link megamenu-title-link">
+														Fırın - Ocak Gaz Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="firin-muslugu-2" class="megamenu-link " >
+															Fırın Musluğu															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="emniyetli-firin-muslugu-2" class="megamenu-link " >
+															Emniyetli Fırın Musluğu															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ankastre-firin-muslugu-2" class="megamenu-link " >
+															Ankastre Fırın Musluğu  															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="radyan-soba-gaz-valfi-2" class="megamenu-link " >
+															Radyan Soba Gaz Valfi															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="endustriyel-firin-muslugu-2" class="megamenu-link " >
+															Endüstriyel Fırın Musluğu															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="firin-termostatlar-2" class="megamenu-link " >
+															Fırın Termostatlar															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="tup-valfleri-2" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-03-03_13-31-02.png">
+                                                Tüp Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="tup-valfleri-2" class="megamenu-link megamenu-title-link">
+														Tüp Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="igneli-tup-valfleri-2" class="megamenu-link " >
+															İğneli Tüp Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="volanli-tup-valfleri-2" class="megamenu-link " >
+															Volanlı Tüp Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="mini-tup-valfleri-2" class="megamenu-link " >
+															Mini Tüp Valfleri															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="su-sebekesi-dagitim-ve-baglanti-elemanlari-3" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-04-13_22-59-37.png">
+                                                Su Şebekesi Dağıtım Ve Bağlantı Elemanları                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="su-sebekesi-dagitim-ve-baglanti-elemanlari-3" class="megamenu-link megamenu-title-link">
+														Su Şebekesi Dağıtım Ve Bağlantı Elemanları													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kose-cikisli-cift-kureli-abone-baglanti-vanasi" class="megamenu-link " >
+															Köşe Çıkışlı Çift Küreli Abone Bağlantı Vanası															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dik-tip-tek-kureli-abone-baglanti-vanasi" class="megamenu-link " >
+															Dik Tip Tek Küreli Abone Bağlantı Vanası															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kose-tip-tek-kureli-abone-baglanti-vanasi" class="megamenu-link " >
+															Köşe Tip Tek Küreli Abone Bağlantı Vanası															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="ana-musluk" class="megamenu-link " >
+															Ana Musluk															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kose-cikisli-cift-kureli-vana-priz-kolye-seti" class="megamenu-link " >
+															Köşe Çıkışlı Çift Küreli Vana Priz Kolye Seti															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dik-tip-vanali-priz-kolye-seti" class="megamenu-link " >
+															Dik Tip Vanalı Priz Kolye Seti															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kose-tip-vanali-priz-kolye-seti" class="megamenu-link " >
+															Köşe Tip Vanalı Priz Kolye Seti															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="manson-tip-baglanti-parcasi" class="megamenu-link " >
+															Manşon Tip Bağlantı Parçası															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="baglanti-parcasi" class="megamenu-link " >
+															 Bağlantı Parçası															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="yangin-valfleri" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-03-03_13-31-11.png">
+                                                Yangın Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="yangin-valfleri" class="megamenu-link megamenu-title-link">
+														Yangın Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="sprinkler" class="megamenu-link " >
+															Sprinkler															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="yangin-vanasi" class="megamenu-link " >
+															Yangın Vanası															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																																				<li class="megamenu-item is-sub">
+											<a href="dogalgaz-valfleri-2" class="megamenu-link" data-img="upload/product_gallery/product_gallery_2021-03-03_13-30-28.png">
+                                                Doğalgaz Valfleri                                            </a>
+											<ul class="megamenu" >
+												<li class="megamenu-item megamenu-back">
+													<a href="javascript:;" class="megamenu-link megamenu-back-link">
+														<i class="fas fa-chevron-left mrx-1"></i> Geri
+													</a>
+												</li>
+												<li class="megamenu-item megamenu-title">
+													<a href="dogalgaz-valfleri-2" class="megamenu-link megamenu-title-link">
+														Doğalgaz Valfleri													</a>
+												</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="servis-kutusu-baglanti-elemanlari-2" class="megamenu-link " >
+															Servis Kutusu Bağlantı Elemanları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dogalgaz-baglanti-rakorlari-2" class="megamenu-link " >
+															Doğalgaz Bağlantı Rakorları															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="dogalgaz-kuresel-valfleri-2" class="megamenu-link " >
+															Doğalgaz Küresel Valfleri															<!-- Burası -->
+														</a>
+													</li>
+												
+													<li class="megamenu-item"
+                                                                                                            >
+														<a href="kor-tapa-gruplari-2" class="megamenu-link " >
+															Kör Tapa Grupları															<!-- Burası -->
+														</a>
+													</li>
+																							</ul>
+										</li>
+																								</ul>
+						</div>
+					</div>  
+					<div class="megamenu-hover">
+						<div class="megamenu-submenu" data-scroll="true">
+							
+						</div>
+						<div class="megamenu-image">
+							<img data-src="" class="gg lazy" alt=""/>
+						</div>
+					</div> 
+				</div>
+				
+			</div>
+			
+		</li>
+			</ul>    
+</nav>
+<script>
+    function showImage(img,mainimg) {
+        if (img){
+            $('.megamenu-image img').attr('src', img);
+            $('.megamenu-image img').addClass('img-responsive');
+        }
+    }
+</script>
+                            <div class="grid grid-align-center grid_item nav-search">
+                    <button class="btn btn-unstyled btn-search collapsed" type="button" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.003" height="29.002" viewBox="0 0 29.003 29.002"><path d="M1302.612,99.492l-5.413-5.357a13.046,13.046,0,0,0-.967-17.324,13.027,13.027,0,0,0-18.413,18.433,13.043,13.043,0,0,0,17.349.965l5.364,5.356a1.392,1.392,0,0,0,1.015.435,1.317,1.317,0,0,0,1.015-.435A1.5,1.5,0,0,0,1302.612,99.492ZM1297.2,86.028a9.916,9.916,0,0,1-3,7.142,10.23,10.23,0,0,1-7.152,2.992,9.945,9.945,0,0,1-7.152-2.992,10.2,10.2,0,0,1-3-7.142,9.915,9.915,0,0,1,3-7.142,10.144,10.144,0,0,1,7.152-2.992,9.944,9.944,0,0,1,7.152,2.992A10.114,10.114,0,0,1,1297.2,86.028Z" transform="translate(-1274.002 -72.999)" fill="#009cdc"/></svg>
+                        </span>
+                    </button>
+                    <form action="search" accept-charset="utf-8" method="get" id="navSearch" class="collapse">
+                        <div class="input-group">
+                            <input type="text" name="search" value="" minlength="3" required class="form-control pSearch" placeholder="Ürün adı veya kodu ile arama yapın..." autocomplete="off">
+                            <button type="submit" id="header__search" class="btn btn-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29.003" height="29.002" viewBox="0 0 29.003 29.002"><path d="M1302.612,99.492l-5.413-5.357a13.046,13.046,0,0,0-.967-17.324,13.027,13.027,0,0,0-18.413,18.433,13.043,13.043,0,0,0,17.349.965l5.364,5.356a1.392,1.392,0,0,0,1.015.435,1.317,1.317,0,0,0,1.015-.435A1.5,1.5,0,0,0,1302.612,99.492ZM1297.2,86.028a9.916,9.916,0,0,1-3,7.142,10.23,10.23,0,0,1-7.152,2.992,9.945,9.945,0,0,1-7.152-2.992,10.2,10.2,0,0,1-3-7.142,9.915,9.915,0,0,1,3-7.142,10.144,10.144,0,0,1,7.152-2.992,9.944,9.944,0,0,1,7.152,2.992A10.114,10.114,0,0,1,1297.2,86.028Z" transform="translate(-1274.002 -72.999)" fill="#009cdc"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                    </div>
+    </div>
+</header>
+<!-- Header End -->
+
+	
+	<div class="container">
+		<div class="text-center py-5">
+			<h1>404 - Page Not Found!</h1>
+			<p>We couldn't find the page you were trying to reach.
+			You can return to the <br><a href=''>Homepage</a>.</p>
+		</div>
+	</div>
+	
+<footer id="footer">
+    <div class="f-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <a href="https://eca.com.tr/" class="f-head-logo">
+                        <img src="upload/files/files_2019-10-31_14-55-35.png" alt="E.C.A. SEREL: Yıllarca Beraber" />
+                    </a>
+                </div>
+                <div class="col-4 text-right">
+                    <a class="back-to-top" id="gotop" href="javascript:;">
+                        <span class="text">Üste Çık</span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="eca-footer">
+        <div class="container-fluid">
+            <div class="row menu-list">
+                <style>
+    .icon svg {
+        width:32px;
+        height:32px;
+        fill: #fff;
+    }
+</style>
+    <div class="col-lg-4 r-l">
+
+        <h4><span class="icon mr-1">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 39"><g transform="translate(-763 -67)"><path d="M771.409,76.75a1.654,1.654,0,0,0-1.682,1.625v3.25h-5.045A1.654,1.654,0,0,0,763,83.25a18.126,18.126,0,0,0,16.818,17.794v3.332a1.683,1.683,0,0,0,3.364,0v-3.332A18.125,18.125,0,0,0,800,83.25a1.654,1.654,0,0,0-1.682-1.625h-5.045v-3.25a1.683,1.683,0,0,0-3.364,0v3.25h-6.727v-9.75a1.683,1.683,0,0,1,3.364,0,1.683,1.683,0,0,0,3.364,0,5.048,5.048,0,0,0-10.091,0v9.75h-6.727v-3.25A1.654,1.654,0,0,0,771.409,76.75ZM781.5,97.875a14.959,14.959,0,0,1-15.044-13h30.088A14.959,14.959,0,0,1,781.5,97.875Z"></g></svg>					</span>
+            YAPI</h4>
+            <div class="mid-menu">
+            <ul>
+                            
+                                            <a href="armaturler"><li>Armatürler</li></a>
+                                        
+                                
+                                            <a href="teknik-urunler"><li>Sıhhi Tesisat Valfleri</li></a>
+                                        
+                                
+                                            <a href="seramik-saglik-gerecleri"><li>Seramik Sağlık Gereçleri</li></a>
+                                        
+                                
+                                            <a href="gomme-rezervuar"><li>Gömme Rezervuar</li></a>
+                                        
+                                
+                                            <a href="kromajli-banyo-aksesuarlari"><li>Kromajlı Banyo Aksesuarları</li></a>
+                                        
+                            </ul>
+          </div>
+    </div>
+    <div class="col-lg-4 r-l">
+
+        <h4><span class="icon mr-1">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.012 39"><g transform="translate(-939.996 -67)"><path d="M964.29,106a1.613,1.613,0,0,0,1.6-1.63v-4.162l2.227,1.716a1.541,1.541,0,0,0,2.227-.3,1.616,1.616,0,0,0-.294-2.274l-4.16-3.261V89.954l5.925,3.39v4.033a1.6,1.6,0,1,0,3.194,0V95.188l3.614,2.1a1.617,1.617,0,0,0,2.185-.6,1.689,1.689,0,0,0-.588-2.231l-3.95-2.274,2.773-1.5a1.618,1.618,0,0,0,.673-2.188,1.588,1.588,0,0,0-1.429-.858,1.621,1.621,0,0,0-.756.172L972.9,90.254l-5.043-2.917,5.757-3.69,3.824,2.446a1.554,1.554,0,0,0,2.185-.515,1.625,1.625,0,0,0-.5-2.231l-2.521-1.63,3.656-2.36a1.634,1.634,0,0,0,.5-2.231,1.6,1.6,0,0,0-1.345-.772,1.494,1.494,0,0,0-.84.257l-3.572,2.317V76.01a1.6,1.6,0,1,0-3.194,0v4.977l-5.925,3.818V77.726a1.046,1.046,0,0,0,.294-.171l3.866-3a1.616,1.616,0,0,0,.294-2.274,1.542,1.542,0,0,0-1.261-.644,1.665,1.665,0,0,0-.967.343l-2.227,1.716V68.631a1.6,1.6,0,1,0-3.194,0v35.739A1.613,1.613,0,0,0,964.29,106Zm-4.749-10.726V76.74a9.269,9.269,0,0,0,0,18.534Zm-1.533-20.6a1.6,1.6,0,0,0,1.555-1.588l-.022-4.5A1.568,1.568,0,0,0,957.987,67a1.6,1.6,0,0,0-1.555,1.588l.022,4.5A1.6,1.6,0,0,0,958.009,74.674Zm-14.814,3.267,5.246,3.221a1.567,1.567,0,0,0,2.143-.6,1.637,1.637,0,0,0-.588-2.188l-5.246-3.222a1.568,1.568,0,0,0-2.143.6A1.589,1.589,0,0,0,943.194,77.941Zm4.968,12.931-4.968,2.943A1.626,1.626,0,0,0,942.606,96a1.558,1.558,0,0,0,2.143.6l4.968-2.943a1.627,1.627,0,0,0,.588-2.188A1.578,1.578,0,0,0,948.162,90.872Zm3.261,4.952-3.616,4.556a1.631,1.631,0,0,0,.213,2.259,1.553,1.553,0,0,0,2.212-.218l3.616-4.556a1.632,1.632,0,0,0-.213-2.259A1.572,1.572,0,0,0,951.423,95.824Zm-4.088-10.685-5.744-.039a1.6,1.6,0,0,0-.047,3.209l5.744.039a1.591,1.591,0,0,0,1.595-1.58A1.613,1.613,0,0,0,947.335,85.139Zm6.481-10.8-3.7-4.482a1.553,1.553,0,0,0-2.213-.21,1.631,1.631,0,0,0-.206,2.259l3.7,4.482a1.553,1.553,0,0,0,2.213.21A1.653,1.653,0,0,0,953.816,74.337ZM957.987,97a1.6,1.6,0,0,0-1.555,1.587v5.354a1.568,1.568,0,0,0,1.555,1.588,1.6,1.6,0,0,0,1.555-1.588V98.629A1.578,1.578,0,0,0,957.987,97Z"></path></g></svg>					</span>
+            ISITMA - SOĞUTMA</h4>
+            <div class="mid-menu">
+            <ul>
+                            
+                                            <a href="kombiler"><li>Kombiler</li></a>
+                                        
+                                
+                                            <a href="merkezi-isitma-sistemleri"><li>Merkezi Isıtma Sistemleri</li></a>
+                                        
+                                
+                                            <a href="isitma-sistem-valfleri-2"><li>Isıtma Sistem Valfleri </li></a>
+                                        
+                                
+                                            <a href="dosemeden-isitma-sistemleri"><li>Yerden Isıtma Sistem Valfleri</li></a>
+                                        
+                                
+                                            <a href="radyatorler"><li>Radyatörler</li></a>
+                                        
+                                
+                                            <a href="boylerler"><li>Boylerler</li></a>
+                                        
+                                
+                                            <a href="su-isiticilari"><li>Su Isıtıcıları</li></a>
+                                        
+                                
+                                            <a href="havlupan"><li>Havlupan</li></a>
+                                        
+                                
+                                            <a href="klimalar"><li>Klimalar</li></a>
+                                        
+                                
+                                            <a href="isi-pompalari"><li>Isı Pompası</li></a>
+                                        
+                                
+                                            <a href="aluminyum-radyatorler-ve-havlupanlar"><li>Alüminyum Radyatörler ve Havlupanlar</li></a>
+                                        
+                                
+                                            <a href="pelet-soba-ve-kazanlar"><li>Pelet Soba ve Kazanlar</li></a>
+                                        
+                                
+                                            <a href="manyetik-filtre"><li>Manyetik Filtre</li></a>
+                                        
+                            </ul>
+          </div>
+    </div>
+    <div class="col-lg-4 r-l">
+
+        <h4><span class="icon mr-1">
+						<svg fill="#009cdc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.785 34.785"><g id="Group_27" data-name="Group 27" transform="translate(-325 -6)"> <g id="Group_26" data-name="Group 26" transform="translate(325 6)"> <path id="Path_157" data-name="Path 157" d="M40.126,16.888a1.338,1.338,0,0,0-1.329-.017L28.744,22.457V18.041a1.338,1.338,0,0,0-1.936-1.2L15.365,22.566V7.338A1.338,1.338,0,0,0,14.027,6H7.338A1.338,1.338,0,0,0,6,7.338V39.447a1.338,1.338,0,0,0,1.338,1.338H39.447a1.338,1.338,0,0,0,1.338-1.338V18.041A1.34,1.34,0,0,0,40.126,16.888ZM38.109,38.109H8.676V8.676h4.014V24.73a1.339,1.339,0,0,0,1.937,1.2l11.442-5.721V24.73A1.337,1.337,0,0,0,28.056,25.9l10.054-5.585Z" transform="translate(-6 -6)"> <path id="Path_158" data-name="Path 158" d="M29.338,40A1.338,1.338,0,0,0,28,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,29.338,40Z" transform="translate(-13.283 -17.256)"> <path id="Path_159" data-name="Path 159" d="M45.338,46.689a1.338,1.338,0,0,0,1.338-1.338V41.338a1.338,1.338,0,0,0-2.676,0v4.014A1.338,1.338,0,0,0,45.338,46.689Z" transform="translate(-18.58 -17.256)"> <path id="Path_160" data-name="Path 160" d="M21.338,40A1.338,1.338,0,0,0,20,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338A1.338,1.338,0,0,0,21.338,40Z" transform="translate(-10.635 -17.256)"> <path id="Path_161" data-name="Path 161" d="M36,41.338v4.014a1.338,1.338,0,0,0,2.676,0V41.338a1.338,1.338,0,0,0-2.676,0Z" transform="translate(-15.932 -17.256)"> </g> </g> </svg>					</span>
+            Endüstriyel</h4>
+            <div class="mid-menu">
+            <ul>
+                            
+                                            <a href="sogutucu-sistem-valfleri-2"><li>Soğutucu Sistem Valfleri</li></a>
+                                        
+                                
+                                            <a href="firin-ocak-gaz-valfleri-2"><li>Fırın - Ocak Gaz Valfleri</li></a>
+                                        
+                                
+                                            <a href="tup-valfleri-2"><li>Tüp Valfleri</li></a>
+                                        
+                                
+                                            <a href="su-sebekesi-dagitim-ve-baglanti-elemanlari-3"><li>Su Şebekesi Dağıtım Ve Bağlantı Elemanları</li></a>
+                                        
+                                
+                                            <a href="yangin-valfleri"><li>Yangın Valfleri</li></a>
+                                        
+                                
+                                            <a href="dogalgaz-valfleri-2"><li>Doğalgaz Valfleri</li></a>
+                                        
+                            </ul>
+          </div>
+    </div>
+<div class="col-lg-4">
+    <img width="120px" style="padding-left: 40px;" class="award-logo" src="assets/img/logo-5.png" alt="">
+</div>            </div>
+                            <div style="row-gap: 1rem;" class="row contact-no">
+                    <div class="col-lg-3">
+                        <a href="tel:4440322"><img width="200" src="assets/img/444-white.svg" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="tel:08508000322"><img width="200" src="assets/img/850-white.svg" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://api.whatsapp.com/send?phone=+905307083030"><img width="200" src="assets/img/wp-white.svg" alt=""></a>
+                    </div>
+
+                </div>
+                        <div class="row app-list">
+                                    <div class="col-lg-3 dl-area">
+                        <h5>E.C.A Mobil</h5>
+                        <div class="download-mbl">
+                            <a href="https://apps.apple.com/tr/app/eca-mobil/id1248748450?l=tr" target="_blank"><img src="assets/img/os.png" alt=""></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.ionicframework.ecamobilapp443098" target="_blank"><img src="assets/img/google.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 dl-area">
+                        <h5>Emar Teknisyen</h5>
+                        <div class="download-mbl">
+                            <a href="https://apps.apple.com/tr/app/emar-teknisyen/id1329943936?l=tr" target="_blank"><img src="assets/img/os.png" alt=""></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.emar.teknisyen.offline" target="_blank"><img src="assets/img/google.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 dl-area">
+                        <h5>E.C.A Akıllı Cihazlar</h5>
+                        <div class="download-mbl">
+                            <a href="https://apps.apple.com/tr/app/e-c-a-ak%C4%B1ll%C4%B1-cihazlar/id1102406554?l=tr" target="_blank"><img src="assets/img/os.png" alt=""></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.nuvia.eca" target="_blank"><img src="assets/img/google.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 social-area">
+                        <a href="https://www.facebook.com/ECAYILLARCABERABER"><img src="assets/img/fb-ico.png" alt=""></a>
+                        <a href="https://www.instagram.com/elginkaneca/"><img src="assets/img/ins-ico.png" alt=""></a>
+                        <a href="https://www.youtube.com/channel/UCshImWihNL0nhdjZnsGFt2w"><img src="assets/img/ytb-ico.png" alt=""></a>
+                        <a href="https://twitter.com/ECA_Elginkan"><img src="assets/img/twt-ico.png" alt=""></a>
+                    </div>
+                            </div>
+        </div>
+    </section>
+    <div class="f-links">
+	<div class="container">
+		<ul class="f-menu">
+							<li>
+					<a href="serel-2" target="_self">Profesyoneller</a>
+				</li>
+							<li>
+					<a href="sikca-sorulan-sorular" target="_self">Tüketici Köşesi</a>
+				</li>
+							<li>
+					<a href="haberler" target="_self">Haberler</a>
+				</li>
+							<li>
+					<a href="uluslararasi-agimiz" target="_self">Uluslararası Ağımız</a>
+				</li>
+							<li>
+					<a href="http://www.elginkankariyer.com/" target="_blank">Kariyer</a>
+				</li>
+							<li>
+					<a href="mobil-uygulama-gizlilik-bildirimi" target="_self">Mobil Uygulama Gizlilik Bildirimi</a>
+				</li>
+					</ul>
+	</div>
+</div>
+<div class="f-foot">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-12 col-md-3">
+				<a href="http://www.elginkan.com.tr/" target="_blank" title="Elginkan">
+					<img src="assets/img/elginkan.png" alt="Elginkan" />
+				</a>
+				<div class="copyright mtx-2">Copyright © E.C.A. - Serel 2021</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<ul class="grid-justify-center f-menu">
+											<li>
+							<a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/11305" target="_blank">Bilgi Toplumu Hizmetleri</a>
+						</li>
+											<li>
+							<a href="yasal-metinler" target="_self">Kişisel Verilerin Korunması</a>
+						</li>
+									</ul>
+			</div>
+			<div class="col-12 col-md-3 egegen">
+				<a href="https://egegen.com/seo" target="_blank" title="seo ajansı">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.47 595.28"><path class="cls-1" d="M156.81,239.76c-2.46,6.58-5.07,15.24-2.78,20,3.37,7,13.87,9,22.46,11.55,5.83-5.09,5.77-5.57,7.24-13.57-2.58-3.92-6.34-7.3-11-11.73C167.68,241.33,165.73,239.21,156.81,239.76Zm-1.3,55.92c4.12-20.18-1.78-43.32-26.64-39.34-1.52,8.28,1.62,20.65,4,28.85C135.34,293.65,142.77,298.85,155.51,295.68ZM97.93,232c-4.59,16.8,13,27.63,29.46,23.5C121.33,245.4,109,233.53,97.93,232Zm56.34-36.71-8.52,9.65,3.14,9.47c16,20.31,14.52,27.76,24,26.43,3.81-6.85-.32-16.3-3.95-24.58C164.15,205.37,164.12,201.57,154.27,195.27Zm14.65,113.26c-8.19-9.3-11.47-14-25.76-6.26-11.6,6.29-16.58,13.34-13.47,23.34C139.38,356.76,164.31,319.81,168.92,308.53ZM206.81,208c.54.5,1.23,1,1.23,1.86,4.51-.13,5.67-2,8.59-5.26-1.84-2.83-2.22-4.59-3.57-5.26-2.74,1.9-6.31,3.73-6.85,7.47a1.3,1.3,0,0,0,.55,1.15l.05,0Zm-16.15,18.25c-5.45-5.16-7.2-6.48-13.14-5.91-6,13,.84,44.66,23.1,22.21C198.84,234.62,196.68,232,190.66,226.28ZM152,246.4c1.35-7.44,5.12-23.61-4.95-28.86-2.39-1.24-29.15-2.68-31.19-2-14.16,4.45-.18,32.34,22.87,35.24C143.52,251.34,146.37,248.08,152,246.4Zm42.65-29c8.67,4.45,13.49.37,12.15-9.34l-.05,0C204.09,206.49,193.14,204.21,194.66,217.37ZM115,315.28l-1.41-4.64c-8-4.09-13.71-4.27-12,5.77C113.06,329.84,115,317.53,115,315.28Zm86.62-76.08c7.07,17.33,19.65,10.65,29.23,1.3,3.65-9.39,10-19.22,2.53-31.17-3.17.87-9.24,1.06-12.27,3.75-3.27,2.91-5.32,9.9-7.67,13.91C208.25,235.85,202.16,237,201.63,239.2Zm102.09-19,2,3.75c7.6,2.13,12.57,1.3,9.38-7.08C302.86,207.27,303.3,218.24,303.72,220.18Zm-36.51,22.23c1.92-1.25.89-7.36,7.44-15.28,3-3.59,8.62-2.39,10.23-6.46,1.5-3.76-.4-9.54-.65-12.82-13.79-2.92-20.86,6.4-28.44,13C254.8,226.57,253.64,234.31,267.21,242.41Zm25.57-37.11c1.58,6.22,4.21,7.53,9,11.08,2.75-3,4.71-3.77,5.06-5.75-3.11-3.49-6.41-8.14-11-8.33C294.3,202.25,294.54,205.06,292.78,205.3ZM273,248.81c7.73,14.73,17.53,12.25,23.16,7-4.89-7.89-7.8-15.32-15-23.15C271.31,232.21,267.18,237.82,273,248.81ZM243,286.24c6.57,1.92,32.75,4.3,27.14-7.07,0-.06-12.61-15-24.71-16.4C242.07,268.47,241.21,278.84,243,286.24Zm32-11.78c-1.36-8.6-2.7-7.68-4.24-14.56-1.57-7.06.22-7.64-2.31-15.06-8.74-2.82-10.55-2.92-19-.18C252.1,261.51,264,273.26,275,274.46Zm-55.66,13.23c1.16-5.73-2.78-19.33-6.93-24-1.63-1.85-4.44-9.78-8.7-11.53-3.34-1.38-8.15,3.39-10.13,2.2C168.07,274.48,210.37,290.81,219.38,287.69Zm79.12-95.64c1.18.88,2.3,3.81,3.45,4.44,3.66,2,7.35.48,12,.08,1.58-1.82,1.89-4.75-.92-7.36A26.25,26.25,0,0,0,298.5,192.05ZM181.62,315c9-9.86,13.78-9.34,14.45-24.22-6.54-6.66-19.45-13.66-30.86-19l-7.08-1.88.36,7.65c2,7.62,4.44,12.88,7.58,20.47C169.6,306.54,169.82,311,181.62,315Zm68.88,10c4.69.94,12.5-5.47,17.13-6,13.84-1.72,18.14-7.26,22.69-16.62-8.52-19.43-36.22-17.8-47.12-2.54a23.61,23.61,0,0,0-4.27,11.1C242.66,315.16,245,324,250.5,325.06Zm39.34-146.48c2.91-2,5.32-7,6.48-12.73-1.6-3.61-5.9-3.17-10.78-2.65-2.23,6.06-2.09,6.4,0,12.7C286.47,178.69,288.1,176.7,289.84,178.58ZM286.66,208c18.21-9.88,11.84-33.66,2.25-28.66-1.15.59-12,12.64-12.47,14.2C274.39,200.11,282.89,205.42,286.66,208ZM119.83,337c1.65.39,2-2.79,4-2.64-.38-7.28-3-9.35-7.47-14.36-3.74,2.7-6.09,3.14-7,5.26C112.13,329.8,114.76,335.71,119.83,337ZM253,172.59c0,11.43,6.81,14.29,16.22,7.71,0,0,0-.05,0-.07C269.34,176.66,265.87,164,253,172.59Zm16.22,7.71c-.23.82-.36,1.8-1.28,2.27,2.53,4.65,5.16,4.84,10.06,6.19,2-3.45,3.61-4.78,3.59-6.56-3.44-1.83-7.25-4.58-11.45-3.15a1.53,1.53,0,0,0-.9,1.18v.06ZM98.29,379.36l2.54-1.23c.37-.18.74-.36,1.1-.52l-.22-1,1.21-2.88A26.08,26.08,0,0,1,98.29,379.36Zm13.32-24.74c-6.28-2-4.35-2.05-11.64.63-7.17,9.21,1,11.36,8.47,5.45C112.49,357.51,111.49,358.2,111.61,354.62ZM465.5,253.35c4.65.21,7.11,5.45,11.32,4.29,3.91-1.07,7.37-6.06,9.84-8.24-6-12.77-17.64-12.81-27.51-14.88-5.13,2.62-12,6.35-10.33,22.07C451,257.36,455.24,252.87,465.5,253.35Zm-30.37,13.48c-1.73,1.9-7.1,3.36-8.17,5.77-1.27,2.82,1.94,6.67,2.64,9.68a13.2,13.2,0,0,0,6.34,1.62c10.32,0,19.88-12,13.87-22C444.15,261,440.3,261.16,435.13,266.83Zm124.34,32.95c-.3,2.27,5,5.44,6.83,15.55.8,4.6.3,11.86,2.35,15.73,1.91,3.56,7.53,5.86,10.21,7.78,11.14-8.61,8.61-20,8.47-30.1C581.59,296.64,572.11,286,559.47,299.78Zm-250.26-15.9c-2.86-4.36-7.07-8.14-12.32-13.06-5.57-5.23-7.75-7.6-17.7-7-6.75,18.12,5.87,30.43,21.94,35.19C307.64,293.36,307.57,292.81,309.21,283.88Zm97.31-29.33c6.09,10,7.79,11.5,17.23,16.6,6.43-4.57,5.15-6.67,10.53-11.76s6-2.93,12-9.61C435.68,241.15,418.37,241.43,406.52,254.55ZM160.83,379.69c2.6-12.72-4.36-17.46-16.32-12.25l0,.09C143.51,371.5,144.53,386.33,160.83,379.69Zm225.88,4.36c-.74-1.44-15.83-15.11-17.77-15.72-8.22-2.63-14.93,8-18.23,12.74C363,404,393,396.16,386.71,384.05Zm-242.2-16.61c.44-.86.81-1.92,1.94-2.24-1.79-5.74-4.67-6.55-9.83-9.14-3,3.4-5.09,4.5-5.46,6.48,3.41,2.82,7,6.75,12,6.09a1.73,1.73,0,0,0,1.27-1.1s0,0,0-.08Zm223.23,71.17c11.14-1.7,12.69-10.29,6.08-21.16-6.31.53-10.83-.51-10.83,8.08C363,431.83,362.93,434.75,367.74,438.61ZM300.1,370.1C307.3,367,309.81,357,312,348.23c2.86-11.52,5.17-14.55,1.23-25.56l-16,11.83C297.54,360.39,291.79,365.33,300.1,370.1Zm58.75-103c-4.58.82-8.11-3.76-12-1.71-3.57,1.9-5.87,7.53-7.8,10.19,8.59,11.16,20,8.65,30.1,8.52,4.43-3.7,10.35-8.83,5.26-23.8C372.16,260,369,265.34,358.85,267.12Zm-36.28,20.06c-5.36,1.88-14.71,13-20.07,16.83,13.08,22.76,36.23,13.32,48.49-.36,4.66-5.22,3.88-11.48,4-14.52C348.54,285.6,330.16,284.52,322.57,287.18Zm-97.84,11.93c4.68,5,3.69,3.72,9.68,3.61,4.42-8.2,4.14-5.71.88-14.88C221,279.35,216.06,289.91,224.73,299.11Zm11.17-32.87c-4.18-6.06-7.92-15.26-18.19-15.66-3.45,10.17,8.43,29.38,10.55,31.67C246.05,284.7,242.26,275.47,235.9,266.24Zm159.53,72.67c-14.38-.12-18,8.48-9.78,20.34l.09,0C390.22,359.47,406.18,355.19,395.43,338.91Zm-36.49-48.5-.47,14.66c11.61,3.43,14.3.51,25.38-3.86,8.43-3.35,18-7.18,20-15.69-6.05-9-10.1-2-36,.21Zm21-16.62c8.62,4.63,10.23,3.49,18.75,1.56,6.52-1.5,9.29-2.48,15.12-6.92C394.62,247.74,381,253.19,379.91,273.79Zm31.38,12.93c4.66,4.95,3.68,3.72,9.66,3.59,4.44-8.17,4.15-5.7.89-14.87C407.58,266.94,402.63,277.52,411.29,286.72Zm-25.64,72.53c-1-.3-2.27-.46-2.85-1.62-5.86,3.15-6.1,6.45-7.82,12.62,4.32,2.5,6,4.56,8.21,4.53,2.33-4.3,5.8-9.08,4-14.36a1.89,1.89,0,0,0-1.48-1.15h-.07ZM333.76,319.9c6,12,8,13.91,19.74,20.52,10-4.78,8.71-7.31,17.33-12.79,8.4-5.32,8.88-2.92,18.83-10.19C377.12,306.64,353.21,305.65,333.76,319.9Zm40.47,94.46c.37-7.42-.44-11.73-3.51-18.3-1.12,1.48-4.81,2.86-5.59,4.3-2.52,4.59-.64,9.24-.18,15.12C367.24,417.45,370.91,417.87,374.23,414.36Zm-27.44-74.75c-11.14-6.89-12.76-6.36-24.8-7.27-6.47,9.07-10.76,23.2-9.21,32.05C337.82,370.83,341.29,357.54,346.79,339.61Zm-159.91,4.57c8.52,4.85,17.67,4.44,23.63-5.15-5.51-7-9.17-17.82-16.44-21.82-10.68-5.89-13.79,5.46-33.24,8C166.53,332.19,178.65,339.52,186.88,344.18ZM346,380.2c11.15-6.54,11.94-10.64,4.79-20.89-10.1,1.25-16.94,6.75-25.47,10.63C325.92,382.28,344.14,396.49,346,380.2Zm1.28,26.18c4.41-3.9,10.28-8,10.53-13.81.07-1.86-3.46-1.57-3.74-3.79-7.82,2-9.5,5.27-14,11.19C343.86,403.44,344.84,405.91,347.32,406.38Zm56.47,26.42c10.51-17.27-7.41-21.39-10.42-21.51l-5.32,1.89C387.82,425.56,391.32,434.66,403.79,432.8Zm-17.73-33c-4.33-3.71-3.37-2.77-7.28-2.13-.83,7.26-1.28,5.15,3.19,12.52C393.5,416,394.08,406.74,386.06,399.84Zm-46.6,17c12.11-15.38-1.69-14.89-4.11-14.38L330.61,405C327.91,414.55,328.91,420.8,339.46,416.83Zm-142-121.7c1.31,13.39,8.18,28.07,14.89,39.1,13.74-3.23,19.28-8.37,28-15.64C232,302.66,208.83,295.2,197.42,295.13Zm31.1,39.3c-8.81-1.45-9.58.61-15.39,6.73-4.46,4.7-6.19,7.08-8.81,14.87C228.52,371.32,236.82,358.81,228.52,334.43Zm83.67,63c12.36-3.79,15.61-14.4,11-26-10.12-1.09-18,2.67-27.24,4.49C293.66,388,295.64,402.51,312.19,397.42Zm-41.93-52.29c.16-.15-4.84-10.64-13.62-14.59-6.16-2.76-15,.3-21.61,1.1-2.63,8-.81,21.12,3.52,29.8C247.23,362,280.38,357.69,270.26,345.13Zm33.58-19.8,4-3.15c-3.41-10.67-9.07-17.43-19.18-12.21C284.7,327.8,301.22,326.12,303.84,325.33Zm-12.46,1.44c-7.56-10.48-18.65-10.16-28.2-2.09,2.21,9.94,8.32,16.23,13,24.37C288.4,347.34,301.5,340.83,291.38,326.77ZM407.06,379.9c-7.6-2.81-8-2.65-16,0-3.52,1.16-1,3.21-3.39,5.39,2.54,3.67,8.75,6.72,16,8.2C408.21,391.46,407.68,386.06,407.06,379.9ZM423,293.13c-10.17-3.45-29.37,8.44-31.68,10.55-2.45,17.79,6.78,14,16,7.64C413.35,307.14,422.55,303.42,423,293.13ZM112.77,149.83c5.29-10.44,7.83-15.26,3.1-25.69-19.89-6.5-29.68,6.44-27.79,30C99,158.57,105.59,164.06,112.77,149.83Zm13.09,7c14.22-8.63,15-21.26-3.76-28.28a32.43,32.43,0,0,0-1.48,14.34C121.16,150.25,120.71,151.93,125.86,156.85Zm427,217.05a28.6,28.6,0,0,1-7.05-.85l-11.34-2.85L540.18,360a39.88,39.88,0,0,1,6.42-8.95,22.06,22.06,0,0,0,2.91-3.71,21.7,21.7,0,0,0,2.25-4.43,32.42,32.42,0,0,1,5.74-9.67l1.69-2.08a49.06,49.06,0,0,1-1.28-9.78c-.12-1.75-.22-3.41-.42-4.52a19.87,19.87,0,0,0-3.81-8.75c-1.5-2.15-3.53-5.08-3.11-9.19-3.17-.49-6.21-1.09-9.49-1.75l-3.65-.72c-1.07-.21-2.07-.38-3-.54l-.12,0c0,.58,0,1.16,0,1.74,0,122.34-99.53,221.87-221.88,221.87A222,222,0,0,1,122.29,411.87a15.06,15.06,0,0,1-6.62,1.55h0c-9.83,0-16.46-8.6-19.73-25.56l-1.14-5.92A17.34,17.34,0,0,1,86,384.35h0c-5.37,0-10.7-2.4-15.86-7.13L67,374.39l.19-4.18c.35-7.33,3.22-12.93,8.09-16.31a16.73,16.73,0,0,1-2-1.79c-2.43-2.53-5.25-7.16-4.92-14.83l.17-3.94,3-2.53c3.95-3.3,7.87-4.84,12.36-4.84a37.09,37.09,0,0,1,7.41,1l.14,0,1.08.25a222.86,222.86,0,0,1,2.25-72.73c-.41-.47-.81-1-1.19-1.45a25.73,25.73,0,0,1-5.32-16.68c-4.89-3.3-14.61-12.28-14.9-24.45a23.88,23.88,0,0,1,5.19-15.26,14.37,14.37,0,0,1-3.73-4A259.75,259.75,0,1,0,561.05,372.9a34.65,34.65,0,0,1-8.2,1ZM125.23,120.2c10.17,3.8,15.25,9,17.75,13.6l2-1.17,4.71,3.53c1.91,1.43,3.94,3,6,4.57a221.15,221.15,0,0,1,156.71-65c106.41,0,195.54,75.3,217,175.4a48,48,0,0,1,8.67-3l3.78-.95,3.26,2.12c7.22,4.67,16,13.87,26.12,27.32A259.65,259.65,0,0,0,128.84,114c-1.79,1.79-3.54,3.61-5.27,5.44l.05.12ZM557,352.19c-3.82,5.93-4.78,4.6-9,12.2,10.78,2.71,26-4.17,34.37-19.06-7-5.52-8.75-6.06-17.92-6.44C559.48,345,561,346.12,557,352.19ZM105.36,170.1c-4.55-6.38-13.21-12.65-19.93-13.81-7,10.38-3.78,30.19-3.75,30.26C86.8,198.53,102.45,176.5,105.36,170.1ZM539.13,287.69c8.08,1.57,13.72,2.91,21.59,3.34l7.57-1.17L565,283.3c-7.51-10.11-16.94-21.37-24.78-26.44-14.43,3.62-13,8.21-20.84,19C525.73,286.6,530.12,286,539.13,287.69Zm-84.85,8.81c5.55-5.35,13.84-10.71,9.11-18.55-3.28.26-9.25-.16-12.77,1.19-3.81,1.49-7.3,5.5-10.45,7.71-7,4.88-13.14,5-14.13,6.33C429.25,304.2,442.94,301.28,454.28,296.5ZM414.52,398.43c25.55-10.37,21.62-21.8-.79-26.75-6.37,5.6-5.36,7.05-4.52,13.9C409.87,390.83,410.52,393.12,414.52,398.43Zm108.6-131.71c-2-9-20.42-29.1-31.12-30.23-3.33,7.44-1.4,5.69-2,13.29-.53,7-1.79,5-1,13.17C496.61,269.19,512.29,274.93,523.12,266.72Zm-40.76-3.82c-21-9.34-27.82.21-28.09,9.59,12,4.47,21.65,9.88,35.69,12.61C499.48,278.5,498.06,269.87,482.36,262.9ZM129.5,185.42c1.2,4.49,7.64,9.44,11.38,13.3,9.8-2,14.75-5.95,21-16.62-11.31-9.59-19.62-11.76-29-7C132.38,178.22,128.47,181.61,129.5,185.42Zm76.86-3.62c-3.36-.19-4.7,3.25-6.2,7.16,3.74,4,4,4.08,9.65,4.93,2.49.37,1.6-1.65,3.71-2.24C213.1,188.65,210.27,184.91,206.36,181.8Zm25.43-5.41c4,1.62,6.4,3.62,9-1.58,1.93-3.82,2.86-5.57,1.13-9.38C234.68,163.05,231.11,167.78,231.79,176.39ZM213.67,193c0,1.11,5,14,6,15,4.15,4.11,11.49-.3,14.94-2.15C234.13,188.17,213.59,183.78,213.67,193Zm30.78-1.8c-3.87,1-8.68,1.72-10.6,5.14-.62,1.1,1.62,2,1.11,3.44,5.33,1.21,7.37-.29,11.89-2.5C245.64,194.05,245.8,192.25,244.45,191.21Zm-26.12-33.29c-11.65,7.25-2.06,15.23-.27,16.22l3.8.49C225.79,167.19,226.44,160.61,218.33,157.92ZM219,183.3c1.48,3.59,1.19,2.72,3.76,3.52,2.72-4.13,2.34-2.72,1.89-8.55C219.44,171.23,216.24,176.68,219,183.3Zm8.12,7c1.13-.56,3.79-.27,4.71-.89,2.94-2,3.23-5.41,4.74-9.11-.79-1.9-2.88-3.27-6-2.15A22.44,22.44,0,0,0,227.11,190.3Zm23.4,6.94,3.63-.08c4.57-4.95,5.88-9-1.74-9.88C240.37,192.9,248.88,196.81,250.51,197.24ZM139.4,351c3.76-6.8-4.52-14.64-8.13-18.39-22.5,6.89-20.77,34.81-9,31.4C123.74,363.63,138.49,352.66,139.4,351ZM310.54,174l1.52,4.23c9.86.14,17.08-2.68,15.57-12.59C313.85,157.32,310.62,171.58,310.54,174ZM279,157.91c4.48,5.05,5.62,4.25,11.07,3.55,4.16-.53,6-1.07,10.19-4.26C291.9,136.91,282.82,140.07,279,157.91Zm22.5,21.92c-2.94,3.46-2.2,2.7-1.66,5.8,5.76.65,4.1,1,9.93-2.57C314.32,173.86,306.93,173.42,301.47,179.83Zm14,9.69c.44,5-.36,8.61,6.46,8.58,5,0,7.34,0,10.4-3.82C331,185.43,324.14,184.21,315.52,189.52ZM95,346.76c.64-5.69,2.34-9.51-5.26-11-5.58-1.1-8.17-1.66-12.44,1.92C76.84,347.83,84.18,350.71,95,346.76Zm2,18.4-.76-5c-10.93-2.38-19.6-.87-20.14,10.51C89.59,383,96.39,367.82,97,365.16Zm17.45-17.4c-1.1-1.24-1.68-4.75-2.82-5.71-3.64-3-8.09-2.2-13.37-2.79-2.16,1.65-3.18,4.85-.64,8.4C104.15,349.3,108.13,349.33,114.48,347.76Zm14.07,42.4c-3.85-6.63-5.3-6-11.52-6.43-4.77-.35-6.91-.17-12.31,2.44C109.43,410.64,120.26,409.17,128.55,390.16ZM94,229.39l8.21,1.05c8.49-16.05,9.91-30.28-7.62-36.09C69.4,210,90.11,227.24,94,229.39ZM122.44,382.8c3.83-6.25,3.76-6.65,2.84-14.14-.4-3.33-2.67-1.47-4.18-4-3.69,1.61-7.49,6.58-10.06,12.71C112,381.81,116.88,382.28,122.44,382.8Zm-5.76-230.58c-5.12,3.23-20.3,21.16,3.31,31.7C136.23,172.53,134.28,159.55,116.68,152.22Zm27.69-8.91c-8.07,4.66-8,5.87-11.69,13.1a59.82,59.82,0,0,0,7.27,7.33c8,7,19.21,15,24.43,16.45C175.48,166.66,157,152.75,144.37,143.31Zm15.42,49.35c3.43,7.11,5.71,6.2,9.84,12.34s1.9,6.34,7.48,13.45c4.15-3.65,9.33-7.92,10.32-14.26,1.48-9.37-3.21-21.66-9.75-29.91C166.82,178.63,166.37,184.2,159.79,192.66ZM99.34,182.05c-11.38,13.17,29,35.42,42.57,30.21-.22-14-5.77-13.35-16.93-21.06C117.12,185.77,106.1,174.24,99.34,182.05ZM302.72,252c-6.94,8.31-10.68,11.85.43,21.34,9,7.7,17.11,10.1,26,5.59C356.83,264.85,314.78,253.18,302.72,252Zm-109.12-60c5.58-1.44,5.42-2.63,7-7,1.2-3.38,1.51-5,.72-9.41C182.67,173.92,181.53,182,193.6,191.9Z"></path></svg>
+				</a>
+			</div>
+		</div>
+	</div>   
+</div></footer>
+<!-- Footer End -->
+
+<!-- Loading -->
+<div class="fullscreen" id="loader"><svg class="loader-svg" height="48px" width="48px">
+        <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4"></circle>
+        <circle class="path" cx="24" cy="24" fill="none" r="22" stroke-miterlimit="10" stroke-width="4"></circle>
+    </svg></div>
+<!-- Loading End -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/4.1.3/js/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/plugins/slick/1.8.0/slick.min.js"></script>
+    <script src="assets/plugins/inputmask/jquery.mask.min.js"></script>
+    <script src="assets/plugins/swiper/js/swiper-bundle.min.js"></script>
+    <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="assets/plugins/jquery-validation/localization/messages_tr.min.js"></script>
+    <script src="assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/predictive-search.js"></script>
+        <script src="assets/js/main2.js"></script>
+        <script src="https://kit.fontawesome.com/1b82de6688.js" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        if (navigator.appName == 'Microsoft Internet Explorer' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv 11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)) {
+            $("body").remove();
+            alert("Kullandığınız tarayıcı Internet Explorer. Lütfen Firefox,Chrome,Opera,Yandex… Gibi Güncel Bir İnternet Tarayıcısı Kullanın.");
+            $(function() {
+                window.close();
+            });
+        } else {
+            $("body").show();
+        }
+
+    });
+</script>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        if (window.location.href.indexOf('https://www.eca.com.tr/presentation-films') !== -1) {
+            var subItem = document.querySelector('#leftmenu > li > a');
+            console.log(subItem.href);
+            if (subItem.href !== 'https://www.eca.com.tr/presentation-films') {
+                subItem.click();
+            }
+
+        }
+    });
+</script>
+
+<script>
+    var swipercarouselthumbs = document.querySelector(".swiper-carousel-thumbs");
+    if (swipercarouselthumbs) {
+        const swiper2 = new Swiper(".swiper-carousel-thumbs", {
+            direction: "horizontal",
+            spaceBetween: 10,
+            slidesPerView: 3,
+            breakpoints: {
+                576: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            }
+        })
+    }
+
+    var swipercarousel = document.querySelector(".swiper-carousel");
+    if (swipercarousel) {
+        const swiper = new Swiper(".swiper-carousel", {
+            direction: "horizontal",
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            thumbs: {
+                swiper: swiper2,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+    }
+</script>
+
+
+
+</body>
+
+</html>

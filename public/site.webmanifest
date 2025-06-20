@@ -1,0 +1,16 @@
+{
+  "name": "Öz Mevsim Isı Sistemleri",
+  "short_name": "Öz Mevsim",
+  "description": "Profesyonel kombi, klima ve ısıtma sistemleri hizmetleri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+} 

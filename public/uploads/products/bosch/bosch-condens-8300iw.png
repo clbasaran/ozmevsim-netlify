@@ -1,0 +1,2398 @@
+
+
+<!doctype html>
+<html lang="en-AU" dir="ltr">
+<head>
+<!-- page-id 636455 -->
+
+<title>Bosch Hot Water &amp; Heating - Residential | Bosch Thermotechnology </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="With a strong history in innovation and quality, Bosch hot water and heating products strives to meet the highest standard synonymous with German technology." />
+<meta name="robots" content="index,follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Bosch Hot Water &amp; Heating - Residential | Bosch Thermotechnology " />
+<meta property="og:description" content="With a strong history in innovation and quality, Bosch hot water and heating products strives to meet the highest standard synonymous with German technology." />
+<meta property="og:image" content="https://www.bosch-homecomfort.com/au/media/country_pool/general/bosch_en_lv_2c_rgb.png" />
+<meta property="og:url" content="https://www.bosch-homecomfort.com/au/en/residential/home/" />
+<meta property="og:locale" content="en_AU" />
+<meta property="og:site_name" content="Bosch Home Comfort" />
+<link rel="canonical" href="https://www.bosch-homecomfort.com/au/en/residential/home/" />
+<meta name="google-site-verification" content="tfN43sUbk57G0srJctUh4IROSuX8X1mAwkw1Un5azGk" />
+<!-- base -->
+<link rel="icon" href="https://www.bosch-homecomfort.com/resources/assets/favicons/boschtt/favicon.ico">
+<link rel="preload" href="https://www.bosch-homecomfort.com/resources/assets/fonts/BoschSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://www.bosch-homecomfort.com/resources/assets/fonts/BoschSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://www.bosch-homecomfort.com/resources/assets/criticalcss/boschtt/critical.css?2025_340">
+<link rel="stylesheet" type="text/css" href="https://www.bosch-homecomfort.com/resources/assets/main.css?2025_340">
+<script type="module" src="https://dock.ui.bosch.tech/releases/4-latest/build/dock-privacy-settings.esm.js" crossorigin="anonymous"></script>
+<script nomodule="" src="https://dock.ui.bosch.tech/releases/4-latest/build/dock-privacy-settings.js" crossorigin="anonymous"></script>
+
+<!-- Google Analytics -->
+<!-- Data Layer Object -->
+<script>
+function init_datalayer() {
+if (window.dataLayer === undefined) {
+window.dataLayer = [];
+}
+window.dataLayer.push({
+page: {
+pageInfo: {
+pageURL: 'https://www.bosch-homecomfort.com/au/en/residential/home/',
+pageName: 'Bosch Hot Water &amp; Heating - Residential | Bosch Thermotechnology ',
+pageType: 'residential',
+pageCategory: '',
+pageSubCategory: 'Home',
+breadcrumps: [ ],
+language: 'en',
+country: 'AU'
+}
+}
+});
+}
+privacySettingValue = window.localStorage.getItem("privacySettingValue");
+if (typeof privacySettingValue != "undefined" && privacySettingValue >= 3) {
+if (window.dataLayer === undefined) {
+window.dataLayer = [];
+}
+window.dataLayer.push({
+page: {
+pageInfo: {
+pageURL: 'https://www.bosch-homecomfort.com/au/en/residential/home/',
+pageName: 'Bosch Hot Water &amp; Heating - Residential | Bosch Thermotechnology ',
+pageType: 'residential',
+pageCategory: '',
+pageSubCategory: 'Home',
+breadcrumps: [ ],
+language: 'en',
+country: 'AU'
+}
+}
+});
+}
+</script>
+<!-- TMS Properties -->
+<script>
+privacySettingValue = window.localStorage.getItem("privacySettingValue");
+if (typeof privacySettingValue != "undefined" && privacySettingValue >= 3) {
+(
+function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({
+'gtm.start':new Date().getTime(),
+event:'gtm.js'
+});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),
+dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+}
+)(
+window,
+document,
+'script',
+'dataLayer',
+'GTM-MDHTQPZ'
+);
+}
+</script>
+<!-- End Google Analytics -->
+</head>
+<body class="">
+<dock-privacy-settings cookie-name="do-consent"
+cookie-same-site="Lax"
+cookie-secure="true"
+consent-categories="analysis,marketing"
+consent-domain=".bosch-homecomfort.com"
+consent-path="/au"
+consent-lifetime-accepted="365"
+consent-lifetime-declined="31"
+link-url-marketing=" https://www.bosch.com.au/corporate-information/?prevent-auto-open-privacy-settings=1"
+link-url-comfort=" https://www.bosch.com.au/corporate-information/?prevent-auto-open-privacy-settings=1"
+link-url-imprint=" https://www.bosch.com.au/corporate-information/?prevent-auto-open-privacy-settings=1"
+link-url-policy=" https://www.bosch.com.au/corporate-information/?prevent-auto-open-privacy-settings=1"
+locale= "en-au"
+fallback-locale="en-gb"
+style="font-size: 14px;">
+</dock-privacy-settings>
+<header class="Header Header-v2 -primary -is-sticky " >
+<div class="Header_top -container">
+ <a
+class="Header_logo
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/home/"
+target="_self"
+aria-label="Bosch Home Comfort"
+aria-current="page"
+
+><img class="Logo" alt="Bosch Home Comfort" title="Bosch Home Comfort" src="https://www.bosch-homecomfort.com/resources/assets/img/bosch.svg" width="110" height="24" /></a>
+<div class="Header_metaLinks">
+<div class="Header_gbIdentifier">
+<span class="Header_gbIdentifierLabel">Home Comfort</span>
+</div>
+<div class="Header_quickLinks">
+ <a
+class="Btn Btn-integrated -with-icon
+trackingElement"
+href="tel:1300307037"
+title="1300 30 70 37"
+target="_self"
+rel=" noopener"
+tabindex="0"
+data-track_domevent="click"
+data-track_dyn_pagename="Call"
+data-track_dyn_eventtarget="Call"
+data-track_dyn_eventaction="quick links"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="quick links"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="phone"
+data-track_dyn_clickurl="tel:1300307037"
+><svg role="presentation" width="24" height="24" class="Icon Icon-call Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M128.647 159.431c-6.492 0-35.913-1.732-65.416-31.235-32.082-32.082-31.325-64.069-31.212-66.578a9.934 9.934 0 0 1 2.927-6.96l12.73-12.73A9.933 9.933 0 0 1 54.745 39c2.671 0 5.182 1.04 7.071 2.929l16.97 16.97c1.89 1.89 2.93 4.4 2.93 7.072s-1.04 5.182-2.93 7.071l-9.899 9.9a1.991 1.991 0 0 0-.586 1.413l-.012.39c.014.914.552 9.463 14.74 23.652 14.292 14.291 22.862 14.733 23.672 14.74l.275-.046.095.034c.72 0 1.195-.367 1.413-.585l9.9-9.9c1.89-1.889 4.4-2.93 7.072-2.93s5.182 1.041 7.07 2.93l16.972 16.97c3.897 3.9 3.897 10.243 0 14.142L136.77 156.48a9.937 9.937 0 0 1-6.961 2.928c-.202.008-.595.022-1.162.022zM54.747 47c-.31 0-.906.076-1.415.585L40.604 60.314a1.991 1.991 0 0 0-.586 1.414l-.006.223c-.014.29-1.16 30.551 28.876 60.588 30.205 30.206 60.288 28.89 60.588 28.877l.223-.007c.72 0 1.196-.367 1.415-.586l12.727-12.728c.78-.78.78-2.049 0-2.828l-16.97-16.97a2.001 2.001 0 0 0-2.829 0l-9.899 9.9a9.932 9.932 0 0 1-6.913 2.927c-2.116.13-12.979-.193-29.857-17.07-16.876-16.876-17.194-27.736-17.07-29.857a9.931 9.931 0 0 1 2.927-6.912l9.9-9.9c.78-.78.78-2.049 0-2.828L56.16 47.586A1.992 1.992 0 0 0 54.746 47z"/></svg><span class="Btn_label">Call</span></a>
+ <a
+class="Btn Btn-integrated -with-icon
+trackingElement"
+href="mailto:HotWater.Query@au.bosch.com"
+title="HotWater.Query@au.bosch.com"
+target="_blank"
+rel=" noopener"
+tabindex="0"
+data-track_domevent="click"
+data-track_dyn_pagename="E-mail"
+data-track_dyn_eventtarget="E-mail"
+data-track_dyn_eventaction="quick links"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="quick links"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="mail"
+data-track_dyn_clickurl="mailto:hotwater.query@au.bosch.com"
+><svg role="presentation" width="24" height="24" class="Icon Icon-mail Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M24 44v88c0 8.8 7.2 16 16 16h112c8.8 0 16-7.2 16-16V44H24zm127.4 8L96 91.1 40.6 52h110.8zm.6 88H40c-4.4 0-8-3.6-8-8V55.7l64 45.2 64-45.2V132c0 4.4-3.6 8-8 8z"/></svg><span class="Btn_label">E-mail</span></a>
+<div class="Header_search" tabindex="-1">
+<form id="header-search"
+class="Header_searchForm"
+action="https://www.bosch-homecomfort.com/au/en/bott-search-frontend/residential/search"
+method="get"
+role="search"
+autocomplete="off"
+aria-hidden="false">
+<div class="Header_searchField Textfield Textfield-search">
+<input name="searchTerm"
+type="search"
+pattern=".{3,}"
+placeholder="Search..."
+title="Please write more then 3 characters"
+data-autocomplete-url="https://www.bosch-homecomfort.com/au/en/bott-search-frontend/residential/autocomplete.json?term=" aria-label="Search expanded"
+>
+<ul class="Header_searchSuggestions -primary container List List-default" role="listbox" aria-label="Search suggestions"></ul>
+<button type="button" class="Header_closeSearchBtn Textfield_iconCloseSearch" aria-label="Close">
+<svg class="Icon Icon-close "
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-close.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<button type="submit" class="Textfield_iconSearch" aria-label="Search">
+<svg role="presentation" width="24" height="24" class="Icon Icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" style="enable-background:new 0 0 192 192" xml:space="preserve"><path d="m170.829 149.171-56.874-56.873A51.667 51.667 0 0 0 120 68c0-28.673-23.327-52-52-52S16 39.327 16 68s23.327 52 52 52c8.773 0 17.04-2.192 24.298-6.045l56.873 56.874c3.45 3.45 7.92 5.2 12.248 5.2 3.854 0 7.597-1.388 10.41-4.2 5.97-5.972 5.522-16.135-1-22.658zM24 68c0-24.262 19.738-44 44-44s44 19.738 44 44-19.738 44-44 44-44-19.738-44-44zm142.171 98.171c-1.75 1.753-3.874 1.979-5.347 1.857-2.171-.176-4.357-1.217-5.995-2.857L99.216 109.56a52.439 52.439 0 0 0 10.343-10.343l55.612 55.613c1.64 1.638 2.68 3.824 2.857 5.995.12 1.473-.105 3.596-1.857 5.347z"/></svg>
+</button>
+</div>
+</form>
+<button class="Header_searchBtn Btn Btn-integrated -with-icon" aria-label="Search" aria-expanded="false">
+<svg role="presentation" width="24" height="24" class="Icon Icon-search Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" style="enable-background:new 0 0 192 192" xml:space="preserve"><path d="m170.829 149.171-56.874-56.873A51.667 51.667 0 0 0 120 68c0-28.673-23.327-52-52-52S16 39.327 16 68s23.327 52 52 52c8.773 0 17.04-2.192 24.298-6.045l56.873 56.874c3.45 3.45 7.92 5.2 12.248 5.2 3.854 0 7.597-1.388 10.41-4.2 5.97-5.972 5.522-16.135-1-22.658zM24 68c0-24.262 19.738-44 44-44s44 19.738 44 44-19.738 44-44 44-44-19.738-44-44zm142.171 98.171c-1.75 1.753-3.874 1.979-5.347 1.857-2.171-.176-4.357-1.217-5.995-2.857L99.216 109.56a52.439 52.439 0 0 0 10.343-10.343l55.612 55.613c1.64 1.638 2.68 3.824 2.857 5.995.12 1.473-.105 3.596-1.857 5.347z"/></svg>
+<span class="Btn_label">Search</span>
+</button>
+</div>
+</div>
+</div>
+<button class="Header_menuTrigger Btn Btn-integrated -with-icon" aria-haspopup="true" aria-controls="menu1" aria-expanded="false" data-aria-label-default="Open Menu" data-aria-label-close="Close Menu" aria-label="Open Menu">
+<span class="Header_menuTriggerIcon Btn_Icon">
+<span class="Header_menuTriggerIconBar"></span>
+<span class="Header_menuTriggerIconBar"></span>
+<span class="Header_menuTriggerIconBar"></span>
+<span class="Header_menuTriggerIconBar"></span>
+</span>
+<span class="Header_menuTriggerLabel Btn_label">Menu</span>
+</button>
+</div>
+<div class="Header_searchSuggestions -primary" data-all-results-label="Show all results">
+<div class="-container"></div>
+</div>
+<div class="Header_navigation"
+data-flyout-closebtn-aria-label="Close"
+data-flyout-closebtn-title="Close">
+<nav id="menu1" class="Navigation -container-lg" aria-label="Main navigation">
+<ul class="Navigation_Items" role="menu" aria-label="Areas">
+<li class="Navigation_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+aria-haspopup="true" aria-expanded="false" aria-controls="products" role="menuitem" aria-label="Products"
+data-track_domevent="click"
+data-track_dyn_pagename="Products"
+data-track_dyn_eventtarget="Products"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+>
+Products
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-1" data-menu-position="100">
+<div class="SubMenu_ItemsWrapper">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Products" id="products">
+
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/products-1001042-c/"
+title="All Products"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="All Products"
+data-track_dyn_eventtarget="All Products"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/products-1001042-c/"
+>All Products</a>
+</li>
+<li class="SubMenu_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+data-track_domevent="click"
+data-track_dyn_pagename="3 Phase Electric Instantaneous Water Heater"
+data-track_dyn_eventtarget="3 Phase Electric Instantaneous Water Heater"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+aria-haspopup="true" aria-expanded="false" aria-controls="3phaseelectricinstantaneouswaterheater" role="menuitem" aria-label="3 Phase Electric Instantaneous Water Heater">
+3 Phase Electric Instantaneous Water Heater
+<svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-2" data-menu-position="200">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="3 Phase Electric Instantaneous Water Heater" id="3phaseelectricinstantaneouswaterheater">
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/3-phase-electric-instantaneous-water-heater-20467340-c/"
+title="3 Phase Electric Instantaneous Water Heater"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="3 Phase Electric Instantaneous Water Heater"
+data-track_dyn_eventtarget="3 Phase Electric Instantaneous Water Heater"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/3-phase-electric-instantaneous-water-heater-20467340-c/"
+>3 Phase Electric Instantaneous Water Heater</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-8500i-20467354-p/"
+title="Tronic 8500i"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Tronic 8500i"
+data-track_dyn_eventtarget="Tronic 8500i"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-8500i-20467354-p/"
+>Tronic 8500i</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-7000--20467342-p/"
+title="Tronic 7000"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Tronic 7000"
+data-track_dyn_eventtarget="Tronic 7000"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-7000--20467342-p/"
+>Tronic 7000</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-4000-20467339-p/"
+title="Tronic 4000"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Tronic 4000"
+data-track_dyn_eventtarget="Tronic 4000"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-4000-20467339-p/"
+>Tronic 4000</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="SubMenu_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch Hot Water Systems"
+data-track_dyn_eventtarget="Bosch Hot Water Systems"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+aria-haspopup="true" aria-expanded="false" aria-controls="boschhotwatersystems" role="menuitem" aria-label="Bosch Hot Water Systems">
+Bosch Hot Water Systems
+<svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-2" data-menu-position="200">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Bosch Hot Water Systems" id="boschhotwatersystems">
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-hot-water-systems-1001927-c/"
+title="All Hot Water Solutions"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="All Hot Water Solutions"
+data-track_dyn_eventtarget="All Hot Water Solutions"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-hot-water-systems-1001927-c/"
+>All Hot Water Solutions</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydropower-hot-water-systems-1001934-p/"
+title="HydroPower Hot Water Systems"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="HydroPower Hot Water Systems"
+data-track_dyn_eventtarget="HydroPower Hot Water Systems"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydropower-hot-water-systems-1001934-p/"
+>HydroPower Hot Water Systems</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/pilot-ignition-gas-hot-water-system--1001935-p/"
+title="Pilot Ignition Gas Hot Water System"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Pilot Ignition Gas Hot Water System"
+data-track_dyn_eventtarget="Pilot Ignition Gas Hot Water System"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/pilot-ignition-gas-hot-water-system--1001935-p/"
+>Pilot Ignition Gas Hot Water System</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/internal-compact-hot-water-system-1001936-p/"
+title="Internal Compact Hot Water System"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Internal Compact Hot Water System"
+data-track_dyn_eventtarget="Internal Compact Hot Water System"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/internal-compact-hot-water-system-1001936-p/"
+>Internal Compact Hot Water System</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="SubMenu_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+data-track_domevent="click"
+data-track_dyn_pagename="Hydronic Heating Systems"
+data-track_dyn_eventtarget="Hydronic Heating Systems"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+aria-haspopup="true" aria-expanded="false" aria-controls="hydronicheatingsystems" role="menuitem" aria-label="Hydronic Heating Systems">
+Hydronic Heating Systems
+<svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-2" data-menu-position="200">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Hydronic Heating Systems" id="hydronicheatingsystems">
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydronic-heating-systems-1001944-c/"
+title="All Hydronic Heating Solutions"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="All Hydronic Heating Solutions"
+data-track_dyn_eventtarget="All Hydronic Heating Solutions"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydronic-heating-systems-1001944-c/"
+>All Hydronic Heating Solutions</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/condens-8300i-w-19653641-p/"
+title="Condens 8300i W"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Condens 8300i W"
+data-track_dyn_eventtarget="Condens 8300i W"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/condens-8300i-w-19653641-p/"
+>Condens 8300i W</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/gaz-6000w-1001948-p/"
+title="Gaz 6000W"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Gaz 6000W"
+data-track_dyn_eventtarget="Gaz 6000W"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/gaz-6000w-1001948-p/"
+>Gaz 6000W</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="SubMenu_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+data-track_domevent="click"
+data-track_dyn_pagename="Thermostat & Heating Controllers"
+data-track_dyn_eventtarget="Thermostat & Heating Controllers"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+aria-haspopup="true" aria-expanded="false" aria-controls="thermostat-heatingcontrollers" role="menuitem" aria-label="Thermostat & Heating Controllers">
+Thermostat & Heating Controllers
+<svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-2" data-menu-position="200">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Thermostat & Heating Controllers" id="thermostat-heatingcontrollers">
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/thermostat-heating-controllers-18809114-c/"
+title="All Hydronic Controllers"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="All Hydronic Controllers"
+data-track_dyn_eventtarget="All Hydronic Controllers"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/thermostat-heating-controllers-18809114-c/"
+>All Hydronic Controllers</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cw400-18809115-p/"
+title="Bosch CW400"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch CW400"
+data-track_dyn_eventtarget="Bosch CW400"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cw400-18809115-p/"
+>Bosch CW400</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cr50-18809116-p/"
+title="Bosch CR50"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch CR50"
+data-track_dyn_eventtarget="Bosch CR50"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cr50-18809116-p/"
+>Bosch CR50</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cr10-18809117-p/"
+title="Bosch CR10"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch CR10"
+data-track_dyn_eventtarget="Bosch CR10"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-cr10-18809117-p/"
+>Bosch CR10</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-or30-18809121-p/"
+title="Bosch OR30"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch OR30"
+data-track_dyn_eventtarget="Bosch OR30"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-or30-18809121-p/"
+>Bosch OR30</a>
+</li>
+<li class="SubMenu_Item " role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-or80-18809122-p/"
+title="Bosch OR80"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch OR80"
+data-track_dyn_eventtarget="Bosch OR80"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-or80-18809122-p/"
+>Bosch OR80</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="Navigation_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+aria-haspopup="true" aria-expanded="false" aria-controls="customersupport" role="menuitem" aria-label="Customer Support"
+data-track_domevent="click"
+data-track_dyn_pagename="Customer Support"
+data-track_dyn_eventtarget="Customer Support"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+>
+Customer Support
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-1" data-menu-position="100">
+<div class="SubMenu_ItemsWrapper">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Customer Support" id="customersupport">
+
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/"
+title="Customer Support Overview"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Customer Support Overview"
+data-track_dyn_eventtarget="Customer Support Overview"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/"
+>Customer Support Overview</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/documents-and-downloads/installation-and-user-manuals/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Installation and Customer Manuals"
+data-track_dyn_eventtarget="Installation and Customer Manuals"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/documents-and-downloads/installation-and-user-manuals/"
+>Installation and Customer Manuals</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/customer-faqs/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Troubleshooting / FAQs"
+data-track_dyn_eventtarget="Troubleshooting / FAQs"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/customer-faqs/"
+>Troubleshooting / FAQs</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="/au/en/residential/customer-support/find-a-service-technician/dealersearch/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Find a Service Technician / Installer"
+data-track_dyn_eventtarget="Find a Service Technician / Installer"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="/au/en/residential/customer-support/find-a-service-technician/dealersearch/"
+>Find a Service Technician / Installer</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/warranty-and-servicing/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Warranty and Servicing"
+data-track_dyn_eventtarget="Warranty and Servicing"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/warranty-and-servicing/"
+>Warranty and Servicing</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/documents-and-downloads/product-brochures/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Product Brochures"
+data-track_dyn_eventtarget="Product Brochures"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/documents-and-downloads/product-brochures/"
+>Product Brochures</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/customer-video-support/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Customer Video Support"
+data-track_dyn_eventtarget="Customer Video Support"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/customer-video-support/"
+>Customer Video Support</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/hydronic-heating-support/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Hydronic Heating Support"
+data-track_dyn_eventtarget="Hydronic Heating Support"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/hydronic-heating-support/"
+>Hydronic Heating Support</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/contact-us/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Contact Us"
+data-track_dyn_eventtarget="Contact Us"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/contact-us/"
+>Contact Us</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/newsletter/newsletter-registration/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Newsletter Registration"
+data-track_dyn_eventtarget="Newsletter Registration"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/newsletter/newsletter-registration/"
+>Newsletter Registration</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/competition-winners/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Competition Winners"
+data-track_dyn_eventtarget="Competition Winners"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/competition-winners/"
+>Competition Winners</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/bosch-homecom-easy/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch HomeCom Easy"
+data-track_dyn_eventtarget="Bosch HomeCom Easy"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/customer-support/bosch-homecom-easy/"
+>Bosch HomeCom Easy</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="Navigation_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+aria-haspopup="true" aria-expanded="false" aria-controls="learnmore" role="menuitem" aria-label="Learn More"
+data-track_domevent="click"
+data-track_dyn_pagename="Learn More"
+data-track_dyn_eventtarget="Learn More"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+>
+Learn More
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-1" data-menu-position="100">
+<div class="SubMenu_ItemsWrapper">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Learn More" id="learnmore">
+
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/learn-more/"
+title="Learn More Overview"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Learn More Overview"
+data-track_dyn_eventtarget="Learn More Overview"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/learn-more/"
+>Learn More Overview</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/learn-more/energy-and-climate/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Energy and Climate"
+data-track_dyn_eventtarget="Energy and Climate"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/learn-more/energy-and-climate/"
+>Energy and Climate</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/learn-more/bosch-in-australia/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch in Australia"
+data-track_dyn_eventtarget="Bosch in Australia"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/learn-more/bosch-in-australia/"
+>Bosch in Australia</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="Navigation_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+aria-haspopup="true" aria-expanded="false" aria-controls="trade" role="menuitem" aria-label="Trade"
+data-track_domevent="click"
+data-track_dyn_pagename="Trade"
+data-track_dyn_eventtarget="Trade"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+>
+Trade
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-1" data-menu-position="100">
+<div class="SubMenu_ItemsWrapper">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Trade" id="trade">
+
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+ <a
+class="Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/"
+title="Trade Overview"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Trade Overview"
+data-track_dyn_eventtarget="Trade Overview"
+data-track_dyn_eventaction="1st level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="1st level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/"
+>Trade Overview</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/spare-parts/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Spare Parts"
+data-track_dyn_eventtarget="Spare Parts"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/spare-parts/"
+>Spare Parts</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/installation-manuals/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Installation & Customer Manuals"
+data-track_dyn_eventtarget="Installation & Customer Manuals"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/installation-manuals/"
+>Installation & Customer Manuals</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/trade-faq/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Trade FAQs/Troubleshooting"
+data-track_dyn_eventtarget="Trade FAQs/Troubleshooting"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/trade-faq/"
+>Trade FAQs/Troubleshooting</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/training/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Training"
+data-track_dyn_eventtarget="Training"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/training/"
+>Training</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/image-library/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Image Library"
+data-track_dyn_eventtarget="Image Library"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/image-library/"
+>Image Library</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/resource-download/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Resource Download"
+data-track_dyn_eventtarget="Resource Download"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/resource-download/"
+>Resource Download</a>
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/technical-video-support/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Technical Video Support"
+data-track_dyn_eventtarget="Technical Video Support"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/technical-video-support/"
+>Technical Video Support</a>
+</li>
+<li class="SubMenu_Item -has-sub" role="none">
+<button class="SubMenu_Btn
+trackingElement"
+data-track_domevent="click"
+data-track_dyn_pagename="Promotions"
+data-track_dyn_eventtarget="Promotions"
+data-track_dyn_eventaction="2nd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="2nd level"
+aria-haspopup="true" aria-expanded="false" aria-controls="promotions" role="menuitem" aria-label="Promotions">
+Promotions
+<svg class="Icon Icon-forward-right SubMenu_Icon -visible-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+<svg class="Icon Icon-forward-right SubMenu_Icon -hidden-lg -end"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<div class="SubMenu SubMenu-2" data-menu-position="200">
+<ul class="SubMenu_Items -container-lg" role="menu" aria-label="Promotions" id="promotions">
+
+<li class="SubMenu_Item -goBack" role="none">
+<button class="SubMenu_Btn SubMenu_Btn-back" aria-label="Back to Previous Menu">
+<svg class="Icon Icon-arrow-left SubMenu_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-arrow-left.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+</li>
+<li class="SubMenu_Item -currentSelection" role="none">
+
+</li>
+<li class="SubMenu_Item" role="none">
+
+ <a
+class="
+Navigation_Link
+trackingElement"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/promotions/bosch-e-gift-card-promotion/"
+target="_self"
+role="menuitem"
+data-track_domevent="click"
+data-track_dyn_pagename="Bosch e-Gift Card Promotion"
+data-track_dyn_eventtarget="Bosch e-Gift Card Promotion"
+data-track_dyn_eventaction="3rd level"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="navi_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_clickdetail="3rd level"
+data-track_dyn_clickurl="https://www.bosch-homecomfort.com/au/en/residential/trade/promotions/bosch-e-gift-card-promotion/"
+>Bosch e-Gift Card Promotion</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+<nav class="Header_quickAssistance -contrast" aria-label="Quick Assistance">
+<div class="Hl Hl-5" role="heading" aria-level="2">Quick Assistance</div>
+<ul class="Header_quickAssistanceItems" role="menu">
+<li class="Header_quickAssistanceItem">
+ <a
+class="Header_quickAssistanceLink
+trackingElement"
+href="tel:1300307038"
+title="1300 30 70 38"
+target="_self"
+rel=" noopener"
+tabindex="0"
+data-track_domevent="click"
+data-track_dyn_pagename="Call"
+data-track_dyn_eventtarget="Call"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="phone"
+data-track_dyn_clickurl="tel:1300307038"
+><svg role="presentation" width="24" height="24" class="Icon Icon-call Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M128.647 159.431c-6.492 0-35.913-1.732-65.416-31.235-32.082-32.082-31.325-64.069-31.212-66.578a9.934 9.934 0 0 1 2.927-6.96l12.73-12.73A9.933 9.933 0 0 1 54.745 39c2.671 0 5.182 1.04 7.071 2.929l16.97 16.97c1.89 1.89 2.93 4.4 2.93 7.072s-1.04 5.182-2.93 7.071l-9.899 9.9a1.991 1.991 0 0 0-.586 1.413l-.012.39c.014.914.552 9.463 14.74 23.652 14.292 14.291 22.862 14.733 23.672 14.74l.275-.046.095.034c.72 0 1.195-.367 1.413-.585l9.9-9.9c1.89-1.889 4.4-2.93 7.072-2.93s5.182 1.041 7.07 2.93l16.972 16.97c3.897 3.9 3.897 10.243 0 14.142L136.77 156.48a9.937 9.937 0 0 1-6.961 2.928c-.202.008-.595.022-1.162.022zM54.747 47c-.31 0-.906.076-1.415.585L40.604 60.314a1.991 1.991 0 0 0-.586 1.414l-.006.223c-.014.29-1.16 30.551 28.876 60.588 30.205 30.206 60.288 28.89 60.588 28.877l.223-.007c.72 0 1.196-.367 1.415-.586l12.727-12.728c.78-.78.78-2.049 0-2.828l-16.97-16.97a2.001 2.001 0 0 0-2.829 0l-9.899 9.9a9.932 9.932 0 0 1-6.913 2.927c-2.116.13-12.979-.193-29.857-17.07-16.876-16.876-17.194-27.736-17.07-29.857a9.931 9.931 0 0 1 2.927-6.912l9.9-9.9c.78-.78.78-2.049 0-2.828L56.16 47.586A1.992 1.992 0 0 0 54.746 47z"/></svg><span class="Btn_label">Call</span></a>
+</li>
+<li class="Header_quickAssistanceItem">
+ <a
+class="Header_quickAssistanceLink
+trackingElement"
+href="mailto:HotWater.Query@au.bosch.com"
+title="HotWater.Query@au.bosch.com"
+target="_blank"
+rel=" noopener"
+tabindex="0"
+data-track_domevent="click"
+data-track_dyn_pagename="Contact"
+data-track_dyn_eventtarget="Contact"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="mail"
+data-track_dyn_clickurl="mailto:hotwater.query@au.bosch.com"
+><svg role="presentation" width="24" height="24" class="Icon Icon-mail Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M24 44v88c0 8.8 7.2 16 16 16h112c8.8 0 16-7.2 16-16V44H24zm127.4 8L96 91.1 40.6 52h110.8zm.6 88H40c-4.4 0-8-3.6-8-8V55.7l64 45.2 64-45.2V132c0 4.4-3.6 8-8 8z"/></svg><span class="Btn_label">Contact</span></a>
+</li>
+<li class="Header_quickAssistanceItem">
+ <a
+class="Header_quickAssistanceLink
+"
+href="/au/en/residential/customer-support/find-a-service-technician/dealersearch/"
+title="Find a Service Tech / Installer"
+target="_self"
+tabindex="0"
+
+><svg role="presentation" width="24" height="24" class="Icon Icon-locator Btn_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><path d="M96 92c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm0-40c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16zm0 123.879l-3.446-5.848c-.33-.56-32.99-55.983-39.978-67.964C47.126 93.317 44 80.906 44 68c0-28.673 23.327-52 52-52s52 23.327 52 52c0 12.905-3.125 25.317-8.575 34.067-6.99 11.98-39.65 67.405-39.979 67.964L96 175.879zM96 24c-24.262 0-44 19.738-44 44 0 11.305 2.764 22.475 7.393 29.88l.063.105c5.57 9.548 27.894 47.453 36.544 62.135 8.65-14.683 30.975-52.587 36.545-62.136l.063-.104C137.237 90.474 140 79.304 140 68c0-24.262-19.738-44-44-44z"/></svg><span class="Btn_label">Find a Service Tech / Installer</span></a>
+</li>
+</ul>
+</nav>
+</div>
+
+</header>
+<div id="page-scrollTop" tabindex="-1"></div>
+<div class="page " >
+<main>
+
+<section id="section-3075507" class=" Section Keyvisual -primary" >
+<div class="Keyvisual_items">
+
+<div class="Keyvisual-image Keyvisual_item " >
+<div class="Keyvisual_media">
+<div class="Image" style="--aspect-ratio:20/8" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_600x240.webp 600w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_900x360.webp 900w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_1200x480.webp 1200w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_1600x640.webp 1600w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_600x240original.jpg 600w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_900x360original.jpg 900w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_1200x480original.jpg 1200w , https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_1600x640original.jpg 1600w ">
+<img class="" src="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/rb4926hc_homepage_banner_fa_1600x640original.jpg" width="1600" height="640" alt="Homepage Banner" title="Homepage Banner" >
+</picture>
+</div>
+</div>
+<div class="Keyvisual_content" >
+<div class="Keyvisual_container container Columns">
+<div class="Keyvisual_info Intro Column ">
+<div class="Intro_inner">
+<h1 class="Hl Hl-2">
+3-Phase Electric Instantaneous Water Heater
+</h1 >
+<p class="Hl Hl-6">Engineered for Australian conditions to deliver reliable, energy-efficient hot water on demand.</p>
+<div class="Keyvisual_controls">
+ <a
+class="Btn Btn-primary
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/3-phase-electric-instantaneous-water-heater-20467340-c/"
+title="Find out more"
+target="_self"
+
+><span class="Btn_label">Find out more</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+<section id="section-3118817" class="ProductRecommendation Section Section-space -primary " >
+<div class="container" id="anchor-1545487638">
+<div class="Intro Intro-center Columns">
+<div class="Intro_inner Column">
+<h2 class="Hl Hl-2">
+Featured Products
+</h2 >
+</div>
+</div>
+</div>
+<div class="container">
+<div class="ProductRecommendation_slider"
+role="region"
+aria-roledescription="Carousel"
+aria-label="Carousel"
+>
+<div class="ProductSlider swiper-container SliderAreaWrapper">
+<div class="SliderNavigation_container SliderAreaControl" role="group" aria-label="Carousel control">
+<button class="SliderNavigation SliderNavigation-hasPagination swiper-button-prev" aria-label="Previous slide">
+<svg class="Icon Icon-forward-right-small "
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right-small.svg"
+data-cache="disabled"
+>
+</svg>
+</button>
+<button class="SliderNavigation SliderNavigation-hasPagination swiper-button-next" aria-label="Next slide">
+<svg class="Icon Icon-forward-right-small "
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right-small.svg"
+data-cache="disabled"
+>
+</svg>
+</button>
+<div class="SliderPagination swiper-pagination"></div>
+</div>
+<div class="swiper-wrapper SliderAreaSlides" aria-live="polite">
+
+<div class="ProductSlider_slide swiper-slide" data-clickable="true"
+role="group"
+aria-roledescription="Slide"
+aria-label="1 of 4: Tronic 8500i"
+data-bullet-label="Jump to slide 1 of 4"
+>
+<div class="ProductSlider_tile">
+<div class="ProductSlider_image" style="--aspect-ratio:16/9;">
+<div class="Image">
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522681v389_Tronic_8500i_v2.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522681v389_Tronic_8500i_v2.png 600w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522681v389_Tronic_8500i_v2.png" data-sizes="auto" width="1600" height="900" alt="Tronic 8500i" title="Tronic 8500i" loading="lazy" >
+</picture>
+</div>
+</div>
+</div>
+<div class="ProductSlider_text">3-Phase Electric Instantaneous Water Heater
+</div>
+ <a
+class="Link Link-primary ProductSlider_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/tronic-8500i-20467354-p/"
+data-clickitem="true"
+target="_self"
+aria-label="Tronic 8500i"
+data-linktype="external-internal"
+
+><span class="Link_label">Tronic 8500i</span></a>
+</div>
+
+<div class="ProductSlider_slide swiper-slide" data-clickable="true"
+role="group"
+aria-roledescription="Slide"
+aria-label="2 of 4: Gaz 6000W"
+data-bullet-label="Jump to slide 2 of 4"
+>
+<div class="ProductSlider_tile">
+<div class="ProductSlider_image" style="--aspect-ratio:16/9;">
+<div class="Image">
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522534v389_Gaz_6000_v1.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522534v389_Gaz_6000_v1.png 600w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522534v389_Gaz_6000_v1.png" data-sizes="auto" width="1600" height="900" alt="Gaz 6000W" title="Gaz 6000W" loading="lazy" >
+</picture>
+</div>
+</div>
+</div>
+ <a
+class="Link Link-primary ProductSlider_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/gaz-6000w-1001948-p/"
+data-clickitem="true"
+target="_self"
+aria-label="Gaz 6000W"
+data-linktype="external-internal"
+
+><span class="Link_label">Gaz 6000W</span></a>
+</div>
+
+<div class="ProductSlider_slide swiper-slide" data-clickable="true"
+role="group"
+aria-roledescription="Slide"
+aria-label="3 of 4: HydroPower Hot Water Systems"
+data-bullet-label="Jump to slide 3 of 4"
+>
+<div class="ProductSlider_tile">
+<div class="ProductSlider_image" style="--aspect-ratio:16/9;">
+<div class="Image">
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522526v389_Hydro_Power_v2.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522526v389_Hydro_Power_v2.png 600w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522526v389_Hydro_Power_v2.png" data-sizes="auto" width="1600" height="900" alt="HydroPower Hot Water Systems" title="HydroPower Hot Water Systems" loading="lazy" >
+</picture>
+</div>
+</div>
+</div>
+ <a
+class="Link Link-primary ProductSlider_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydropower-hot-water-systems-1001934-p/"
+data-clickitem="true"
+target="_self"
+aria-label="HydroPower Hot Water Systems"
+data-linktype="external-internal"
+
+><span class="Link_label">HydroPower Hot Water Systems</span></a>
+</div>
+
+<div class="ProductSlider_slide swiper-slide" data-clickable="true"
+role="group"
+aria-roledescription="Slide"
+aria-label="4 of 4: Condens 8300i W"
+data-bullet-label="Jump to slide 4 of 4"
+>
+<div class="ProductSlider_tile">
+<div class="ProductSlider_image" style="--aspect-ratio:16/9;">
+<div class="Image">
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522551v389_Condens_8300i_W_v2.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522551v389_Condens_8300i_W_v2.png 600w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/900x675/o522551v389_Condens_8300i_W_v2.png" data-sizes="auto" width="1600" height="900" alt="Condens 8300i W" title="Condens 8300i W" loading="lazy" >
+</picture>
+</div>
+</div>
+</div>
+<div class="ProductSlider_text">Wall-mounted gas condensing boiler</div>
+ <a
+class="Link Link-primary ProductSlider_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/condens-8300i-w-19653641-p/"
+data-clickitem="true"
+target="_self"
+aria-label="Condens 8300i W"
+data-linktype="external-internal"
+
+><span class="Link_label">Condens 8300i W</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<section id="section-3086502" class=" ProductsOverview Section Section-space -secondary " >
+<div class="container">
+<div class="ProductsOverview_content">
+<div class="Intro ProductsOverview_headline Intro-Columns Intro-center Columns">
+<div class="Intro_inner Column">
+<h2 class="Hl Hl-2">
+Product Categories
+</h2>
+</div>
+</div>
+<ul class="ProductsOverview_list ">
+
+<li class="ProductsOverview_item " >
+ <a
+class="ProductsOverview_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/3-phase-electric-instantaneous-water-heater-20467340-c/"
+target="_self"
+data-linktype="external-internal"
+
+><div class="ProductsOverview_media">
+<div class="Image" style="--aspect-ratio:4/3;" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522688v389_Tronic_4000_v1.webp 400w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522688v389_Tronic_4000_v1.png 400w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522688v389_Tronic_4000_v1.png" alt="3 Phase Electric Instantaneous Water Heater" aria-hidden="true" loading="lazy" >
+</picture>
+</div>
+</div>
+<p class="ProductsOverview_title">3 Phase Electric Instantaneous Water Heater</p></a>
+</li>
+
+<li class="ProductsOverview_item " >
+ <a
+class="ProductsOverview_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/hydronic-heating-systems-1001944-c/"
+target="_self"
+data-linktype="external-internal"
+
+><div class="ProductsOverview_media">
+<div class="Image" style="--aspect-ratio:4/3;" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/image_pool/original-dateien/condens_8300i_w_right_400x225.webp 400w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/image_pool/original-dateien/condens_8300i_w_right_400x225original.png 400w ">
+<img class="" src="https://www.bosch-homecomfort.com/au/media/country_pool/bilder/image_pool/original-dateien/condens_8300i_w_right_400x225original.png" alt="" aria-hidden="true" loading="lazy" >
+</picture>
+</div>
+</div>
+<p class="ProductsOverview_title">Hydronic Heating Systems</p></a>
+</li>
+
+<li class="ProductsOverview_item " >
+ <a
+class="ProductsOverview_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/bosch-hot-water-systems-1001927-c/"
+target="_self"
+data-linktype="external-internal"
+
+><div class="ProductsOverview_media">
+<div class="Image" style="--aspect-ratio:4/3;" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522526v389_Hydro_Power_v2.webp 400w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522526v389_Hydro_Power_v2.png 400w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522526v389_Hydro_Power_v2.png" alt="Bosch Hot Water Systems" aria-hidden="true" loading="lazy" >
+</picture>
+</div>
+</div>
+<p class="ProductsOverview_title">Bosch Hot Water Systems</p></a>
+</li>
+
+<li class="ProductsOverview_item " >
+ <a
+class="ProductsOverview_link
+"
+href="https://www.bosch-homecomfort.com/au/en/ocs/residential/thermostat-heating-controllers-18809114-c/"
+target="_self"
+data-linktype="external-internal"
+
+><div class="ProductsOverview_media">
+<div class="Image" style="--aspect-ratio:4/3;" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522409v389_CW_400_v1.webp 400w ">
+<source srcset="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522409v389_CW_400_v1.png 400w ">
+<img class="" src="https://www.bosch-homecomfort.com/ocsmedia/optimized/200x150/o522409v389_CW_400_v1.png" alt="Thermostat & Heating Controllers" aria-hidden="true" loading="lazy" >
+</picture>
+</div>
+</div>
+<p class="ProductsOverview_title">Thermostat & Heating Controllers</p></a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="section-3086504" class=" ImageTile Section Section-space ImageTile-4 -even -primary " >
+<div class="container" id="anchor--405329675">
+<div class="Intro Intro-center Columns">
+<div class="Intro_inner Column">
+<h2 class="Hl Hl-2">
+Helpful Links
+</h2 >
+</div>
+</div>
+</div>
+<div class="ImageTile_container Columns container">
+<div class="ImageTile_items Column">
+
+<div class="MediaTeaser -secondary "
+data-clickable='true'>
+<div class="MediaTeaser_tile -link">
+<div style="--aspect-ratio:16/9;">
+<div class="MediaTeaser_image" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/woman_sits_on_a_couch_900x507.webp 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/woman_sits_on_a_couch_600x338.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/woman_sits_on_a_couch_900x507original.jpg 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/woman_sits_on_a_couch_600x338original.jpg 600w ">
+<img class="MediaTeaser_thumb" src="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/woman_sits_on_a_couch_600x338original.jpg" data-sizes="auto" width="768" height="432" alt="" title="" loading="lazy" >
+</picture>
+</div>
+</div>
+<div class="MediaTeaser_content">
+<div class="MediaTeaser_text">
+<p class="Hl Hl-6 -size-s">
+Product Brochures
+</p>
+</div>
+ <a
+class="MediaTeaser_link
+Link Link-primary
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/documents-and-downloads/product-brochures/"
+title="Download Brochures"
+data-clickitem="true"
+target="_self"
+
+><span class="Link_label">
+Download Brochures
+</span></a>
+</div>
+</div>
+</div>
+
+<div class="MediaTeaser -secondary "
+data-clickable='true'>
+<div class="MediaTeaser_tile -link">
+<div style="--aspect-ratio:16/9;">
+<div class="MediaTeaser_image" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/family_with_computer_and_smartphone_900x507.webp 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/family_with_computer_and_smartphone_600x338.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/family_with_computer_and_smartphone_900x507original.jpg 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/family_with_computer_and_smartphone_600x338original.jpg 600w ">
+<img class="MediaTeaser_thumb" src="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/family_with_computer_and_smartphone_600x338original.jpg" data-sizes="auto" width="768" height="432" alt="" title="" loading="lazy" >
+</picture>
+</div>
+</div>
+<div class="MediaTeaser_content">
+<div class="MediaTeaser_text">
+<p class="Hl Hl-6 -size-s">
+FAQ / Troubleshooting
+</p>
+</div>
+ <a
+class="MediaTeaser_link
+Link Link-primary
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/customer-faqs/"
+title="FAQ"
+data-clickitem="true"
+target="_self"
+
+><span class="Link_label">
+FAQ
+</span></a>
+</div>
+</div>
+</div>
+
+<div class="MediaTeaser -secondary "
+data-clickable='true'>
+<div class="MediaTeaser_tile -link">
+<div style="--aspect-ratio:16/9;">
+<div class="MediaTeaser_image" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/country_pool/general/man_in_car_with_tablet_900x507.webp 900w , https://www.bosch-homecomfort.com/au/media/country_pool/general/man_in_car_with_tablet_600x338.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/country_pool/general/man_in_car_with_tablet_900x507original.jpg 900w , https://www.bosch-homecomfort.com/au/media/country_pool/general/man_in_car_with_tablet_600x338original.jpg 600w ">
+<img class="MediaTeaser_thumb" src="https://www.bosch-homecomfort.com/au/media/country_pool/general/man_in_car_with_tablet_600x338original.jpg" data-sizes="auto" width="768" height="432" alt="" title="" loading="lazy" >
+</picture>
+</div>
+</div>
+<div class="MediaTeaser_content">
+<div class="MediaTeaser_text">
+<p class="Hl Hl-6 -size-s">
+Spare Parts
+</p>
+</div>
+ <a
+class="MediaTeaser_link
+Link Link-primary
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/trade/spare-parts/"
+title="Spare Parts"
+data-clickitem="true"
+target="_self"
+
+><span class="Link_label">
+Spare Parts
+</span></a>
+</div>
+</div>
+</div>
+
+<div class="MediaTeaser -secondary "
+data-clickable='true'>
+<div class="MediaTeaser_tile -link">
+<div style="--aspect-ratio:16/9;">
+<div class="MediaTeaser_image" >
+<picture>
+<source type="image/webp"
+srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/partners_shake_hands_900x507.webp 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/partners_shake_hands_600x338.webp 600w ">
+<source srcset="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/partners_shake_hands_900x507original.jpg 900w , https://www.bosch-homecomfort.com/au/media/central_pool/global_images/partners_shake_hands_600x338original.jpg 600w ">
+<img class="MediaTeaser_thumb" src="https://www.bosch-homecomfort.com/au/media/central_pool/global_images/partners_shake_hands_600x338original.jpg" data-sizes="auto" width="768" height="432" alt="" title="" loading="lazy" >
+</picture>
+</div>
+</div>
+<div class="MediaTeaser_content">
+<div class="MediaTeaser_text">
+<p class="Hl Hl-6 -size-s">
+Warranty &amp; Servicing
+</p>
+</div>
+ <a
+class="MediaTeaser_link
+Link Link-primary
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/warranty-and-servicing/"
+title="Learn More"
+data-clickitem="true"
+target="_self"
+
+><span class="Link_label">
+Learn More
+</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<section id="section-3086503" class="Section Section-space ServiceTeaser -primary" >
+
+<div class="container">
+<div class="ServiceTeaser_content
+-secondary
+">
+<div class="ServiceTeaser_column  ">
+<div class="ServiceTeaser_inner Content">
+<h4 class="Hl Hl-4">
+Get in Touch
+</h4>
+<p>Personal assistance for all Bosch Hot Water &amp; Heating appliances</p><p>We’re here for you Monday to Friday 8:00am to 6:00pm AEDT</p><p> <a
+class="Btn Btn-primary -with-icon
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/customer-support/contact-us/"
+title="Contact Us"
+target="_self"
+
+><svg class="Icon Icon-mail Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-mail.svg"
+data-cache="604800"
+role="presentation">
+</svg><span class="Btn_label">Contact Us</span></a></p>
+</div>
+</div>
+<div class="ServiceTeaser_column  ">
+<div class="ServiceTeaser_inner Content">
+<h4 class="Hl Hl-4">
+Find a Service Technician
+</h4>
+<p>If you experience any problems with your Bosch Hot Water &amp; Heating appliance, you can arrange a visit from a Bosch service technician.</p><p>Bosch service agents have greater product knowledge and access to spare parts</p><p>Call Bosch on 1300 30 70 37 or refer to our online locator.</p><p> <a
+class="Btn Btn-primary
+"
+href="/au/en/residential/customer-support/find-a-service-technician/dealersearch/"
+title="Find a service technician"
+target="_self"
+
+><span class="Btn_label">Find a service technician</span></a></p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+<div class="StickyControls">
+ <a
+class="scroll-top-toggler StickyControls_scroll-top Btn Btn-primary -with-icon -without-label mb-0
+"
+href="#page-scrollTop"
+rel=" noopener"
+aria-label="Scroll to top"
+data-linktype="external-external"
+
+><svg class="Icon Icon-forward-right Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="disabled"
+role="presentation">
+</svg></a>
+</div>
+</main>
+</div>
+<!-- Sticky Element -->
+
+<aside aria-label="Need help?">
+<section class="CallToAction -primary -floating -hidden">
+<div class="CallToAction_container container">
+<h2 class="Hl Hl-5">Need help?</h2>
+<ul class="CallToAction_list">
+<li class="CallToAction_item">
+ <a
+class="Btn Btn-primary -with-icon CallToAction_btn
+trackingElement"
+href="tel:1300307037"
+title="1300 30 70 37"
+target="_self"
+rel=" noopener"
+data-linktype="external-external"
+data-track_domevent="click"
+data-track_dyn_pagename="Call"
+data-track_dyn_eventtarget="Call"
+data-track_dyn_eventaction="Sticky Navigation"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="phone"
+data-track_dyn_clickurl="tel:1300307037"
+><svg class="Icon Icon-call Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-call.svg"
+data-cache="604800"
+role="presentation">
+</svg><span class="Btn_label">Call</span></a>
+</li>
+<li class="CallToAction_item">
+ <a
+class="Btn Btn-secondary -with-icon CallToAction_btn
+trackingElement"
+href="mailto:HotWater.Query@au.bosch.com"
+title="HotWater.Query@au.bosch.com"
+target="_blank"
+rel=" noopener"
+data-linktype="external-external"
+data-track_domevent="click"
+data-track_dyn_pagename="Contact"
+data-track_dyn_eventtarget="Contact"
+data-track_dyn_eventaction="Sticky Navigation"
+data-track_dyn_elementtype="Navigation"
+data-track_dyn_eventname="contactlink_click"
+data-track_dyn_eventgroup="navigation"
+data-track_dyn_contactname="contact"
+data-track_dyn_contacttype="mail"
+data-track_dyn_clickurl="mailto:hotwater.query@au.bosch.com"
+><svg class="Icon Icon-mail Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-mail.svg"
+data-cache="604800"
+role="presentation">
+</svg><span class="Btn_label">Contact</span></a>
+</li>
+</ul>
+</div>
+</section>
+</aside>
+<footer class="FooterV2 -primary"
+>
+<div class="FooterV2_container -secondary">
+<div class="container">
+<div class="FooterV2_searchbar">
+<div class="FooterV2_hdl">
+<h2 class="H1">
+Still looking for something
+</h2>
+</div>
+<form class="FooterV2_form SearchAutocomplete"
+action="https://www.bosch-homecomfort.com/au/en/bott-search-frontend/residential/search"
+method="get"
+role="search"
+autocomplete="off"
+aria-hidden="false">
+<div class="Header_searchField Textfield Textfield-search">
+<input name="searchTermFooter"
+type="search"
+pattern=".{3,}"
+title="Please write more then 3 characters"
+placeholder="Search..."
+data-autocomplete-url="https://www.bosch-homecomfort.com/au/en/bott-search-frontend/residential/autocomplete.json?term="
+aria-label="Search">
+<ul class="FooterV2_searchSuggestions -primary container List List-default" role="listbox" aria-label="Search suggestions"></ul>
+<button type="button" class="Textfield_iconCloseSearch" aria-label="Clear search input">
+<svg class="Icon Icon-close "
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-close.svg"
+data-cache="604800"
+role="presentation">
+</svg>
+</button>
+<button type="submit" class="Textfield_iconSearch" aria-label="Search">
+<svg role="presentation" width="24" height="24" class="Icon Icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" style="enable-background:new 0 0 192 192" xml:space="preserve"><path d="m170.829 149.171-56.874-56.873A51.667 51.667 0 0 0 120 68c0-28.673-23.327-52-52-52S16 39.327 16 68s23.327 52 52 52c8.773 0 17.04-2.192 24.298-6.045l56.873 56.874c3.45 3.45 7.92 5.2 12.248 5.2 3.854 0 7.597-1.388 10.41-4.2 5.97-5.972 5.522-16.135-1-22.658zM24 68c0-24.262 19.738-44 44-44s44 19.738 44 44-19.738 44-44 44-44-19.738-44-44zm142.171 98.171c-1.75 1.753-3.874 1.979-5.347 1.857-2.171-.176-4.357-1.217-5.995-2.857L99.216 109.56a52.439 52.439 0 0 0 10.343-10.343l55.612 55.613c1.64 1.638 2.68 3.824 2.857 5.995.12 1.473-.105 3.596-1.857 5.347z"/></svg>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="FooterV2_body">
+<div class="container">
+<div class="FooterV2_orderContainer">
+<p class="Hl">Invented for life</p>
+<ul class="Socials">
+<li class="Socials_item">
+ <a
+class="Socials_link Btn Btn-integrated -with-icon -without-label mb-0
+trackingElement"
+href="https://www.facebook.com/BoschAustralia/"
+title="Facebook"
+target="_blank"
+rel=" noopener"
+aria-label="Facebook"
+data-track_domevent="click"
+data-track_dyn_socialname="facebook"
+data-track_dyn_pagename="facebook"
+data-track_dyn_eventtarget=""
+data-track_dyn_eventaction="Social Link"
+data-track_dyn_elementtype="social"
+data-track_dyn_clickurl="https://www.facebook.com/boschaustralia/"
+><svg class="Icon Icon-facebook Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-facebook.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li class="Socials_item">
+ <a
+class="Socials_link Btn Btn-integrated -with-icon -without-label mb-0
+trackingElement"
+href="https://www.instagram.com/boschaustralia/"
+title="Instagram"
+target="_blank"
+rel=" noopener"
+aria-label="Instagram"
+data-track_domevent="click"
+data-track_dyn_socialname="instagram"
+data-track_dyn_pagename="instagram"
+data-track_dyn_eventtarget=""
+data-track_dyn_eventaction="Social Link"
+data-track_dyn_elementtype="social"
+data-track_dyn_clickurl="https://www.instagram.com/boschaustralia/"
+><svg class="Icon Icon-instagram Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-instagram.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li class="Socials_item">
+ <a
+class="Socials_link Btn Btn-integrated -with-icon -without-label mb-0
+trackingElement"
+href="https://www.youtube.com/c/BoschHotWaterHeating"
+title="YouTube"
+target="_blank"
+rel=" noopener"
+aria-label="YouTube"
+data-track_domevent="click"
+data-track_dyn_socialname="youtube"
+data-track_dyn_pagename="youtube"
+data-track_dyn_eventtarget=""
+data-track_dyn_eventaction="Social Link"
+data-track_dyn_elementtype="social"
+data-track_dyn_clickurl="https://www.youtube.com/c/boschhotwaterheating"
+><svg class="Icon Icon-youtube Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-youtube.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+</ul>
+<ul class="List List-default">
+<li>
+ <a
+class="Link Link-integrated
+"
+href="https://www.bosch-homecomfort.com/au/en/residential/learn-more/bosch-in-australia/"
+title="Bosch in Australia"
+target="_self"
+
+><span class="Link_label">Bosch in Australia</span></a>
+</li>
+<li>
+ <a
+class="Link Link-integrated
+"
+href="https://www.bosch.com.au/careers/"
+title="Careers"
+target="_blank"
+rel=" noopener"
+
+><span class="Link_label">Careers</span></a>
+</li>
+</ul>
+</div>
+<div class="FooterV2_bottomList">
+© Robert Bosch (Australia) Pty Ltd 2025, all rights reserved
+<ul class="List List-default">
+<li>
+ <a
+class="Footer_nav-link Link Link-integrated -with-icon
+"
+href="https://www.bosch.com.au/corporate-information/"
+title="Copyright"
+target="_blank"
+rel=" noopener"
+
+>Copyright
+<svg class="Icon Icon-externallink Link_icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-externallink.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li>
+ <a
+class="Footer_nav-link Link Link-integrated -with-icon
+"
+href="https://www.bosch.com.au/corporate-information/?prevent-auto-open-privacy-settings=1"
+title="Corporate Information"
+target="_blank"
+rel=" noopener"
+
+>Corporate Information
+<svg class="Icon Icon-externallink Link_icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-externallink.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li>
+ <a
+class="Footer_nav-link Link Link-integrated -with-icon
+"
+href="https://www.bosch.com.au/privacy-policy/"
+title="Privacy Policy"
+target="_blank"
+rel=" noopener"
+
+>Privacy Policy
+<svg class="Icon Icon-externallink Link_icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-externallink.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li>
+ <a
+class="Footer_nav-link Link Link-integrated -with-icon
+"
+href="https://www.bosch.com.au/terms-and-conditions/"
+title="Terms & Conditions"
+target="_blank"
+rel=" noopener"
+
+>Terms &amp; Conditions
+<svg class="Icon Icon-externallink Link_icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-externallink.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</li>
+<li>
+<button data-show-privacy-settings class="Link Link-integrated Btn Btn-integrated" title=" Cookies" aria-haspopup="dialog"> Cookies </button>
+</li>
+</ul>
+ <a
+class="scroll-top-toggler FooterV2_scrollTop Btn Btn-integrated -with-icon -without-label mb-0
+"
+href="#page-scrollTop"
+target="_self"
+rel=" noopener"
+aria-label="Scroll to top"
+
+><svg class="Icon Icon-forward-right Btn_Icon"
+data-src="https://www.bosch-homecomfort.com/resources/assets/svg/icons/icon-forward-right.svg"
+data-cache="604800"
+role="presentation">
+</svg></a>
+</div>
+</div>
+</div>
+</footer>
+
+    
+
+    
+
+    
+
+
+<script>
+function BoschPrivacyCallback_OnUpdate(consents) {
+//Custom code for client specific usage
+if (consents.comfort) {
+console.log("Info: comfort is on");
+if (!consents.marketing) {
+window.localStorage.setItem("privacySettingValue", '1');
+window.dataLayer = [];
+}
+} else {
+//console.log("Info: comfort is off");
+}
+if (consents.marketing || consents.analysis ) {
+if (consents.marketing) {
+console.log("Info: marketing is on");
+} else {
+console.log("Info: marketing is off");
+}
+if (consents.analysis) {
+console.log("Info: analysis is on");
+} else {
+console.log("Info: analysis is off");
+}
+if (window.localStorage.getItem("privacySettingValue") >= 3) {
+//do nothing
+} else {
+init_ga();
+window.localStorage.setItem("privacySettingValue", '3');
+}
+} else {
+console.log("Info: marketing is off");
+console.log("Info: analysis is off");
+}
+if (!consents.comfort && !consents.marketing && !consents.analysis) {
+window.localStorage.setItem("privacySettingValue", '0');
+window.dataLayer = [];
+}
+}
+</script>
+<script>
+function init_ga() {
+privacySettingValue = window.localStorage.getItem("privacySettingValue");
+init_datalayer();
+window.ga=window.ga||(
+function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({
+'gtm.start':new Date().getTime(),
+event:'gtm.js'
+});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),
+dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+}
+)(
+window,
+document,
+'script',
+'dataLayer',
+'GTM-MDHTQPZ'
+);
+var gascript = document.createElement('script');
+gascript.async = true;
+gascript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MDHTQPZ';
+document.getElementsByTagName('head')[0].appendChild(gascript, document.getElementsByTagName('head')[0]);
+}
+</script>
+<script src="https://www.bosch-homecomfort.com/resources/assets/jquery/jquery.min.js?2025_340"></script>
+<script>window.initializeOnlyGA4 = false;</script>
+<script type="text/javascript" src="https://www.bosch-homecomfort.com/ga4/kits/kits.min.js?2025_19"></script>
+<script>
+var CONF = {
+ENV: 'production',
+ASSET_PATH: 'https://www.bosch-homecomfort.com/resources/assets/',
+CONSENT_WALL: {
+}
+}
+</script>
+<script type="text/javascript" src="https://www.bosch-homecomfort.com/resources/assets/main.bundle.js?2025_340"></script>
+<!-- CUSTOMER MAINTAINED JS CODE-->
+<!-- ................................................................. -->
+<!-- ................................................................. -->
+<!--SEO JSON-LD-->
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+
+{
+"@type": "ListItem",
+"position": 0,
+"item": {
+"@id": "https://www.bosch-homecomfort.com/au/en/residential/home/",
+"name": "Home",
+"image": ""
+}
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "Organization",
+"name": "Bosch Home Comfort",
+"url": "https://www.bosch-homecomfort.com",
+"logo": "https://www.bosch-homecomfort.com/resources/assets/img/bosch.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"url": "https://www.bosch-homecomfort.com/au/en/",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "https://www.bosch-homecomfort.com/au/en/search.html?terms={search_term_string}",
+"query-input": "required name=search_term_string"
+}
+}
+</script>
+<!--END SEO JSON-LD-->
+</body>
+</html>
