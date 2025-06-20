@@ -82,7 +82,7 @@ export default function AdminServicesPage() {
         price_max: formData.price_max ? Number(formData.price_max) : null
       };
 
-      const url = editingService ? `/api/services/${editingService.id}` : '/api/services/';
+      const url = editingService ? `/api/services/${editingService.id}/` : '/api/services/';
       const method = editingService ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
@@ -112,7 +112,7 @@ export default function AdminServicesPage() {
     }
 
     try {
-      const response = await fetch(`/api/services/${id}`, {
+      const response = await fetch(`/api/services/${id}/`, {
         method: 'DELETE',
       });
 

@@ -145,43 +145,51 @@ const AdminDashboard = () => {
       let contactData = [];
 
       try {
-        const blogResponse = await fetch('/api/blog');
+        console.log('📝 Loading blog posts...');
+        const blogResponse = await fetch('/api/blog/');
         if (blogResponse.ok) {
           const blogResult = await blogResponse.json();
           blogData = Array.isArray(blogResult) ? blogResult : (blogResult.success ? blogResult.data || [] : []);
+          console.log('✅ Blog posts loaded:', blogData.length || 0);
         }
       } catch (error) {
-        console.log('Blog API error:', error);
+        console.error('❌ Error loading blog posts:', error);
       }
 
       try {
-        const faqResponse = await fetch('/api/faq');
+        console.log('❓ Loading FAQ...');
+        const faqResponse = await fetch('/api/faq/');
         if (faqResponse.ok) {
           const faqResult = await faqResponse.json();
           faqData = Array.isArray(faqResult) ? faqResult : (faqResult.success ? faqResult.data || [] : []);
+          console.log('✅ FAQ loaded:', faqData.length || 0);
         }
       } catch (error) {
-        console.log('FAQ API error:', error);
+        console.error('❌ Error loading FAQ:', error);
       }
 
       try {
-        const testimonialsResponse = await fetch('/api/testimonials');
+        console.log('⭐ Loading testimonials...');
+        const testimonialsResponse = await fetch('/api/testimonials/');
         if (testimonialsResponse.ok) {
           const testimonialsResult = await testimonialsResponse.json();
           testimonialsData = Array.isArray(testimonialsResult) ? testimonialsResult : (testimonialsResult.success ? testimonialsResult.data || [] : []);
+          console.log('✅ Testimonials loaded:', testimonialsData.length || 0);
         }
       } catch (error) {
-        console.log('Testimonials API error:', error);
+        console.error('❌ Error loading testimonials:', error);
       }
 
       try {
-        const contactResponse = await fetch('/api/contact');
+        console.log('📧 Loading contact messages...');
+        const contactResponse = await fetch('/api/contact/');
         if (contactResponse.ok) {
           const contactResult = await contactResponse.json();
           contactData = Array.isArray(contactResult) ? contactResult : (contactResult.success ? contactResult.data || [] : []);
+          console.log('✅ Contact API checked');
         }
       } catch (error) {
-        console.log('Contact API error:', error);
+        console.error('❌ Error loading contact messages:', error);
       }
 
       // Get data from localStorage for other content

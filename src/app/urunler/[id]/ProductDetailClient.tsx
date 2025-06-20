@@ -42,7 +42,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
       setIsLoading(true);
       try {
         // Fetch single product using the ID endpoint
-        const response = await fetch(`/api/products/${productId}`);
+        const response = await fetch(`/api/products/${productId}/`);
         if (response.ok) {
           const productData = await response.json();
           setProduct(productData);

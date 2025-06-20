@@ -103,16 +103,12 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/contact/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          source: 'contact_section',
-          timestamp: new Date().toISOString()
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -151,49 +147,13 @@ const ContactSection = () => {
           priority: 'normal'
         });
       } else {
-        setSubmitStatus('error');
+        throw new Error('Form submission failed');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
-      
-      // API başarısız olursa sadece localStorage'a kaydet
-      try {
-        const messageData = {
-          id: Date.now().toString(),
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          subject: formData.service,
-          message: formData.message,
-          priority: formData.priority,
-          date: new Date().toISOString(),
-          status: 'unread',
-          createdAt: new Date().toISOString(),
-          source: 'contact_section'
-        };
-
-        const existingMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
-        const updatedMessages = [messageData, ...existingMessages];
-        
-        localStorage.setItem('contactMessages', JSON.stringify(updatedMessages));
-        localStorage.setItem('ozmevsim_contact_messages', JSON.stringify(updatedMessages));
-        
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: '',
-          priority: 'normal'
-        });
-        setSubmitStatus('success'); // Başarılı göster çünkü localStorage'a kaydedildi
-      } catch (storageError) {
-        console.error('Storage error:', storageError);
-        setSubmitStatus('error');
-      }
+      console.error('Error submitting form:', error);
+      alert('Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus('idle'), 5000);
     }
   };
 
