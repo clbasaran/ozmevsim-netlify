@@ -6,12 +6,14 @@ export async function GET(request: Request, { params }: { params: { id: string }
     const client = await dbPool.connect();
     const result = await client.query(
       `SELECT 
-        id, name, description, short_description, 
-        main_image as image_url, brand, category_id, 
-        features, specifications, is_active as status, 
-        created_at, updated_at, price, stock_status
-       FROM products 
-       WHERE id = $1`,
+        p.id, p.name, p.description, p.short_description, 
+        p.main_image as image_url, p.brand, p.category_id, 
+        p.features, p.specifications, p.is_active as status, 
+        p.created_at, p.updated_at, p.price, p.stock_status,
+        c.name as category
+       FROM products p
+       LEFT JOIN categories c ON p.category_id = c.id
+       WHERE p.id = $1`,
       [params.id]
     );
     client.release();

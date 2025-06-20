@@ -21,6 +21,7 @@ interface Product {
   description: string;
   image_url: string;
   category: string;
+  category_id?: string;
   brand: string;
   features: string[];
   status: string;
@@ -48,15 +49,25 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
           setProduct(productData);
           
           // Fetch related products from same category
-          if (productData.category) {
+          if (productData.category || productData.category_id) {
             const relatedResponse = await fetch(`/api/products/`);
             if (relatedResponse.ok) {
               const allProducts = await relatedResponse.json();
               const productsArray = Array.isArray(allProducts) ? allProducts : (allProducts.data || []);
-              const filtered = productsArray
-                .filter((p: Product) => p.category === productData.category && p.id !== productId)
-                .slice(0, 3);
-              setRelatedProducts(filtered);
+              if (Array.isArray(productsArray)) {
+                const filtered = productsArray
+                  .filter((p: Product) => {
+                    // Try to match by category first, then category_id
+                    const categoryMatch = productData.category && p.category === productData.category;
+                    const categoryIdMatch = productData.category_id && p.category_id === productData.category_id;
+                    return (categoryMatch || categoryIdMatch) && p.id !== productId;
+                  })
+                  .slice(0, 3);
+                setRelatedProducts(filtered);
+              } else {
+                console.warn('Products data is not an array:', productsArray);
+                setRelatedProducts([]);
+              }
             }
           }
         } else {

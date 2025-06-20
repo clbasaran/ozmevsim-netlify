@@ -243,10 +243,11 @@ export default function AdminProductsPage() {
     }
   };
 
-  // Filter and sort products
-  const filteredProducts = products
+  // Filtered products
+  const filteredProducts = Array.isArray(products) ? products
     .filter(product => {
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = !searchTerm || 
+                           product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            product.brand.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = !filterCategory || product.category === filterCategory;
       const matchesStatus = !filterStatus || product.status === filterStatus;
@@ -257,7 +258,7 @@ export default function AdminProductsPage() {
       const bValue = b[sortBy as keyof Product];
       const result = aValue < bValue ? -1 : aValue > bValue ? 1 : 0;
       return sortOrder === 'asc' ? result : -result;
-    });
+    }) : [];
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -362,7 +363,7 @@ export default function AdminProductsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Toplam Ürün</p>
-                <p className="text-2xl font-bold text-gray-900">{products.length}</p>
+                <p className="text-2xl font-bold text-gray-900">{Array.isArray(products) ? products.length : 0}</p>
               </div>
               <ChartBarIcon className="h-8 w-8 text-blue-600" />
             </div>
@@ -372,7 +373,7 @@ export default function AdminProductsPage() {
               <div>
                 <p className="text-sm text-gray-600">Aktif Ürün</p>
                 <p className="text-2xl font-bold text-green-600">
-                  {products.filter(p => p.status === 'active').length}
+                  {Array.isArray(products) ? products.filter(p => p.status === 'active').length : 0}
                 </p>
               </div>
               <CheckCircleIcon className="h-8 w-8 text-green-600" />
@@ -392,7 +393,7 @@ export default function AdminProductsPage() {
               <div>
                 <p className="text-sm text-gray-600">Pasif Ürün</p>
                 <p className="text-2xl font-bold text-red-600">
-                  {products.filter(p => p.status === 'inactive').length}
+                  {Array.isArray(products) ? products.filter(p => p.status === 'inactive').length : 0}
                 </p>
               </div>
               <XCircleIcon className="h-8 w-8 text-red-600" />
