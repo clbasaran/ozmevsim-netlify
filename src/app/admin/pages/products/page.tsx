@@ -548,12 +548,12 @@ export default function AdminProductsPage() {
                     <div className="flex items-center">
                       <div className="h-12 w-12 flex-shrink-0">
                         <img
-                          src={product.image_url || '/images/placeholder-product.jpg'}
+                          src={product.image_url || '/Mevsim-4.png'}
                           alt={product.name}
                           className="h-12 w-12 rounded-lg object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = '/images/placeholder-product.jpg';
+                            target.src = '/Mevsim-4.png';
                           }}
                         />
                       </div>
@@ -697,7 +697,7 @@ export default function AdminProductsPage() {
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = '/images/placeholder-product.jpg';
+                            target.src = '/Mevsim-4.png';
                           }}
                         />
                       </div>

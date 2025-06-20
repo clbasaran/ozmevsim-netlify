@@ -184,7 +184,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
                   className="object-contain p-8 w-full h-full"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = '/images/placeholder-product.jpg';
+                    target.src = '/Mevsim-4.png';
                   }}
                 />
               </div>
@@ -394,7 +394,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
                         className="object-contain p-6 group-hover:scale-105 transition-transform duration-300 w-full h-full"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/images/placeholder-product.jpg';
+                          target.src = '/Mevsim-4.png';
                         }}
                       />
                     </div>
