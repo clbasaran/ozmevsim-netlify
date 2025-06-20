@@ -42,7 +42,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
       setIsLoading(true);
       try {
         // Fetch single product
-        const response = await fetch(`/api/products?id=${productId}`);
+        const response = await fetch(`/api/products/?id=${productId}`);
         if (response.ok) {
           const allProducts = await response.json();
           const foundProduct = allProducts.find((p: Product) => p.id === productId);
@@ -51,7 +51,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
             setProduct(foundProduct);
             
             // Fetch related products from same category
-            const relatedResponse = await fetch(`/api/products?category=${foundProduct.category}`);
+            const relatedResponse = await fetch(`/api/products/?category=${foundProduct.category}`);
             if (relatedResponse.ok) {
               const relatedData = await relatedResponse.json();
               const filtered = relatedData.filter((p: Product) => p.id !== productId).slice(0, 3);

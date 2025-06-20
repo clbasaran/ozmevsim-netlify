@@ -70,8 +70,7 @@ CREATE TABLE services (
     gallery JSONB DEFAULT '[]',
     features JSONB DEFAULT '[]',
     benefits JSONB DEFAULT '[]',
-    price_min DECIMAL(10,2),
-    price_max DECIMAL(10,2),
+    price_range VARCHAR(100),
     duration VARCHAR(100),
     warranty VARCHAR(100),
     is_featured BOOLEAN DEFAULT false,
@@ -91,7 +90,7 @@ CREATE TABLE blog_posts (
     excerpt VARCHAR(500),
     content TEXT,
     featured_image VARCHAR(500),
-    author_id UUID REFERENCES users(id),
+    author VARCHAR(255),
     category VARCHAR(100),
     tags JSONB DEFAULT '[]',
     is_published BOOLEAN DEFAULT false,
@@ -168,13 +167,59 @@ CREATE TABLE testimonials (
 );
 
 -- FAQ table
-CREATE TABLE faqs (
+CREATE TABLE faq (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     question VARCHAR(500) NOT NULL,
     answer TEXT NOT NULL,
     category VARCHAR(100),
+    is_featured BOOLEAN DEFAULT false,
     is_active BOOLEAN DEFAULT true,
     sort_order INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Company info table
+CREATE TABLE company_info (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    company_name VARCHAR(255),
+    about_text TEXT,
+    mission TEXT,
+    vision TEXT,
+    values JSONB DEFAULT '[]',
+    founding_year INTEGER,
+    team_size INTEGER,
+    experience_years INTEGER,
+    certifications JSONB DEFAULT '[]',
+    address TEXT,
+    phone VARCHAR(50),
+    email VARCHAR(255),
+    working_hours JSONB DEFAULT '{}',
+    social_media JSONB DEFAULT '{}',
+    hero_title VARCHAR(255),
+    hero_subtitle TEXT,
+    hero_image VARCHAR(500),
+    logo_url VARCHAR(500),
+    is_active BOOLEAN DEFAULT true,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- References/Portfolio table
+CREATE TABLE references (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    client_name VARCHAR(255) NOT NULL,
+    project_type VARCHAR(100),
+    location VARCHAR(255),
+    completion_date DATE,
+    image_url VARCHAR(500),
+    gallery_images JSONB DEFAULT '[]',
+    project_value DECIMAL(12,2),
+    testimonial TEXT,
+    is_featured BOOLEAN DEFAULT false,
+    is_active BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -199,8 +244,7 @@ CREATE TABLE page_contents (
     content JSONB NOT NULL,
     is_active BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(page_name, section_name)
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- File uploads table
@@ -209,15 +253,13 @@ CREATE TABLE file_uploads (
     filename VARCHAR(255) NOT NULL,
     original_name VARCHAR(255) NOT NULL,
     file_path VARCHAR(500) NOT NULL,
-    file_size INTEGER,
+    file_size BIGINT,
     mime_type VARCHAR(100),
-    alt_text VARCHAR(255),
     uploaded_by UUID REFERENCES users(id),
-    is_active BOOLEAN DEFAULT true,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Indexes for performance
+-- Indexes for better performance
 CREATE INDEX idx_products_category ON products(category_id);
 CREATE INDEX idx_products_active ON products(is_active);
 CREATE INDEX idx_products_featured ON products(is_featured);
@@ -228,7 +270,7 @@ CREATE INDEX idx_contact_messages_created ON contact_messages(created_at);
 CREATE INDEX idx_projects_category ON projects(category);
 CREATE INDEX idx_projects_featured ON projects(is_featured);
 
--- Triggers for updated_at
+-- Updated at trigger function
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -237,6 +279,7 @@ BEGIN
 END;
 $$ language 'plpgsql';
 
+-- Triggers
 CREATE TRIGGER update_users_updated_at BEFORE UPDATE ON users FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_categories_updated_at BEFORE UPDATE ON categories FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_products_updated_at BEFORE UPDATE ON products FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
@@ -245,6 +288,8 @@ CREATE TRIGGER update_blog_posts_updated_at BEFORE UPDATE ON blog_posts FOR EACH
 CREATE TRIGGER update_projects_updated_at BEFORE UPDATE ON projects FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_contact_messages_updated_at BEFORE UPDATE ON contact_messages FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_testimonials_updated_at BEFORE UPDATE ON testimonials FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
-CREATE TRIGGER update_faqs_updated_at BEFORE UPDATE ON faqs FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
+CREATE TRIGGER update_faq_updated_at BEFORE UPDATE ON faq FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
+CREATE TRIGGER update_company_info_updated_at BEFORE UPDATE ON company_info FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
+CREATE TRIGGER update_references_updated_at BEFORE UPDATE ON references FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_settings_updated_at BEFORE UPDATE ON settings FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column();
 CREATE TRIGGER update_page_contents_updated_at BEFORE UPDATE ON page_contents FOR EACH ROW EXECUTE PROCEDURE update_updated_at_column(); 

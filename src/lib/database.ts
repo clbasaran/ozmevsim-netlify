@@ -32,6 +32,9 @@ export function getDbPool(): Pool {
   return pool;
 }
 
+// Export pool for direct use in API routes
+export const dbPool = getDbPool();
+
 // Database service class
 export class DatabaseService {
   private pool: Pool;

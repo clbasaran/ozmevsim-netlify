@@ -85,7 +85,7 @@ export default function AdminProductsPage() {
     const loadProducts = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('/api/products');
+        const response = await fetch('/api/products/');
         if (response.ok) {
           const data = await response.json();
           setProducts(data);
@@ -139,7 +139,7 @@ export default function AdminProductsPage() {
 
     try {
       const method = isCreating ? 'POST' : 'PUT';
-      const url = isCreating ? '/api/products' : `/api/products/${selectedProduct.id}`;
+      const url = isCreating ? '/api/products/' : `/api/products/${selectedProduct.id}/`;
       
       const response = await fetch(url, {
         method,
@@ -151,7 +151,7 @@ export default function AdminProductsPage() {
 
       if (response.ok) {
         // Reload products
-        const productsResponse = await fetch('/api/products');
+        const productsResponse = await fetch('/api/products/');
         if (productsResponse.ok) {
           const data = await productsResponse.json();
           setProducts(data);
@@ -171,7 +171,7 @@ export default function AdminProductsPage() {
     if (!confirm('Bu ürünü silmek istediğinizden emin misiniz?')) return;
 
     try {
-      const response = await fetch(`/api/products/${id}`, {
+      const response = await fetch(`/api/products/${id}/`, {
         method: 'DELETE',
       });
 

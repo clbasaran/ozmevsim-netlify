@@ -32,34 +32,22 @@ import {
   ArrowUpIcon,
   ArrowDownIcon
 } from '@heroicons/react/24/outline';
-import { Line, Bar, Doughnut } from 'react-chartjs-2';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  ArcElement,
-  Title,
+  LineChart,
+  Line,
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
-  Legend,
-  Filler
-} from 'chart.js';
-
-// Register ChartJS components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
-);
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar
+} from 'recharts';
 
 interface AdminUser {
   id: string;
@@ -112,6 +100,26 @@ interface DashboardData {
   activities: Activity[];
 }
 
+// Define color palette for charts
+const COLORS = {
+  primary: '#f97316',     // orange-500
+  secondary: '#3b82f6',   // blue-500
+  success: '#10b981',     // emerald-500
+  warning: '#f59e0b',     // amber-500
+  danger: '#ef4444',      // red-500
+  info: '#8b5cf6',        // violet-500
+  gray: '#6b7280'         // gray-500
+};
+
+const chartColors = [
+  COLORS.primary,
+  COLORS.secondary,
+  COLORS.success,
+  COLORS.warning,
+  COLORS.info,
+  COLORS.danger
+];
+
 const AdminDashboard = () => {
   console.log('📊 AdminDashboard component rendering');
   
@@ -140,7 +148,7 @@ const AdminDashboard = () => {
         const blogResponse = await fetch('/api/blog');
         if (blogResponse.ok) {
           const blogResult = await blogResponse.json();
-          blogData = blogResult.success ? blogResult.data : [];
+          blogData = Array.isArray(blogResult) ? blogResult : (blogResult.success ? blogResult.data || [] : []);
         }
       } catch (error) {
         console.log('Blog API error:', error);
@@ -150,7 +158,7 @@ const AdminDashboard = () => {
         const faqResponse = await fetch('/api/faq');
         if (faqResponse.ok) {
           const faqResult = await faqResponse.json();
-          faqData = faqResult.success ? faqResult.data : [];
+          faqData = Array.isArray(faqResult) ? faqResult : (faqResult.success ? faqResult.data || [] : []);
         }
       } catch (error) {
         console.log('FAQ API error:', error);
@@ -160,7 +168,7 @@ const AdminDashboard = () => {
         const testimonialsResponse = await fetch('/api/testimonials');
         if (testimonialsResponse.ok) {
           const testimonialsResult = await testimonialsResponse.json();
-          testimonialsData = testimonialsResult.success ? testimonialsResult.data : [];
+          testimonialsData = Array.isArray(testimonialsResult) ? testimonialsResult : (testimonialsResult.success ? testimonialsResult.data || [] : []);
         }
       } catch (error) {
         console.log('Testimonials API error:', error);
@@ -170,7 +178,7 @@ const AdminDashboard = () => {
         const contactResponse = await fetch('/api/contact');
         if (contactResponse.ok) {
           const contactResult = await contactResponse.json();
-          contactData = contactResult.success ? contactResult.data : [];
+          contactData = Array.isArray(contactResult) ? contactResult : (contactResult.success ? contactResult.data || [] : []);
         }
       } catch (error) {
         console.log('Contact API error:', error);
@@ -191,11 +199,19 @@ const AdminDashboard = () => {
         }
       }
 
-      // Calculate real statistics
+      // Ensure all data is arrays before using filter
+      blogData = Array.isArray(blogData) ? blogData : [];
+      faqData = Array.isArray(faqData) ? faqData : [];
+      testimonialsData = Array.isArray(testimonialsData) ? testimonialsData : [];
+      contactData = Array.isArray(contactData) ? contactData : [];
+      productsData = Array.isArray(productsData) ? productsData : [];
+      referencesData = Array.isArray(referencesData) ? referencesData : [];
+
+      // Calculate real statistics with proper database field names
       const totalContent = blogData.length + faqData.length + testimonialsData.length + productsData.length + referencesData.length;
       const publishedBlogPosts = blogData.filter((post: any) => post.status === 'published').length;
-      const activeFaqs = faqData.filter((faq: any) => faq.isActive !== false).length;
-      const approvedTestimonials = testimonialsData.filter((testimonial: any) => testimonial.status === 'approved').length;
+      const activeFaqs = faqData.filter((faq: any) => faq.is_active !== false).length;
+      const approvedTestimonials = testimonialsData.filter((testimonial: any) => testimonial.is_approved === true).length;
       
       // Generate realistic visitor data based on content
       const baseVisitors = Math.max(1000, totalContent * 50);
@@ -347,127 +363,53 @@ const AdminDashboard = () => {
     const days = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'];
     
     // Generate realistic data based on actual content
-    const baseTraffic = Math.max(100, stats.blogPosts * 20);
-    const blogTrafficData = days.map(() => 
-      baseTraffic + Math.floor(Math.random() * baseTraffic * 0.5)
-    );
+    const baseValue = Math.max(100, stats.totalVisitors / 7);
     
-    const pageViewData = blogTrafficData.map(traffic => 
-      Math.floor(traffic * (2 + Math.random()))
-    );
-
-    return {
-      lineChartData: {
-        labels: days,
-        datasets: [
-          {
-            label: 'İçerik Görüntüleme',
-            data: blogTrafficData,
-            borderColor: 'rgb(251, 146, 60)',
-            backgroundColor: 'rgba(251, 146, 60, 0.1)',
-            tension: 0.4,
-            fill: true
-          },
-          {
-            label: 'Sayfa Etkileşimi',
-            data: pageViewData,
-            borderColor: 'rgb(79, 70, 229)',
-            backgroundColor: 'rgba(79, 70, 229, 0.1)',
-            tension: 0.4,
-            fill: true
-          }
-        ]
-      },
-      barChartData: {
-        labels: ['Blog', 'SSS', 'Ürünler', 'Hizmetler', 'İletişim'],
-        datasets: [
-          {
-            label: 'İçerik Sayısı',
-            data: [
-              stats.blogPosts,
-              stats.faqs,
-              Math.floor(stats.blogPosts * 0.8),
-              Math.floor(stats.faqs * 1.2),
-              stats.contacts
-            ],
-            backgroundColor: [
-              'rgba(251, 146, 60, 0.8)',
-              'rgba(79, 70, 229, 0.8)',
-              'rgba(34, 197, 94, 0.8)',
-              'rgba(239, 68, 68, 0.8)',
-              'rgba(168, 85, 247, 0.8)'
-            ]
-          }
-        ]
-      },
-      doughnutChartData: {
-        labels: ['Blog', 'SSS', 'Yorumlar'],
-        datasets: [
-          {
-            data: [stats.blogPosts, stats.faqs, stats.testimonials],
-            backgroundColor: [
-              'rgba(251, 146, 60, 0.8)',
-              'rgba(79, 70, 229, 0.8)',
-              'rgba(34, 197, 94, 0.8)'
-            ],
-            borderWidth: 0
-          }
-        ]
-      }
-    };
+    return days.map((day, index) => {
+      const variation = (Math.random() - 0.5) * 0.3;
+      const weekendFactor = index >= 5 ? 0.7 : 1; // Lower traffic on weekends
+      
+      return {
+        name: day,
+        ziyaretçiler: Math.floor(baseValue * (1 + variation) * weekendFactor),
+        sayfaGörüntüleme: Math.floor(baseValue * 2.5 * (1 + variation) * weekendFactor),
+        dönüşüm: Math.floor(baseValue * 0.05 * (1 + variation) * weekendFactor)
+      };
+    });
   };
 
   const chartData = generateChartData();
 
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: true,
-        position: 'bottom' as const
-      }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        grid: {
-          display: true,
-          color: 'rgba(0, 0, 0, 0.05)'
-        }
-      },
-      x: {
-        grid: {
-          display: false
-        }
-      }
-    }
-  };
+  // Content distribution data
+  const contentDistribution = dashboardData ? [
+    { name: 'Blog', value: dashboardData.stats.blogPosts, color: COLORS.primary },
+    { name: 'SSS', value: dashboardData.stats.faqs, color: COLORS.secondary },
+    { name: 'Yorumlar', value: dashboardData.stats.testimonials, color: COLORS.success },
+    { name: 'İletişim', value: dashboardData.stats.contacts, color: COLORS.warning }
+  ] : [];
 
   if (isLoading) {
     return (
-      <div className="space-y-6">
-        <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600"></div>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Dashboard yükleniyor...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* JavaScript Test */}
-      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-        <h2 className="text-red-800 font-bold">🧪 JavaScript Test</h2>
-        <button 
-          onClick={() => {
-            alert('JavaScript çalışıyor!');
-            console.log('🎯 BUTTON CLICKED - JS WORKING!');
-          }}
-          className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-        >
-          Bu butona tıklayın - JS Test
-        </button>
+    <div className="space-y-8">
+      {/* Debug Info */}
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm">
+        <h4 className="font-medium text-blue-900 mb-2">🔧 Debug Bilgisi</h4>
+        <div className="text-blue-800 space-y-1">
+          <p>Dashboard Data: {dashboardData ? '✅ Yüklendi' : '❌ Yok'}</p>
+          <p>Chart Data: {chartData ? `✅ ${chartData.length} gün` : '❌ Yok'}</p>
+          <p>Stats: {stats.length} kart</p>
+          <p>İçerik Dağılımı: {contentDistribution.length} kategori</p>
+        </div>
       </div>
       
       {/* Header */}
@@ -484,7 +426,7 @@ const AdminDashboard = () => {
             Verileri Yenile
           </button>
           <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <CalendarIcon className="h-4 w-4" />
+            <ClockIcon className="h-4 w-4" />
             <span>{new Date().toLocaleDateString('tr-TR', { 
               weekday: 'long', 
               year: 'numeric', 
@@ -533,13 +475,34 @@ const AdminDashboard = () => {
       {/* Charts Row */}
       {chartData && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Content Performance Chart */}
+          {/* Traffic Trends Chart */}
           <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              İçerik Performansı
+              Haftalık Trafik Trendi
             </h3>
             <div className="h-80">
-              <Line data={chartData.lineChartData} options={chartOptions} />
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Line 
+                    type="monotone" 
+                    dataKey="ziyaretçiler" 
+                    stroke={COLORS.primary} 
+                    strokeWidth={2}
+                    name="Ziyaretçiler"
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="sayfaGörüntüleme" 
+                    stroke={COLORS.secondary} 
+                    strokeWidth={2}
+                    name="Sayfa Görüntüleme"
+                  />
+                </LineChart>
+              </ResponsiveContainer>
             </div>
           </div>
 
@@ -549,16 +512,25 @@ const AdminDashboard = () => {
               İçerik Dağılımı
             </h3>
             <div className="h-80">
-              <Doughnut data={chartData.doughnutChartData} options={{
-                ...chartOptions,
-                plugins: {
-                  ...chartOptions.plugins,
-                  legend: {
-                    display: true,
-                    position: 'bottom'
-                  }
-                }
-              }} />
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={contentDistribution}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={({ name, percent }: any) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
+                    {contentDistribution.map((entry: any, index: number) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
             </div>
           </div>
         </div>
@@ -566,23 +538,22 @@ const AdminDashboard = () => {
 
       {/* Content Stats & Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Content Statistics */}
+        {/* Content Statistics Bar Chart */}
         {chartData && (
           <div className="bg-white rounded-xl shadow-sm p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              İçerik İstatistikleri
+              Günlük Dönüşüm Oranları
             </h3>
             <div className="h-80">
-              <Bar data={chartData.barChartData} options={{
-                ...chartOptions,
-                indexAxis: 'y' as const,
-                plugins: {
-                  ...chartOptions.plugins,
-                  legend: {
-                    display: false
-                  }
-                }
-              }} />
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar dataKey="dönüşüm" fill={COLORS.success} name="Dönüşüm" />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
           </div>
         )}

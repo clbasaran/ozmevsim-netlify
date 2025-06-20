@@ -69,39 +69,33 @@ export async function middleware(request: NextRequest) {
     response.headers.set('X-RateLimit-Remaining', rateLimit.remaining.toString());
   }
   
-  // Security headers
+  // Basic security headers (CSP temporarily disabled for debugging)
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  // Content Security Policy
-  const csp = [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "media-src 'self' https:",
-    "connect-src 'self' https://api.ozmevsim.com https://cms.ozmevsim.com",
-    "form-action 'self'",
-    "base-uri 'self'",
-    "object-src 'none'",
-    "frame-ancestors 'none'",
-    "upgrade-insecure-requests"
-  ].join('; ');
-  
-  response.headers.set('Content-Security-Policy', csp);
-  
-  // HSTS (only in production with HTTPS)
-  if (process.env.NODE_ENV === 'production' && request.nextUrl.protocol === 'https:') {
-    response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-  }
+  // Temporarily disable CSP for debugging
+  // const csp = [
+  //   "default-src 'self'",
+  //   "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+  //   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  //   "font-src 'self' https://fonts.gstatic.com",
+  //   "img-src 'self' data: https: blob:",
+  //   "media-src 'self' https:",
+  //   "connect-src 'self' https://api.ozmevsim.com https://cms.ozmevsim.com",
+  //   "form-action 'self'",
+  //   "base-uri 'self'",
+  //   "object-src 'none'",
+  //   "frame-ancestors 'none'",
+  //   "upgrade-insecure-requests"
+  // ].join('; ');
+  // 
+  // response.headers.set('Content-Security-Policy', csp);
   
   // CORS headers for API routes
   if (request.nextUrl.pathname.startsWith('/api')) {
-    response.headers.set('Access-Control-Allow-Origin', process.env.NEXT_PUBLIC_SITE_URL || '*');
+    response.headers.set('Access-Control-Allow-Origin', '*');
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-API-Key');
     response.headers.set('Access-Control-Max-Age', '86400');
@@ -115,19 +109,17 @@ export async function middleware(request: NextRequest) {
     }
   }
   
-  // Block common attack patterns
-  const userAgent = request.headers.get('user-agent') || '';
-  const suspiciousPatterns = [
-    /bot/i,
-    /crawler/i,
-    /spider/i,
-    /scraper/i,
-    // Add more patterns as needed
-  ];
-  
-  // Only block on sensitive endpoints
+  // Block common attack patterns (only for sensitive endpoints)
   if (request.nextUrl.pathname.startsWith('/api/contact') || 
       request.nextUrl.pathname.startsWith('/api/newsletter')) {
+    const userAgent = request.headers.get('user-agent') || '';
+    const suspiciousPatterns = [
+      /bot/i,
+      /crawler/i,
+      /spider/i,
+      /scraper/i,
+    ];
+    
     const isSuspicious = suspiciousPatterns.some(pattern => pattern.test(userAgent));
     
     if (isSuspicious && !userAgent.includes('Googlebot') && !userAgent.includes('Bingbot')) {

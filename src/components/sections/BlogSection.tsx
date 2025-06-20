@@ -20,63 +20,19 @@ import {
 interface BlogPost {
   id: string;
   title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  category: 'tips' | 'news' | 'technology' | 'maintenance';
-  author: string;
-  authorAvatar: string;
-  publishDate: string;
-  readTime: number;
-  views: number;
-  tags: string[];
-  featuredImage: string;
-  featured: boolean;
-  status: 'published' | 'draft' | 'archived';
-  createdAt: string;
-  updatedAt: string;
+  slug?: string;
+  excerpt?: string;
+  content?: string;
+  category?: string;
+  author?: string;
+  featured_image?: string;
+  is_featured: boolean;
+  is_published: boolean;
+  published_at?: string;
+  tags?: string[] | any;
+  created_at: string;
+  updated_at: string;
 }
-
-const defaultBlogPosts: BlogPost[] = [
-  {
-    id: '1',
-    title: 'Kış Aylarında Kombi Verimliliğini Artırmanın 10 Yolu',
-    slug: 'kis-aylarinda-kombi-verimliligini-artirmanin-10-yolu',
-    excerpt: 'Soğuk kış aylarında enerji faturalarınızı düşürürken evinizi sıcak tutmanın pratik yollarını keşfedin.',
-    content: 'Kış aylarında artan doğalgaz faturaları ailelerin en büyük endişelerinden biri. İşte kombi verimliliğinizi artırarak hem tasarruf edebileceğiniz hem de çevreyi koruyabileceğiniz 10 etkili yöntem...',
-    category: 'tips',
-    author: 'Murat Özkan',
-    authorAvatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-    publishDate: '2024-03-15',
-    readTime: 8,
-    views: 1250,
-    tags: ['enerji tasarrufu', 'kombi', 'kış bakımı', 'verimlilik'],
-    featuredImage: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&h=400&fit=crop',
-    featured: true,
-    status: 'published',
-    createdAt: '2024-03-15T10:00:00Z',
-    updatedAt: '2024-03-15T10:00:00Z'
-  },
-  {
-    id: '2',
-    title: 'Yeni Nesil Akıllı Termostat Teknolojileri',
-    slug: 'yeni-nesil-akilli-termostat-teknolojileri',
-    excerpt: 'IoT destekli akıllı termostatlarla evinizin ısıtma sistemini nasıl optimize edebileceğinizi öğrenin.',
-    content: 'Teknolojinin hızla gelişmesiyle birlikte ev ısıtma sistemleri de akıllanıyor. Yeni nesil akıllı termostatlar...',
-    category: 'technology',
-    author: 'Ayşe Demir',
-    authorAvatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
-    publishDate: '2024-03-12',
-    readTime: 6,
-    views: 890,
-    tags: ['akıllı sistem', 'termostat', 'IoT', 'teknoloji'],
-    featuredImage: 'https://images.unsplash.com/photo-1558618666-fbd25c85cd64?w=600&h=400&fit=crop',
-    featured: false,
-    status: 'published',
-    createdAt: '2024-03-12T10:00:00Z',
-    updatedAt: '2024-03-12T10:00:00Z'
-  }
-];
 
 const categories = {
   tips: { name: 'İpuçları', icon: LightBulbIcon, color: 'bg-yellow-100 text-yellow-700' },
@@ -87,22 +43,83 @@ const categories = {
 
 export default function BlogSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(defaultBlogPosts);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // For static deployment, use default data
-    setBlogPosts(defaultBlogPosts);
-    setLoading(false);
+    const fetchBlogPosts = async () => {
+      try {
+        setLoading(true);
+        console.log('🔍 Fetching blog posts from API...');
+        
+        const response = await fetch('/api/blog/', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('✅ Blog posts fetched successfully:', data);
+        
+        setBlogPosts(data || []);
+        setError(null);
+      } catch (err) {
+        console.error('❌ Error fetching blog posts:', err);
+        setError('Blog yazıları yüklenirken bir hata oluştu');
+        
+        // Fallback to default data in case of error
+        setBlogPosts([
+          {
+            id: '1',
+            title: 'Kış Aylarında Kombi Verimliliğini Artırmanın 10 Yolu',
+            excerpt: 'Soğuk kış aylarında enerji faturalarınızı düşürürken evinizi sıcak tutmanın pratik yollarını keşfedin.',
+            category: 'tips',
+            author: 'Murat Özkan',
+            featured_image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&h=400&fit=crop',
+            is_featured: true,
+            is_published: true,
+            published_at: '2024-03-15T10:00:00Z',
+            tags: ['enerji tasarrufu', 'kombi', 'kış bakımı', 'verimlilik'],
+            created_at: '2024-03-15T10:00:00Z',
+            updated_at: '2024-03-15T10:00:00Z'
+          },
+          {
+            id: '2',
+            title: 'Yeni Nesil Akıllı Termostat Teknolojileri',
+            excerpt: 'IoT destekli akıllı termostatlarla evinizin ısıtma sistemini nasıl optimize edebileceğinizi öğrenin.',
+            category: 'technology',
+            author: 'Ayşe Demir',
+            featured_image: 'https://images.unsplash.com/photo-1558618666-fbd25c85cd64?w=600&h=400&fit=crop',
+            is_featured: false,
+            is_published: true,
+            published_at: '2024-03-12T10:00:00Z',
+            tags: ['akıllı sistem', 'termostat', 'IoT', 'teknoloji'],
+            created_at: '2024-03-12T10:00:00Z',
+            updated_at: '2024-03-12T10:00:00Z'
+          }
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPosts();
   }, []);
 
+  const publishedPosts = blogPosts.filter(post => post.is_published);
+  
   const filteredPosts = selectedCategory === 'all' 
-    ? blogPosts 
-    : blogPosts.filter((post: BlogPost) => post.category === selectedCategory);
+    ? publishedPosts 
+    : publishedPosts.filter((post: BlogPost) => post.category === selectedCategory);
 
-  const featuredPost = blogPosts.find((post: BlogPost) => post.featured);
-  const recentPosts = blogPosts.filter((post: BlogPost) => !post.featured).slice(0, 5);
+  const featuredPost = publishedPosts.find((post: BlogPost) => post.is_featured);
+  const recentPosts = publishedPosts.filter((post: BlogPost) => !post.is_featured).slice(0, 5);
 
   if (loading) {
     return (
@@ -111,13 +128,41 @@ export default function BlogSection() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Blog & Haberler</h2>
             <div className="flex justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <p className="ml-4 text-gray-600">Blog yazıları yükleniyor...</p>
             </div>
           </div>
         </div>
       </section>
     );
   }
+
+  // Helper function to parse tags
+  const parseTags = (tags: any): string[] => {
+    if (Array.isArray(tags)) return tags;
+    if (typeof tags === 'string') {
+      try {
+        return JSON.parse(tags);
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  };
+
+  // Helper function to format date
+  const formatDate = (dateString: string): string => {
+    try {
+      const date = new Date(dateString);
+      return date.toLocaleDateString('tr-TR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+    } catch {
+      return 'Tarih belirtilmemiş';
+    }
+  };
 
   return (
     <section className="py-20 bg-gray-50">
@@ -138,6 +183,14 @@ export default function BlogSection() {
           </p>
         </motion.div>
 
+        {error && (
+          <div className="text-center mb-8">
+            <p className="text-amber-600 bg-amber-50 px-4 py-2 rounded-lg inline-block">
+              {error}
+            </p>
+          </div>
+        )}
+
         {/* Category Filter */}
         <motion.div
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -150,7 +203,7 @@ export default function BlogSection() {
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               selectedCategory === 'all'
-                ? 'bg-primary-600 text-white shadow-lg'
+                ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
             }`}
           >
@@ -162,7 +215,7 @@ export default function BlogSection() {
               onClick={() => setSelectedCategory(key)}
               className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === key
-                  ? 'bg-primary-600 text-white shadow-lg'
+                  ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
               }`}
             >
@@ -185,57 +238,56 @@ export default function BlogSection() {
               <div className="lg:flex">
                 <div className="lg:w-1/2">
                   <img
-                    src={featuredPost.featuredImage}
+                    src={featuredPost.featured_image || 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&h=400&fit=crop'}
                     alt={featuredPost.title}
                     className="w-full h-64 lg:h-full object-cover"
                   />
                 </div>
                 <div className="lg:w-1/2 p-8 lg:p-12">
                   <div className="flex items-center mb-4">
-                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${categories[featuredPost.category].color}`}>
-                      {React.createElement(categories[featuredPost.category].icon, { className: "h-4 w-4 mr-1" })}
-                      {categories[featuredPost.category].name}
-                    </span>
+                    {featuredPost.category && categories[featuredPost.category as keyof typeof categories] && (
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${categories[featuredPost.category as keyof typeof categories].color}`}>
+                        {React.createElement(categories[featuredPost.category as keyof typeof categories].icon, { className: "h-4 w-4 mr-1" })}
+                        {categories[featuredPost.category as keyof typeof categories].name}
+                      </span>
+                    )}
                     <span className="ml-3 text-sm text-red-600 font-medium">Öne Çıkan</span>
                   </div>
                   
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                     {featuredPost.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-6 text-lg">
-                    {featuredPost.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center">
-                      <img
-                        src={featuredPost.authorAvatar}
-                        alt={featuredPost.author}
-                        className="w-10 h-10 rounded-full mr-3"
-                      />
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">{featuredPost.author}</p>
-                        <div className="flex items-center text-xs text-gray-500">
-                          <CalendarIcon className="h-3 w-3 mr-1" />
-                          {new Date(featuredPost.publishDate).toLocaleDateString('tr-TR')}
-                          <ClockIcon className="h-3 w-3 ml-3 mr-1" />
-                          {featuredPost.readTime} dk okuma
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <EyeIcon className="h-4 w-4 mr-1" />
-                      {featuredPost.views}
-                    </div>
+                  {featuredPost.excerpt && (
+                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                      {featuredPost.excerpt}
+                    </p>
+                  )}
+                  
+                  <div className="flex items-center text-sm text-gray-500 mb-6">
+                    <UserIcon className="h-4 w-4 mr-2" />
+                    <span className="mr-4">{featuredPost.author || 'Yazar belirtilmemiş'}</span>
+                    <CalendarIcon className="h-4 w-4 mr-2" />
+                    <span>{formatDate(featuredPost.published_at || featuredPost.created_at)}</span>
                   </div>
-
-                  <button 
-                    onClick={() => setSelectedPost(featuredPost)}
-                    className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors duration-300 flex items-center font-medium"
-                  >
+                  
+                  {parseTags(featuredPost.tags).length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {parseTags(featuredPost.tags).slice(0, 3).map((tag: string, index: number) => (
+                        <span
+                          key={index}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700"
+                        >
+                          <TagIcon className="h-3 w-3 mr-1" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  
+                  <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium group">
                     Devamını Oku
-                    <ArrowRightIcon className="h-4 w-4 ml-2" />
+                    <ArrowRightIcon className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>
@@ -243,203 +295,103 @@ export default function BlogSection() {
           </motion.div>
         )}
 
-        {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.filter(post => !post.featured || selectedCategory !== 'all').map((post, index) => (
-            <motion.div
+        {/* Recent Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredPosts.slice(0, 6).map((post, index) => (
+            <motion.article
               key={post.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img
-                  src={post.featuredImage}
+                  src={post.featured_image || 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=400&h=250&fit=crop'}
                   alt={post.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${categories[post.category].color}`}>
-                    {React.createElement(categories[post.category].icon, { className: "h-3 w-3 mr-1" })}
-                    {categories[post.category].name}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4 bg-white bg-opacity-90 rounded-full p-2">
-                  <div className="flex items-center text-xs text-gray-600">
-                    <EyeIcon className="h-3 w-3 mr-1" />
-                    {post.views}
+                {post.category && categories[post.category as keyof typeof categories] && (
+                  <div className="absolute top-4 left-4">
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${categories[post.category as keyof typeof categories].color}`}>
+                      {React.createElement(categories[post.category as keyof typeof categories].icon, { className: "h-3 w-3 mr-1" })}
+                      {categories[post.category as keyof typeof categories].name}
+                    </span>
                   </div>
-                </div>
+                )}
               </div>
-
+              
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between mb-4">
+                {post.excerpt && (
+                  <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                )}
+                
+                <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                   <div className="flex items-center">
-                    <img
-                      src={post.authorAvatar}
-                      alt={post.author}
-                      className="w-8 h-8 rounded-full mr-2"
-                    />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                      <div className="flex items-center text-xs text-gray-500">
-                        <CalendarIcon className="h-3 w-3 mr-1" />
-                        {new Date(post.publishDate).toLocaleDateString('tr-TR')}
-                      </div>
-                    </div>
+                    <UserIcon className="h-3 w-3 mr-1" />
+                    <span>{post.author || 'Yazar belirtilmemiş'}</span>
                   </div>
-                  <div className="flex items-center text-xs text-gray-500">
-                    <ClockIcon className="h-3 w-3 mr-1" />
-                    {post.readTime} dk
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.slice(0, 2).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="inline-flex items-center px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                    >
-                      <TagIcon className="h-3 w-3 mr-1" />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <button 
-                  onClick={() => setSelectedPost(post)}
-                  className="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors duration-300 font-medium"
-                >
-                  Yazıyı Oku
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Newsletter Subscription */}
-        <motion.div
-          className="mt-16 bg-primary-600 rounded-2xl p-8 lg:p-12 text-center text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <NewspaperIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-          <h3 className="text-3xl font-bold mb-4">
-            Blog Güncellemelerini Kaçırmayın
-          </h3>
-          <p className="text-primary-100 mb-8 max-w-2xl mx-auto text-lg">
-            Yeni yazılarımız, ipuçları ve özel kampanyalarımız hakkında ilk siz haberdar olun.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="E-posta adresiniz"
-              className="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="w-full sm:w-auto bg-white text-primary-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium whitespace-nowrap">
-              Abone Ol
-            </button>
-          </div>
-        </motion.div>
-
-        {/* Blog Post Modal */}
-        {selectedPost && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-            <motion.div
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="relative">
-                <img
-                  src={selectedPost.featuredImage}
-                  alt={selectedPost.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
-                />
-                <button
-                  onClick={() => setSelectedPost(null)}
-                  className="absolute top-4 right-4 bg-white bg-opacity-90 rounded-full p-2 hover:bg-opacity-100 transition-all"
-                >
-                  ✕
-                </button>
-              </div>
-
-              <div className="p-8">
-                <div className="flex items-center mb-4">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${categories[selectedPost.category].color}`}>
-                    {React.createElement(categories[selectedPost.category].icon, { className: "h-4 w-4 mr-1" })}
-                    {categories[selectedPost.category].name}
-                  </span>
-                </div>
-
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                  {selectedPost.title}
-                </h1>
-
-                <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-200">
                   <div className="flex items-center">
-                    <img
-                      src={selectedPost.authorAvatar}
-                      alt={selectedPost.author}
-                      className="w-12 h-12 rounded-full mr-4"
-                    />
-                    <div>
-                      <p className="font-medium text-gray-900">{selectedPost.author}</p>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <CalendarIcon className="h-4 w-4 mr-1" />
-                        {new Date(selectedPost.publishDate).toLocaleDateString('tr-TR')}
-                        <ClockIcon className="h-4 w-4 ml-4 mr-1" />
-                        {selectedPost.readTime} dakika okuma
-                        <EyeIcon className="h-4 w-4 ml-4 mr-1" />
-                        {selectedPost.views} görüntüleme
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex space-x-2">
-                    <button className="p-2 text-gray-400 hover:text-primary-600 transition-colors">
-                      <ShareIcon className="h-5 w-5" />
-                    </button>
-                    <button className="p-2 text-gray-400 hover:text-primary-600 transition-colors">
-                      <ChatBubbleLeftIcon className="h-5 w-5" />
-                    </button>
+                    <CalendarIcon className="h-3 w-3 mr-1" />
+                    <span>{formatDate(post.published_at || post.created_at)}</span>
                   </div>
                 </div>
-
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-xl text-gray-600 mb-6">{selectedPost.excerpt}</p>
-                  <p className="text-gray-700 leading-relaxed">{selectedPost.content}</p>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-3">Etiketler:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedPost.tags.map((tag, index) => (
+                
+                {parseTags(post.tags).length > 0 && (
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {parseTags(post.tags).slice(0, 2).map((tag: string, tagIndex: number) => (
                       <span
-                        key={index}
-                        className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 text-sm rounded-full"
+                        key={tagIndex}
+                        className="inline-block px-2 py-1 rounded-full text-xs bg-gray-100 text-gray-600"
                       >
-                        <TagIcon className="h-3 w-3 mr-1" />
                         {tag}
                       </span>
                     ))}
                   </div>
-                </div>
+                )}
+                
+                <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group">
+                  Devamını Oku
+                  <ArrowRightIcon className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </button>
               </div>
-            </motion.div>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredPosts.length === 0 && !loading && (
+          <div className="text-center py-12">
+            <NewspaperIcon className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500 text-lg">
+              {selectedCategory === 'all' 
+                ? 'Henüz blog yazısı bulunmamaktadır.' 
+                : 'Bu kategoride henüz yazı bulunmamaktadır.'}
+            </p>
           </div>
+        )}
+
+        {/* View All Button */}
+        {filteredPosts.length > 0 && (
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <button className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+              Tüm Blog Yazılarını Görüntüle
+              <ArrowRightIcon className="h-5 w-5" />
+            </button>
+          </motion.div>
         )}
       </div>
     </section>

@@ -15,22 +15,26 @@ interface Product {
   id: string;
   name: string;
   description: string;
-  image_url: string;
-  category: string;
+  main_image: string;
+  category_name: string;
   brand: string;
   features: string[];
-  status: string;
+  is_active: boolean;
+  price?: string;
+  short_description?: string;
 }
 
 interface ApiProduct {
   id: string;
   name: string;
   description: string;
-  image_url: string;
-  category: string;
+  main_image: string;
+  category_name: string;
   brand: string;
   features: string[];
-  status: string;
+  is_active: boolean;
+  price?: string;
+  short_description?: string;
 }
 
 const ProductsSection = () => {
@@ -38,32 +42,92 @@ const ProductsSection = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<string[]>(['Tümü']);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   // Load products from API
   useEffect(() => {
     const loadProducts = async () => {
+      console.log('🔍 ProductsSection: Starting to load products...');
+      console.log('🌐 ProductsSection: Window location:', typeof window !== 'undefined' ? window.location.href : 'Server');
+      console.log('🌐 ProductsSection: Environment:', process.env.NODE_ENV);
+      
       setIsLoading(true);
+      setError(null);
+      
       try {
-        const response = await fetch('/api/products');
+        console.log('🔌 ProductsSection: About to call API...');
+        
+        // More explicit URL construction with trailing slash (required by next.config.js trailingSlash: true)
+        const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+        const apiUrl = `${baseUrl}/api/products/`;
+        console.log('🔌 ProductsSection: API URL:', apiUrl);
+        
+        const response = await fetch(apiUrl, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          cache: 'no-store' // Prevent caching issues
+        });
+        
+        console.log('📡 ProductsSection: Response received:', {
+          status: response.status,
+          statusText: response.statusText,
+          ok: response.ok,
+          type: response.type,
+          url: response.url,
+          headers: Object.fromEntries(response.headers.entries())
+        });
+        
         if (response.ok) {
-          const data: ApiProduct[] = await response.json();
-          setProducts(data);
+          const responseData = await response.json();
+          console.log('📊 ProductsSection: Received response:', responseData);
           
-          // Extract unique categories from products
-          const allCategories = data.map((p) => p.category).filter((cat) => Boolean(cat) && typeof cat === 'string');
-          const uniqueCategories: string[] = ['Tümü', ...Array.from(new Set(allCategories))];
-          setCategories(uniqueCategories);
+          // Handle API response format: {success: true, data: [...]}
+          const data: ApiProduct[] = responseData.success ? responseData.data : responseData;
+          console.log('📊 ProductsSection: Extracted data:', data);
+          console.log('📊 ProductsSection: Data length:', data?.length);
+          
+          if (Array.isArray(data)) {
+            setProducts(data);
+            
+            // Extract unique categories from products
+            const allCategories = data.map((p) => p.category_name).filter((cat) => Boolean(cat) && typeof cat === 'string');
+            console.log('🏷️ ProductsSection: All categories:', allCategories);
+            const uniqueCategories: string[] = ['Tümü', ...Array.from(new Set(allCategories))];
+            console.log('🏷️ ProductsSection: Unique categories:', uniqueCategories);
+            setCategories(uniqueCategories);
+          } else {
+            console.error('❌ ProductsSection: Data is not an array:', data);
+            setError('Invalid data format received from API');
+          }
         } else {
-          console.error('Failed to fetch products');
+          console.error('❌ ProductsSection: Failed to fetch products, status:', response.status);
+          const errorText = await response.text();
+          console.error('❌ ProductsSection: Error response:', errorText);
+          setError(`API Error: ${response.status} - ${errorText}`);
         }
       } catch (error) {
-        console.error('Error loading products:', error);
+        console.error('❌ ProductsSection: Error loading products:', error);
+        if (error instanceof Error) {
+          console.error('❌ ProductsSection: Error details:', {
+            name: error.name,
+            message: error.message,
+            stack: error.stack
+          });
+          setError(`Network Error: ${error.message}`);
+        } else {
+          setError('Unknown error occurred');
+        }
       } finally {
+        console.log('✅ ProductsSection: Loading finished');
         setIsLoading(false);
       }
     };
 
-    loadProducts();
+    // Add a small delay to ensure component is fully mounted
+    const timeoutId = setTimeout(loadProducts, 100);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   // WhatsApp redirect function
@@ -77,7 +141,7 @@ const ProductsSection = () => {
 
   const filteredProducts = selectedCategory === 'Tümü' 
     ? products.slice(0, 6) // Show max 6 products on homepage
-    : products.filter(product => product.category === selectedCategory).slice(0, 6);
+    : products.filter(product => product.category_name === selectedCategory).slice(0, 6);
 
   if (isLoading) {
     return (
@@ -85,6 +149,30 @@ const ProductsSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Ürünler yükleniyor...</p>
+          <p className="mt-2 text-sm text-gray-400">
+            API çağrısı gerçekleştiriliyor...
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-red-800 mb-2">
+              Ürünler Yüklenemedi
+            </h3>
+            <p className="text-red-600 mb-4">{error}</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+            >
+              Sayfayı Yenile
+            </button>
+          </div>
         </div>
       </section>
     );
@@ -153,7 +241,7 @@ const ProductsSection = () => {
                 {/* Product Image */}
                 <div className="relative h-64 bg-gray-50 overflow-hidden">
                   <img
-                    src={product.image_url}
+                    src={product.main_image}
                     alt={product.name}
                     className="object-contain p-6 group-hover:scale-105 transition-transform duration-300 w-full h-full"
                     loading="lazy"
@@ -179,7 +267,7 @@ const ProductsSection = () => {
                   {/* Brand & Category */}
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-sm font-medium text-blue-600">{product.brand}</span>
-                    <span className="text-sm text-gray-500">{product.category}</span>
+                    <span className="text-sm text-gray-500">{product.category_name}</span>
                   </div>
 
                   {/* Product Name */}

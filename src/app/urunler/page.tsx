@@ -46,7 +46,7 @@ export default function ProductsPage() {
         setLoading(true);
         setError(null);
         
-        const response = await fetch('/api/products');
+        const response = await fetch('/api/products/');
         if (!response.ok) {
           throw new Error('Ürünler yüklenirken hata oluştu');
         }
