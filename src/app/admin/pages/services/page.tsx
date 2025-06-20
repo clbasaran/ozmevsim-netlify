@@ -350,7 +350,7 @@ export default function AdminServicesPage() {
                     type="text"
                     value={formData.title}
                     onChange={(e) => setFormData({...formData, title: e.target.value})}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                     required
                   />
                 </div>
@@ -363,7 +363,7 @@ export default function AdminServicesPage() {
                     type="text"
                     value={formData.short_description}
                     onChange={(e) => setFormData({...formData, short_description: e.target.value})}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Kart görünümünde gösterilecek kısa açıklama"
                   />
                 </div>
@@ -376,7 +376,7 @@ export default function AdminServicesPage() {
                     value={formData.description}
                     onChange={(e) => setFormData({...formData, description: e.target.value})}
                     rows={4}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500 resize-none"
                     required
                   />
                 </div>
@@ -390,7 +390,7 @@ export default function AdminServicesPage() {
                       type="text"
                       value={formData.icon}
                       onChange={(e) => setFormData({...formData, icon: e.target.value})}
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                       placeholder="🔧"
                     />
                   </div>
@@ -403,7 +403,7 @@ export default function AdminServicesPage() {
                       type="number"
                       value={formData.price_min}
                       onChange={(e) => setFormData({...formData, price_min: e.target.value})}
-                      className="w-full p-2 border border-gray-300 rounded-lg"
+                      className="w-full p-2 border border-gray-300 rounded-lg text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                       placeholder="15000"
                     />
                   </div>
@@ -415,7 +415,7 @@ export default function AdminServicesPage() {
                       type="number"
                       value={formData.price_max}
                       onChange={(e) => setFormData({...formData, price_max: e.target.value})}
-                      className="w-full p-2 border border-gray-300 rounded-lg"
+                      className="w-full p-2 border border-gray-300 rounded-lg text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                       placeholder="45000"
                     />
                   </div>
@@ -429,7 +429,7 @@ export default function AdminServicesPage() {
                     type="url"
                     value={formData.image_url}
                     onChange={(e) => setFormData({...formData, image_url: e.target.value})}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500"
                     placeholder="https://example.com/image.jpg"
                   />
                 </div>
@@ -442,7 +442,7 @@ export default function AdminServicesPage() {
                     value={formData.features}
                     onChange={(e) => setFormData({...formData, features: e.target.value})}
                     rows={4}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-blue-500 focus:border-blue-500 resize-none"
                     placeholder="Ücretsiz keşif&#10;Profesyonel montaj&#10;2 yıl garanti"
                   />
                 </div>

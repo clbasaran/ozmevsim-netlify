@@ -592,7 +592,7 @@ export default function AdminProductsPage() {
                       type="text"
                       value={selectedProduct.name}
                       onChange={(e) => setSelectedProduct({...selectedProduct, name: e.target.value})}
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -601,7 +601,7 @@ export default function AdminProductsPage() {
                       type="text"
                       value={selectedProduct.brand}
                       onChange={(e) => setSelectedProduct({...selectedProduct, brand: e.target.value})}
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -612,7 +612,7 @@ export default function AdminProductsPage() {
                     <select
                       value={selectedProduct.category}
                       onChange={(e) => setSelectedProduct({...selectedProduct, category: e.target.value})}
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Kategori Seçin</option>
                       {categories.map(cat => (
@@ -625,7 +625,7 @@ export default function AdminProductsPage() {
                     <select
                       value={selectedProduct.status}
                       onChange={(e) => setSelectedProduct({...selectedProduct, status: e.target.value})}
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="active">Aktif</option>
                       <option value="inactive">Pasif</option>
@@ -639,7 +639,7 @@ export default function AdminProductsPage() {
                     value={selectedProduct.description}
                     onChange={(e) => setSelectedProduct({...selectedProduct, description: e.target.value})}
                     rows={3}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                   />
                 </div>
 
@@ -649,7 +649,7 @@ export default function AdminProductsPage() {
                     type="text"
                     value={selectedProduct.image_url}
                     onChange={(e) => setSelectedProduct({...selectedProduct, image_url: e.target.value})}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="https://example.com/image.jpg"
                   />
                 </div>
@@ -673,7 +673,7 @@ export default function AdminProductsPage() {
                           type="text"
                           value={feature}
                           onChange={(e) => updateFeature(index, e.target.value)}
-                          className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="Özellik açıklaması"
                         />
                         <button

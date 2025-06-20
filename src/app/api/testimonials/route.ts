@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { pool } from '@/lib/database';
+import { dbPool } from '@/lib/database';
 
 export async function GET(request: NextRequest) {
   console.log('🔍 Testimonials API GET request received');
@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   try {
     console.log('🔌 Attempting database connection...');
     
-    const result = await pool.query(`
+    const result = await dbPool.query(`
       SELECT 
         id,
         name,
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const result = await pool.query(`
+    const result = await dbPool.query(`
       INSERT INTO testimonials (
         name, company, comment, rating, is_active, is_featured, is_approved,
         avatar_url, project_type, location, project_title

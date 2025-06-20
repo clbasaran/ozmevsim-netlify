@@ -4,36 +4,48 @@
 import { Pool, PoolConfig } from 'pg';
 
 // Database connection configuration
-const dbConfig: PoolConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  database: process.env.DB_NAME || 'ozmevsim',
-  user: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || '',
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+const dbConfig: PoolConfig = process.env.DATABASE_URL 
+  ? {
+      connectionString: process.env.DATABASE_URL,
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    }
+  : {
+      host: process.env.DB_HOST || 'localhost',
+      port: parseInt(process.env.DB_PORT || '5432'),
+      database: process.env.DB_NAME || 'ozmevsim',
+      user: process.env.DB_USER || 'postgres',
+      password: process.env.DB_PASSWORD || '',
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    };
+
+// Add common pool settings
+Object.assign(dbConfig, {
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
-};
+});
 
 // Create connection pool
-let pool: Pool | null = null;
+let dbPoolInstance: Pool | null = null;
 
 export function getDbPool(): Pool {
-  if (!pool) {
-    pool = new Pool(dbConfig);
+  if (!dbPoolInstance) {
+    dbPoolInstance = new Pool(dbConfig);
     
-    pool.on('error', (err) => {
+    dbPoolInstance.on('error', (err) => {
       console.error('Unexpected error on idle client', err);
       process.exit(-1);
     });
   }
   
-  return pool;
+  return dbPoolInstance;
 }
 
 // Export pool for direct use in API routes
 export const dbPool = getDbPool();
+
+// Also export as 'pool' for backward compatibility
+export const pool = dbPool;
 
 // Database service class
 export class DatabaseService {
