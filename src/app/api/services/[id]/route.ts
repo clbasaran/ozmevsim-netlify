@@ -9,10 +9,11 @@ interface RouteParams {
 
 export async function GET(request: Request, { params }: RouteParams) {
   try {
+    const { id } = await params;
     const client = await dbPool.connect();
     const result = await client.query(
       'SELECT * FROM services WHERE id = $1 AND is_active = true',
-      [params.id]
+      [id]
     );
     client.release();
 
@@ -35,19 +36,21 @@ export async function GET(request: Request, { params }: RouteParams) {
 
 export async function PUT(request: Request, { params }: RouteParams) {
   try {
+    const { id } = await params;
     const body = await request.json();
-    const { title, description, short_description, image_url, icon, features, price_min, price_max, is_featured, is_active } = body;
+    const { title, description, short_description, image_url, icon, features, benefits, price_min, price_max, duration, warranty, is_featured, is_active } = body;
 
     const client = await dbPool.connect();
     const result = await client.query(
       `UPDATE services 
        SET title = $1, description = $2, short_description = $3, image_url = $4, 
-           icon = $5, features = $6, price_min = $7, price_max = $8, is_featured = $9, 
-           is_active = $10, updated_at = NOW()
-       WHERE id = $11 
+           icon = $5, features = $6, benefits = $7, price_min = $8, price_max = $9, 
+           duration = $10, warranty = $11, is_featured = $12, is_active = $13, updated_at = NOW()
+       WHERE id = $14 
        RETURNING *`,
       [title, description, short_description, image_url, icon, 
-       JSON.stringify(features || []), price_min, price_max, is_featured, is_active, params.id]
+       JSON.stringify(features || []), JSON.stringify(benefits || []), price_min, price_max, 
+       duration, warranty, is_featured, is_active, id]
     );
     client.release();
 
@@ -58,22 +61,30 @@ export async function PUT(request: Request, { params }: RouteParams) {
       );
     }
 
-    return NextResponse.json(result.rows[0]);
+    const response = NextResponse.json(result.rows[0]);
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    return response;
   } catch (error) {
-    console.error('Error updating service:', error);
-    return NextResponse.json(
-      { error: 'Failed to update service' },
+    console.error('❌ Error updating service:', error);
+    const errorResponse = NextResponse.json(
+      { error: 'Failed to update service', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
+    errorResponse.headers.set('Access-Control-Allow-Origin', '*');
+    return errorResponse;
   }
 }
 
 export async function DELETE(request: Request, { params }: RouteParams) {
   try {
+    const { id } = await params;
     const client = await dbPool.connect();
     const result = await client.query(
       'UPDATE services SET is_active = false, updated_at = NOW() WHERE id = $1 RETURNING *',
-      [params.id]
+      [id]
     );
     client.release();
 

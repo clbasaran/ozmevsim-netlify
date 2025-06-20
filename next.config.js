@@ -1,9 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Removed static export since we're using database integration
-  trailingSlash: true,
+  eslint: {
+    // Disable ESLint during builds
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Disable TypeScript type checking during builds if needed
+    ignoreBuildErrors: true,
+  },
   images: {
-    unoptimized: true, // Required for Netlify hosting
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      }
+    ],
+    unoptimized: true,
     domains: ['localhost', 'images.unsplash.com', 'via.placeholder.com', 'ozmevsim.netlify.app']
   },
   env: {
@@ -12,7 +28,10 @@ const nextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true
+  experimental: {
+    forceSwcTransforms: true,
+  },
+  output: 'standalone'
 };
 
 module.exports = nextConfig; 

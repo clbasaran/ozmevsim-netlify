@@ -20,9 +20,13 @@ const dbConfig: PoolConfig = process.env.DATABASE_URL
 
 // Add common pool settings
 Object.assign(dbConfig, {
-  max: 20,
-  idleTimeoutMillis: 30000,
-  connectionTimeoutMillis: 2000,
+  max: 10,
+  idleTimeoutMillis: 60000,
+  connectionTimeoutMillis: 5000,
+  acquireTimeoutMillis: 60000,
+  createTimeoutMillis: 30000,
+  reapIntervalMillis: 1000,
+  createRetryIntervalMillis: 200,
 });
 
 // Create connection pool

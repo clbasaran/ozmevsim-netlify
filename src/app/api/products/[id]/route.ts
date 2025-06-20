@@ -3,19 +3,16 @@ import { dbPool } from '@/lib/database';
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
   try {
+    const { id } = await params;
     const client = await dbPool.connect();
-    const result = await client.query(
-      `SELECT 
-        p.id, p.name, p.description, p.short_description, 
-        p.main_image as image_url, p.brand, p.category_id, 
-        p.features, p.specifications, p.is_active as status, 
-        p.created_at, p.updated_at, p.price, p.stock_status,
-        c.name as category
-       FROM products p
-       LEFT JOIN categories c ON p.category_id = c.id
-       WHERE p.id = $1`,
-      [params.id]
-    );
+    
+    const result = await client.query(`
+      SELECT p.*, c.name as category_name 
+      FROM products p 
+      LEFT JOIN categories c ON p.category_id = c.id 
+      WHERE p.id = $1 AND p.is_active = true
+    `, [id]);
+    
     client.release();
 
     if (result.rows.length === 0) {
@@ -25,97 +22,93 @@ export async function GET(request: Request, { params }: { params: { id: string }
       );
     }
 
-    return NextResponse.json(result.rows[0]);
+    const response = NextResponse.json(result.rows[0]);
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    return response;
   } catch (error) {
-    console.error('Error fetching product:', error);
-    return NextResponse.json(
+    console.error('❌ Error fetching product:', error);
+    const errorResponse = NextResponse.json(
       { error: 'Failed to fetch product' },
       { status: 500 }
     );
+    errorResponse.headers.set('Access-Control-Allow-Origin', '*');
+    return errorResponse;
   }
 }
 
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
   try {
+    const { id } = await params;
     const body = await request.json();
-    const { name, description, short_description, main_image, brand, category_id, features, specifications, price, is_active } = body;
+    const {
+      name,
+      description,
+      short_description,
+      category_id,
+      brand,
+      model,
+      price,
+      main_image,
+      gallery,
+      specifications,
+      features,
+      energy_class,
+      is_featured,
+      is_active,
+      stock_status,
+      meta_title,
+      meta_description
+    } = body;
+
+    // Generate slug if name is provided
+    const slug = name ? name.toLowerCase()
+      .trim()
+      .replace(/[çÇ]/g, 'c')
+      .replace(/[ğĞ]/g, 'g')
+      .replace(/[ıI]/g, 'i')
+      .replace(/[öÖ]/g, 'o')
+      .replace(/[şŞ]/g, 's')
+      .replace(/[üÜ]/g, 'u')
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '') || 'product-' + Date.now() : undefined;
 
     const client = await dbPool.connect();
+    const result = await client.query(`
+      UPDATE products 
+      SET 
+        name = COALESCE($1, name),
+        slug = COALESCE($2, slug),
+        description = COALESCE($3, description),
+        short_description = COALESCE($4, short_description),
+        category_id = COALESCE($5, category_id),
+        brand = COALESCE($6, brand),
+        model = COALESCE($7, model),
+        price = COALESCE($8, price),
+        main_image = COALESCE($9, main_image),
+        gallery = COALESCE($10, gallery),
+        specifications = COALESCE($11, specifications),
+        features = COALESCE($12, features),
+        energy_class = COALESCE($13, energy_class),
+        is_featured = COALESCE($14, is_featured),
+        is_active = COALESCE($15, is_active),
+        stock_status = COALESCE($16, stock_status),
+        meta_title = COALESCE($17, meta_title),
+        meta_description = COALESCE($18, meta_description),
+        updated_at = NOW()
+      WHERE id = $19 
+      RETURNING *
+    `, [
+      name, slug, description, short_description, category_id, brand, model, price,
+      main_image, JSON.stringify(gallery || []), JSON.stringify(specifications || {}),
+      JSON.stringify(features || []), energy_class, is_featured, is_active,
+      stock_status, meta_title, meta_description, id
+    ]);
     
-    // Generate slug from name if name is provided
-    let updateQuery = `UPDATE products SET `;
-    let values = [];
-    let paramCount = 1;
-    let updates = [];
-
-    if (name) {
-      const slug = name.toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
-      updates.push(`name = $${paramCount}, slug = $${paramCount + 1}`);
-      values.push(name, slug);
-      paramCount += 2;
-    }
-    
-    if (description !== undefined) {
-      updates.push(`description = $${paramCount}`);
-      values.push(description);
-      paramCount++;
-    }
-    
-    if (short_description !== undefined) {
-      updates.push(`short_description = $${paramCount}`);
-      values.push(short_description);
-      paramCount++;
-    }
-    
-    if (main_image !== undefined) {
-      updates.push(`main_image = $${paramCount}`);
-      values.push(main_image);
-      paramCount++;
-    }
-    
-    if (brand !== undefined) {
-      updates.push(`brand = $${paramCount}`);
-      values.push(brand);
-      paramCount++;
-    }
-    
-    if (category_id !== undefined) {
-      updates.push(`category_id = $${paramCount}`);
-      values.push(category_id);
-      paramCount++;
-    }
-    
-    if (features !== undefined) {
-      updates.push(`features = $${paramCount}`);
-      values.push(JSON.stringify(features));
-      paramCount++;
-    }
-    
-    if (specifications !== undefined) {
-      updates.push(`specifications = $${paramCount}`);
-      values.push(JSON.stringify(specifications));
-      paramCount++;
-    }
-    
-    if (price !== undefined) {
-      updates.push(`price = $${paramCount}`);
-      values.push(price);
-      paramCount++;
-    }
-    
-    if (is_active !== undefined) {
-      updates.push(`is_active = $${paramCount}`);
-      values.push(is_active);
-      paramCount++;
-    }
-    
-    updates.push(`updated_at = NOW()`);
-    updateQuery += updates.join(', ') + ` WHERE id = $${paramCount} RETURNING *`;
-    values.push(params.id);
-
-    const result = await client.query(updateQuery, values);
     client.release();
 
     if (result.rows.length === 0) {
@@ -125,23 +118,34 @@ export async function PUT(request: Request, { params }: { params: { id: string }
       );
     }
 
-    return NextResponse.json(result.rows[0]);
+    const response = NextResponse.json(result.rows[0]);
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    return response;
   } catch (error) {
-    console.error('Error updating product:', error);
-    return NextResponse.json(
-      { error: 'Failed to update product' },
+    console.error('❌ Error updating product:', error);
+    const errorResponse = NextResponse.json(
+      { error: 'Failed to update product', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
+    errorResponse.headers.set('Access-Control-Allow-Origin', '*');
+    return errorResponse;
   }
 }
 
 export async function DELETE(request: Request, { params }: { params: { id: string } }) {
   try {
+    const { id } = await params;
     const client = await dbPool.connect();
+    
+    // Soft delete - set is_active to false instead of hard delete
     const result = await client.query(
-      'DELETE FROM products WHERE id = $1 RETURNING *',
-      [params.id]
+      'UPDATE products SET is_active = false, updated_at = NOW() WHERE id = $1 RETURNING *',
+      [id]
     );
+    
     client.release();
 
     if (result.rows.length === 0) {
@@ -151,12 +155,19 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
       );
     }
 
-    return NextResponse.json({ message: 'Product deleted successfully' });
+    const response = NextResponse.json({ message: 'Product deleted successfully' });
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    return response;
   } catch (error) {
-    console.error('Error deleting product:', error);
-    return NextResponse.json(
-      { error: 'Failed to delete product' },
+    console.error('❌ Error deleting product:', error);
+    const errorResponse = NextResponse.json(
+      { error: 'Failed to delete product', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
+    errorResponse.headers.set('Access-Control-Allow-Origin', '*');
+    return errorResponse;
   }
 } 

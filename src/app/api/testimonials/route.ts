@@ -11,19 +11,20 @@ export async function GET(request: NextRequest) {
       SELECT 
         id,
         name,
+        email,
         company,
-        comment,
+        position,
+        content,
         rating,
+        service_category,
         is_active,
         is_featured,
         is_approved,
         avatar_url,
-        project_type,
-        location,
-        project_title,
         created_at,
         updated_at
       FROM testimonials 
+      WHERE is_active = true
       ORDER BY is_featured DESC, created_at DESC
     `);
     
@@ -54,34 +55,34 @@ export async function POST(request: NextRequest) {
     
     const {
       name,
+      email,
       company,
-      comment,
+      position,
+      content,
       rating,
+      service_category,
       is_active = true,
       is_featured = false,
       is_approved = true,
-      avatar_url,
-      project_type,
-      location,
-      project_title
+      avatar_url
     } = body;
 
-    if (!name || !comment || !rating) {
+    if (!name || !content || !rating) {
       return NextResponse.json(
-        { error: 'Name, comment, and rating are required' },
+        { error: 'Name, content, and rating are required' },
         { status: 400 }
       );
     }
 
     const result = await dbPool.query(`
       INSERT INTO testimonials (
-        name, company, comment, rating, is_active, is_featured, is_approved,
-        avatar_url, project_type, location, project_title
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+        name, email, company, position, content, rating, service_category,
+        is_active, is_featured, is_approved, avatar_url, created_at, updated_at
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, NOW(), NOW())
       RETURNING *
     `, [
-      name, company, comment, rating, is_active, is_featured, is_approved,
-      avatar_url, project_type, location, project_title
+      name, email, company, position, content, rating, service_category,
+      is_active, is_featured, is_approved, avatar_url
     ]);
 
     return NextResponse.json({

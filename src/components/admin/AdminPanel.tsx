@@ -60,6 +60,163 @@ const AdminPanel = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // CRUD Handler Functions
+  const handleViewCustomer = async (customerId: string) => {
+    try {
+      console.log('👁️ Viewing customer:', customerId);
+      // Navigate to customer detail or open modal
+      alert(`Müşteri detayları: ${customerId}`);
+    } catch (error) {
+      console.error('Error viewing customer:', error);
+      setError('Müşteri bilgileri görüntülenirken hata oluştu');
+    }
+  };
+
+  const handleEditCustomer = async (customerId: string) => {
+    try {
+      console.log('✏️ Editing customer:', customerId);
+      // Open edit modal or navigate to edit form
+      const customerData = {
+        name: 'Updated Customer Name',
+        email: 'updated@email.com',
+        phone: '+90 555 123 4567'
+      };
+      // Simulate API call
+      alert(`Müşteri düzenleme: ${customerId} - ${JSON.stringify(customerData)}`);
+    } catch (error) {
+      console.error('Error editing customer:', error);
+      setError('Müşteri düzenlenirken hata oluştu');
+    }
+  };
+
+  const handleDeleteCustomer = async (customerId: string) => {
+    try {
+      if (!confirm('Bu müşteriyi silmek istediğinizden emin misiniz?')) {
+        return;
+      }
+
+      console.log('🗑️ Deleting customer:', customerId);
+      setLoading(true);
+      
+      // Remove from local state
+      setCustomers(prev => prev.filter(c => c.id !== customerId));
+      
+      // Simulate API call
+      alert(`Müşteri silindi: ${customerId}`);
+    } catch (error) {
+      console.error('Error deleting customer:', error);
+      setError('Müşteri silinirken hata oluştu');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleViewOrder = async (orderId: string) => {
+    try {
+      console.log('👁️ Viewing order:', orderId);
+      alert(`Sipariş detayları: ${orderId}`);
+    } catch (error) {
+      console.error('Error viewing order:', error);
+      setError('Sipariş bilgileri görüntülenirken hata oluştu');
+    }
+  };
+
+  const handleEditOrder = async (orderId: string) => {
+    try {
+      console.log('✏️ Editing order:', orderId);
+      const orderData = {
+        status: 'completed',
+        notes: 'Sipariş güncellendi'
+      };
+      alert(`Sipariş düzenleme: ${orderId} - ${JSON.stringify(orderData)}`);
+    } catch (error) {
+      console.error('Error editing order:', error);
+      setError('Sipariş düzenlenirken hata oluştu');
+    }
+  };
+
+  const handleCreateNew = async (type: 'customer' | 'order') => {
+    try {
+      console.log(`➕ Creating new ${type}`);
+      
+      if (type === 'customer') {
+        const newCustomer = {
+          name: 'Yeni Müşteri',
+          email: 'yeni@email.com',
+          phone: '+90 555 000 0000',
+          address: 'Yeni Adres'
+        };
+        alert(`Yeni müşteri oluşturma: ${JSON.stringify(newCustomer)}`);
+      } else {
+        const newOrder = {
+          customerId: '1',
+          products: ['Yeni Ürün'],
+          total: 1000,
+          status: 'pending'
+        };
+        alert(`Yeni sipariş oluşturma: ${JSON.stringify(newOrder)}`);
+      }
+    } catch (error) {
+      console.error(`Error creating new ${type}:`, error);
+      setError(`Yeni ${type === 'customer' ? 'müşteri' : 'sipariş'} oluşturulurken hata oluştu`);
+    }
+  };
+
+  // API Integration Functions
+  const loadProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/products');
+      if (response.ok) {
+        const data = await response.json();
+        console.log('📦 Products loaded:', data.length);
+      }
+    } catch (error) {
+      console.error('Error loading products:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadServices = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/services');
+      if (response.ok) {
+        const data = await response.json();
+        console.log('🔧 Services loaded:', data.length);
+      }
+    } catch (error) {
+      console.error('Error loading services:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadTestimonials = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/testimonials');
+      if (response.ok) {
+        const data = await response.json();
+        console.log('💬 Testimonials loaded:', data.length);
+      }
+    } catch (error) {
+      console.error('Error loading testimonials:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  React.useEffect(() => {
+    // Load real data from APIs
+    loadProducts();
+    loadServices();
+    loadTestimonials();
+  }, []);
 
   // Mock data
   React.useEffect(() => {
@@ -336,7 +493,10 @@ const AdminPanel = () => {
                     <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Müşteriler</h1>
                     <p className="text-gray-600 dark:text-gray-400 mt-2">Müşteri yönetimi ve bilgileri</p>
                   </div>
-                  <button className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center space-x-2">
+                  <button 
+                    onClick={() => handleCreateNew('customer')}
+                    className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center space-x-2"
+                  >
                     <PlusIcon className="h-5 w-5" />
                     <span>Yeni Müşteri</span>
                   </button>
@@ -430,13 +590,25 @@ const AdminPanel = () => {
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                               <div className="flex space-x-2">
-                                <button className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300">
+                                <button 
+                                  onClick={() => handleViewCustomer(customer.id)}
+                                  className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+                                  title="Görüntüle"
+                                >
                                   <EyeIcon className="h-4 w-4" />
                                 </button>
-                                <button className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
+                                <button 
+                                  onClick={() => handleEditCustomer(customer.id)}
+                                  className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                                  title="Düzenle"
+                                >
                                   <PencilIcon className="h-4 w-4" />
                                 </button>
-                                <button className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300">
+                                <button 
+                                  onClick={() => handleDeleteCustomer(customer.id)}
+                                  className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300"
+                                  title="Sil"
+                                >
                                   <TrashIcon className="h-4 w-4" />
                                 </button>
                               </div>
@@ -464,7 +636,10 @@ const AdminPanel = () => {
                     <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Siparişler</h1>
                     <p className="text-gray-600 dark:text-gray-400 mt-2">Sipariş yönetimi ve takibi</p>
                   </div>
-                  <button className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center space-x-2">
+                  <button 
+                    onClick={() => handleCreateNew('order')}
+                    className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center space-x-2"
+                  >
                     <PlusIcon className="h-5 w-5" />
                     <span>Yeni Sipariş</span>
                   </button>
@@ -526,10 +701,18 @@ const AdminPanel = () => {
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                               <div className="flex space-x-2">
-                                <button className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300">
+                                <button 
+                                  onClick={() => handleViewOrder(order.id)}
+                                  className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+                                  title="Görüntüle"
+                                >
                                   <EyeIcon className="h-4 w-4" />
                                 </button>
-                                <button className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300">
+                                <button 
+                                  onClick={() => handleEditOrder(order.id)}
+                                  className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
+                                  title="Düzenle"
+                                >
                                   <PencilIcon className="h-4 w-4" />
                                 </button>
                               </div>
